@@ -1,0 +1,541 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.producto-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.informacion-producto {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imagen-producto {
+    width: 200px;
+    height: auto;
+}
+
+.detalles-producto {
+    flex-grow: 1;
+}
+
+.detalles-producto h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+
+.botones {
+    display: flex;
+    gap: 10px;
+}
+
+.agregar-carrito,
+.comprar {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.agregar-carrito {
+    background-color: #28a745;
+}
+
+.comprar {
+    background-color: #007bff;
+}
+.especificaciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transform: translatey(-60px); 
+
+}
+
+.caracteristica {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    background-color: #eaeaea;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: auto; /* Ajusta el ancho según necesites */
+}
+
+.caracteristica img {
+    width: 30px; /* Tamaño específico para las imágenes */
+    height: 30px;
+    margin-right: 10px; /* Espaciado entre la imagen y el texto */
+}
+
+.caracteristica p {
+    font-size: 0.85rem;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+    white-space: nowrap; /* Para evitar que el texto se desborde en varias líneas */
+}
+
+
+.descripcion {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-left: 40px;
+
+}
+
+.reseñas {
+    margin-bottom: 20px;
+    margin-left: 40px;
+
+}
+
+.reseñas h3 {
+    font-size: 1.2rem;
+}
+
+.reseña {
+    margin-bottom: 10px;
+}
+
+.reseña span {
+    color: #f39c12;
+}
+.financiamiento {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logos {
+    display: flex; /* Para alinear las imágenes en línea */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 10px; /* Espacio entre las imágenes */
+    margin-top: 10px;
+}
+
+.logos img {
+    width: 650px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: auto;
+}
+
+.recomendaciones {
+    margin-top: 20px;
+}
+
+.recomendaciones h3 {
+    margin-bottom: 10px;
+}
+
+.productos-recomendados {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.navegar {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    color: #333;
+}
+
+.navegar:hover {
+    color: #007bff;
+}
+
+
+.cantidad, .comprar {
+    background-color: #0056f2;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.cantidad {
+    background-color: #8ec9ff;
+    color: #000;
+}
+
+.rectangle {
+    width: 200px;
+    height: 250px;
+    background-color: rgba(86, 80, 154, 0.2); 
+    border-radius: 10px;
+    border: 1px solid black; 
+        }
+     
+        .container {
+            display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 60px;
+          padding: 80px;
+        }
+
+
+        .info {
+            display: flex;
+            flex-direction: column; /* Mantiene los elementos en columnas */
+            align-items: flex-start; /* Alinea los elementos al inicio */
+
+        }
+ 
+
+        
+.Iphone151350X1080Px1 {
+    width: 200px;
+    height: 150px;
+    position: absolute;
+
+}
+.carousel-inner .carousel-item {
+    transition: none; 
+}
+
+
+
+
+
+
+
+
+
+.producto {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr; /* Ajuste a tres columnas proporcionadas */
+    align-items: start; /* Alineación de los elementos al inicio */
+    gap: 20px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.galeria {
+    grid-column: 1 / 2; /* Primera columna para la galería */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250PX;
+    height: auto;   
+    margin-top: -65PX;
+    margin-left: 50px;
+
+}   
+.tamano{
+    width: 230px; /* Ancho del contenedor */
+    height: 200px; /* Altura del contenedor */
+}
+.galeria img{
+    width: 230px; /* Ancho del contenedor */
+    height: 200px; /* Altura del contenedor */
+    object-fit: contain;
+
+}   
+.detalles {
+    grid-column: 2 / 3; /* Segunda columna para los detalles */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.precio {
+    grid-column: 3 / 4; /* Tercera columna para precio y acciones */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+.boton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    transform: rotate(90deg);
+  }
+
+
+
+
+
+/* Carrusel y botones de navegación */
+.carousel-container {
+    position: relative; /* Para controlar la posición de los botones */
+    width: 250px; /* Ancho específico para las imágenes */
+    height: 200px; /* Altura de las imágenes */
+    margin-left: -20px;  
+  margin-top: -60px;
+
+
+    
+}
+
+/* Configuración del carrusel */
+.carousel-inner .carousel-item {
+    position: relative;
+    width: 100%; /* Para que ocupe todo el espacio disponible */
+    height: 200px; /* Establece la altura de todas las imágenes igual */
+    margin-top: 80px;
+
+}
+
+
+/* Posición de los botones de navegación fuera del carrusel */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 80%;
+    z-index: 10; /* Asegura que los botones estén encima de las imágenes */
+    background-color: #000;
+    border-radius: 5px;
+
+}
+
+.carousel-control-prev {
+    left: -30px; /* Botón anterior fuera del contenedor */
+
+}
+
+.carousel-control-next {
+    right: -30px; /* Botón siguiente fuera del contenedor */
+}
+
+
+
+
+       
+.envio {
+    display: flex; /* Alinea la imagen y el texto en una fila */
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    gap: 5px; /* Espaciado entre la imagen y el texto */
+}
+
+.envio img {
+    width: 40px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    margin-right: 5px; /* Espaciado opcional entre la imagen y el texto */
+}
+
+
+.aa {
+    width: 160px;
+margin-left: 190px;
+margin-top: -100px;
+}
+
+
+
+
+/* Dispositivos pequeños (teléfonos en modo vertical) */
+@media (max-width: 700px) {
+    .producto {
+        grid-template-columns: 1fr; /* Una sola columna */
+        text-align: center;
+        gap: 10px;
+    }
+
+    .galeria, .detalles, .precio {
+        grid-column: 1 / 2; /* Todos los elementos en una sola columna */
+        margin: 0 auto;
+        margin-left: 40px;
+    }
+    .precio {
+        margin-left: 180px;
+        margin-top: -117px;
+        padding: 0 0 45px 0;
+    }
+    .galeria img {
+        width: 100%; /* Asegura que las imágenes se adapten al ancho */
+    }
+
+    .carousel-container {
+        width: 100%; /* Ancho completo */
+        height: auto; /* Altura ajustable */
+    }
+
+    .precio h3 {
+        font-size: 1.5rem; /* Ajustar tamaño del precio */
+    }
+
+    .aa {
+        width: 100%; /* Botón de agregar al carrito ajustado */
+        margin: 10px auto;
+    }
+
+    .recomendaciones .container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para productos recomendados */
+        gap: 10px;
+    }
+
+    .carousel-control-prev, 
+    .carousel-control-next {
+        top: 50%; /* Coloca los botones verticalmente en el centro del carrusel */
+    }
+    
+    .carousel-control-prev {
+        left: -10px; /* Ajusta la posición horizontal del botón anterior */
+    }
+    
+    .carousel-control-next {
+        right: -20px; /* Ajusta la posición horizontal del botón siguiente */
+    }
+    
+.w-100 {
+    width: 60% !important;
+    margin-left: 55px;
+}
+.especificaciones {
+
+    margin-bottom: -35px; 
+}
+.especificaciones p {
+    max-width: 300px; /* Ancho máximo del contenedor del texto */
+    word-wrap: break-word; /* Permite dividir palabras largas si es necesario */
+    white-space: normal; /* Asegura que el texto se ajuste en varias líneas */
+    line-height: 1.5; /* Ajusta el espacio entre líneas para mejorar la legibilidad */
+}
+.financiamiento {
+    margin-left: 30px;
+    max-width: 300px; /* Ancho máximo del contenedor del texto */
+    word-wrap: break-word; /* Permite dividir palabras largas si es necesario */
+    white-space: normal; /* Asegura que el texto se ajuste en varias líneas */
+    line-height: 1.5; /* Ajusta el espacio entre líneas para mejorar la legibilidad */
+}
+
+.logos img {
+    width: 360px;
+    height: auto;
+}
+.logos img:not(:first-child) {
+    display: none; /* Oculta todas las imágenes excepto la primera */
+}
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Diseño responsivo */
+    gap: 20px;
+    padding: 20px;
+}
+
+.rectangle {
+    width: 100%;
+    height: auto;
+    background-color: rgba(42, 39, 71, 0.2); /* Fondo sutil */
+    border-radius: 10px; /* Esquinas redondeadas */
+    border: 1px solid #ddd; /* Borde claro */
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rectangle:hover {
+    transform: scale(1.05); /* Efecto de hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-img {
+    width: 160px; /* Ancho del contenedor */
+    height: 150px; /* Altura del contenedor */
+    object-fit: cover; /* Asegura que la imagen se ajuste */
+    border-radius: 5px; /* Esquinas redondeadas para la imagen */
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Opcional: estilos para enlaces si quieres que sean más interactivos */
+.rectangle a {
+    text-decoration: none; /* Sin subrayado */
+    color: inherit; /* Hereda el color del texto */
+}
+
+.rectangle a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas más estrechas */
+        margin-top: 25px;
+    }
+
+    .product-img {
+        width: 100px; /* Reduce el tamaño de las imágenes */
+        height: 100px;
+    }
+
+    .product-name {
+        font-size: 14px;
+        height: 30px;
+    }
+
+    .product-price {
+        font-size: 16px;
+    }
+}

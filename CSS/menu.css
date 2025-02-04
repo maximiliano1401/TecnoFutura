@@ -1,0 +1,592 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+
+.mennu {
+    position: absolute;
+    left: 358px;
+    top: 59px;
+    width: 70px;
+    height: 50px;
+    background: white;
+    border-top-left-radius: 22px; /* Redondea la esquina superior izquierda */
+    border-bottom-left-radius: 22px; /* Redondea la esquina inferior izquierda */
+    border-top-right-radius: 0; /* Asegura que la esquina superior derecha no tenga redondeado */
+    border-bottom-right-radius: 0; /* Asegura que la esquina inferior derecha no tenga redondeado */
+
+}
+.buscar {
+    width: 500px;
+    height: 50px;   
+    left: 428px;    
+    top: 59px;
+    position: absolute;
+    color: #000;
+    font-size:22px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    border: none;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: white;
+    border-top-right-radius: 22px; /* Redondea la esquina superior derecha */
+    border-bottom-right-radius: 22px; /* Redondea la esquina inferior derecha */
+    border-top-left-radius: 0; /* Asegura que la esquina superior izquierda no tenga redondeado */
+    border-bottom-left-radius: 0; /* Asegura que la esquina inferior izquierda no tenga redondeado */}
+.buscar:hover {
+    
+}
+
+
+.Search {
+width: 44px;
+height: 40px;
+left: 390px;
+top: 51px;
+position: absolute;
+}
+.ubi {
+    width: 587px;
+    height: 29px;
+    left: 465px;
+    top: 131px;
+    position: absolute;
+    color: black;
+    font-size: 22px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+
+
+
+
+.Repartidor1 {
+width: 30px;
+height: 30px;
+left: 450px;
+top: 480px;
+position: absolute;
+}
+.EnProductosDesde999 {
+    left: 620px;
+    top: 480px;
+    position: absolute;
+    color: black;
+    font-size: 24px;
+    font-family: Sansation;
+    font-weight: 400;
+    word-wrap: break-word;
+    }   
+    
+.EnvOGratis {
+    left: 490px;
+    top: 480px;
+    position: absolute;
+    color: #3069D8;
+    font-size: 24px;
+    font-family: Sansation;
+    font-weight: 700;
+    word-wrap: break-word;
+    }
+
+.Categorizador {
+width: 500px;
+height: 50px;
+left: 67px;
+top: 184px;
+position: absolute;
+transform: rotate(90deg);
+transform-origin: 0 0;
+}
+
+
+.Categorizador {
+position: absolute;
+transform: rotate(360deg);
+transform-origin: 0 0;
+left: -160px;
+top: 260px;
+font-size: 25px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.Categorizador img {
+margin-top: 10px; 
+width: auto;
+max-width: 15%;
+}
+.Iphone151350X1080Px1 {
+    width: 500px;
+    height: 300px;
+    left: 400px;
+    top: 180px;
+    position: absolute;
+}
+.carousel-inner .carousel-item {
+    transition: none; 
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    background-color: black; 
+    color: white;
+}
+.carousel-control-prev {
+    left: -60px;
+}
+.carousel-control-next {
+    right: -60px;
+}
+.lupa {
+    padding: 10px;
+    margin-left: 10px;
+}
+
+
+.navbar-toggler{
+    background-color: white;
+}
+.navbar-toggler{
+    background-color: white;
+}
+.user-menu {
+    width: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.user-info .user-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.list-group-item {
+    border: none;
+    cursor: pointer;
+}
+.list-group-item i {
+    font-size: 18px;
+}
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+#comprasSubmenu .list-group-item {
+    padding-left: 20px;
+}
+.text-danger {
+    color: #ff0000 !important;
+}
+.text-light {
+    margin-top: 30px;
+    padding-left: 30px;
+}
+.text-primary {
+    margin-top: 60px;
+    margin-left: 15vw;
+}
+.contenedor {
+    margin-top: -20px;
+    padding-left: -10px !important;
+}
+
+.unu {
+  margin-top: -20px;
+margin-left: 0px;
+}
+input[type="text"]::placeholder {
+    text-align: center; /* Cambia la alineación */
+    color: gray; /* Cambia el color */
+    font-style: italic; /* Cambia el estilo de fuente */
+    margin-left: 40px; /* Mueve el texto hacia la derecha */
+
+}
+
+input[type="text"] {
+    margin-left: 0px; /* Mueve el texto hacia la derecha */
+}
+
+
+
+        .contenedor-movido {
+            margin-top: 390px; 
+            margin-left: 0px; 
+        }
+     
+        .container {
+            display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px;
+          padding: 120px;
+          margin-left: -80px;
+
+        }
+.mover{
+      position: absolute;
+      margin-top: -80px;
+      margin-left: 220px;
+}
+.boton {
+    transform: rotate(90deg);
+    max-width: 15%;
+  width: 50px;
+  height: 40px;
+  margin-left: auto;
+  padding-right: 10px !important;
+  }
+        
+        .carrito {  
+                position: absolute;
+                top: 0; /* Ajusta según sea necesario */
+                right: 0;
+                margin: 10px; /* Espaciado opcional */
+            
+            
+        }
+
+        button {
+            border: none; /* Elimina el borde */
+            background: none; /* Elimina el color de fondo */
+            padding: 0; /* Elimina el relleno interno */
+            margin: 0; /* Elimina cualquier margen */
+            outline: none; /* Elimina el contorno al enfocarse */
+            cursor: pointer; /* Asegura que aún parezca clicable */
+            display: inline-block; /* Asegura que mantenga comportamiento en línea */
+
+        }
+        
+     
+        
+      .rectangle {
+        width: 200px;
+        height: auto;
+        background-color: rgba(42, 39, 71, 0.2);
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        align-items: flex-start;
+    }
+          
+          
+    
+            .product-img {
+              width: 160px; /* Ancho del contenedor */
+              height: 150px; /* Altura del contenedor */
+        
+            }
+
+            .product-name {
+              text-decoration: none;
+                font-size: 16px;
+                font-weight: bold;
+                margin-top: 10px;
+                color: #333;
+            }
+    
+            .product-description {
+                font-size: 14px;
+                color: #666;
+                margin-top: 5px;
+                text-decoration: none;
+
+            }
+    
+            .product-price {
+                font-size: 18px;
+                color: #333;
+                margin-top: 10px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+                  
+      .rectangle a {
+        text-decoration: none;
+
+    }
+    .precio{
+      margin-bottom: 0px;
+    }
+            
+    .rectangle .descripcion{
+      height: auto;
+      min-height: 100px !important;   
+      block-size: auto;
+    }
+    
+    .rectangle .precio{
+      flex: 1;
+      align-items: end;
+    }
+
+    .nombre{
+      height: auto;
+      min-height: 50px !important;   
+      block-size: auto; 
+    }
+
+
+
+
+    
+      
+  @media (max-width: 700px) {
+    .mennu {
+      margin-left: -89%;
+      max-height: 4%;
+      max-width: 10%;
+
+   top: 55px;  
+    }
+    .buscar {
+        left: 20.5%;        
+        top: 55px;  
+        max-height: 4%;
+   max-width: 230px;
+        font-size: 14px;
+
+        }
+        input[type="text"]::placeholder {
+            text-align: center; /* Cambia la alineación */
+            color: gray; /* Cambia el color */
+            font-style: italic; /* Cambia el estilo de fuente */
+            margin-left: 30px; /* Mueve el texto hacia la derecha */
+        
+        }
+        .boton {
+          margin-left: 290px;
+          }
+              
+.btn {
+    margin-left: -20px;
+
+}
+        .lupa {
+            width: 100%;
+            margin-left: -2%;
+
+        }
+        .Iphone151350X1080Px1{
+            left: 100px;
+            height: -0;
+            top: 30%;
+                }
+       
+        .w-100 {
+             max-width: 200px;
+             max-height: 333px;
+             margin-left: 0%;
+        }
+        
+            .Categorizador {    
+                width: 50%;
+                gap: 10px;
+                margin: 20px 0;
+                margin-top: -30%;
+
+            }
+        
+           
+        
+            .Categorizador p {
+                font-size: 20px;          /* Ajusta el tamaño del texto del título */
+                font-weight: bold;        /* Hace el título más destacado */
+                margin: 0;                /* Elimina márgenes extra */
+                margin-left: 185%;
+             
+                top: 20%;
+            }
+            p {
+                margin-top: 0;
+            }
+            .Categorizador img {
+                min-width: 30%;
+            }
+        
+            .Categorizador {
+                flex-wrap: wrap;          /* Permite que las imágenes se ajusten en filas si es necesario */
+            }
+        .move{
+            margin-top: -30%;
+            margin-left: 50%;
+        }
+
+
+
+
+        .Repartidor1 {
+         margin-top: -40%;
+         margin-left: -113%;
+         width: 20px;
+         height: 20px;
+            }
+            .EnProductosDesde999 {
+                margin-top: -40%;
+                margin-left: -129%;
+                width: 100%;
+                font-size: 16px;
+
+                }   
+                
+            .EnvOGratis {
+                margin-top: -40%;
+                margin-left: -117%;
+                font-size: 16px;
+                font-family: Sansation;
+                font-weight: 700;
+            }
+
+                .container {
+                  margin-left: 0%;
+                  margin-top: 12%;
+                  grid-template-columns: repeat(2, 1fr);
+                  gap: 0 18px;
+                }
+
+                .mover{
+                    width: 100%;
+                    margin-left: 5%;
+                    font-size: 18px;
+                    margin-top: -23px
+                }
+
+
+
+
+                .rectangle {
+                        width: 100%;                 /* Ajusta el ancho al 100% del contenedor */
+                        border-radius: 8px;          /* Reduce el radio del borde */
+                        background-color: rgba(42, 39, 71, 0.1); /* Color más claro para dispositivos pequeños */
+                        text-align: center;          /* Centra el texto */
+                        flex-direction: column;      /* Asegura disposición en columna */
+                    }
+                
+                    .product-img {
+                        width: 60px;                /* Reduce el tamaño de las imágenes */
+                        height: 60px;               /* Mantiene proporción */
+                    }
+                
+                    .product-name {
+                        font-size: 16px;             /* Reduce el tamaño del texto */
+                        margin-top: 8px;             /* Ajusta espaciado superior */
+                    }
+                
+                    .product-description {
+                        font-size: 14px;             /* Texto más pequeño */
+                        color: #666;                 /* Mantén el color */
+                        margin-top: 5px;             /* Espaciado superior reducido */
+                    }
+                
+                    .product-price {
+                        font-size: 18px;             /* Tamaño ligeramente más pequeño */
+                        margin-top: 8px;             /* Ajusta el margen superior */
+                    }
+                
+                    .precio {
+                        margin-bottom: 0px;          /* Mantén el margen inferior en 0 */
+                    }
+                
+                    .rectangle .descripcion {
+                        min-height: 80px !important; /* Ajusta la altura mínima para móviles */
+                    }
+                
+                    .rectangle .precio {
+                        align-items: center;         /* Centra horizontalmente */
+                        text-align: center;          /* Centra el texto */
+                    }
+                
+                    .nombre {
+                        min-height: 40px !important; /* Reduce la altura mínima */
+                        
+                    }
+
+
+                    .carrito {  
+                        margin-right: 45%;
+                    
+                    
+                }        
+                    
+                #imageCarousel {
+                    min-width: 20%;                 /* Asegura que el carrusel ocupe todo el ancho del dispositivo */
+                    margin: 0 auto;              /* Centra el carrusel */
+
+                }
+            
+                #imageCarousel .carousel-inner {
+                    max-width: 30%;                 /* Asegura que las imágenes ocupen todo el ancho del carrusel */
+                }
+            
+                #imageCarousel .carousel-item img {
+                    min-width: 30%;                 /* Ajusta la imagen al ancho completo del contenedor */
+                    height: auto;                /* Mantiene la proporción de la imagen */
+                    max-height: 125px;           /* Limita la altura máxima de las imágenes */
+                    object-fit: cover;           /* Recorta la imagen para ajustarla */
+                    border-radius: 8px;          /* Bordes redondeados para las imágenes */
+                }
+            
+                .carousel-control-prev,
+                .carousel-control-next {
+                    width: 10%;                  /* Reduce el tamaño de las áreas de clic de las flechas */
+                }
+            
+                .carousel-control-prev-icon,
+                .carousel-control-next-icon {
+                    background-size: 20px 20px;  /* Ajusta el tamaño de los íconos de las flechas */
+                    margin-left: 20%;
+                }
+
+
+                .carousel-control-prev, .carousel-control-next {
+                    width: 5%;
+                    margin-top: 10%;
+                }
+.carousel-control-prev {
+    left: -10%;
+    height: 20px;
+}
+.carousel-control-next {
+    right: 60%;
+    height: 20px;
+}
+@media (max-width: 700px) {
+    .text-primary {
+        margin-top: 60px;
+        margin-right: -164%;
+        white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+        text-overflow: ellipsis; /* Muestra "..." al final si el texto es más largo */
+        width: 7ch; /* Define el ancho máximo como 5 caracteres */
+    }
+}
+
+            
+                    }
+                
+                
+

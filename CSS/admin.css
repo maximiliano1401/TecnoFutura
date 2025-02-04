@@ -1,0 +1,92 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Fondo suave */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo del encabezado */
+.header {
+    margin-bottom: 20px;
+}
+
+.username {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0056f2;
+}
+
+.email {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Botones personalizados */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-button {
+    background-color: #0056f2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-button:hover {
+    background-color: #0040c8;
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+.custom-button:active {
+    transform: scale(0.95); /* Efecto de clic */
+}
+.boton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    transform: rotate(90deg);
+  }
+
+
+/* Ajustes responsivos */
+@media (max-width: 700px) {
+    .container {
+        padding: 15px;
+        margin-top: -180px;
+    }
+
+    .username {
+        font-size: 1.2rem;
+    }
+
+    .custom-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
