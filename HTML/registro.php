@@ -27,13 +27,13 @@
                     <input type="text" id="nombre" name="nombre" class="input-field" placeholder="Ingresa tu nombre completo" required>
                 </div>
                 <div class="input">
-                    <input type="number" id="edad" name="edad" min="0" class="input-field" placeholder="Ingresa tu edad" required>
+                    <input type="number" id="edad" name="edad" min="0" class="input-field" placeholder="Fecha de nacimiento" required>
                 </div>
                 <div class="input">
                     <input type="email" id="correo" name="correo" class="input-field" placeholder="Ingresa un correo" required>
                 </div>
                 <div class="input">
-                    <input type="number" id="numero" name="numero" min="0" class="input-field" placeholder="Ingresa tu numero telefonico" required>
+                    <input type="number" id="numero" name="numero" min="0" class="input-field" placeholder="Ingresa tu númerdo de celular" required>
                 </div>
                 <div class="input password">
                     <input type="password" id="contrasena" name="contrasena" class="input-field" placeholder="Ingresa una contraseña" required>
