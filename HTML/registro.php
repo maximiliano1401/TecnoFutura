@@ -78,6 +78,53 @@
     <!-- Agregar enlaces a jQuery y Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function checkboxverificador() {
+            const checkbox = document.getElementById("terminos");
+            const BotonParaProcesar = document.getElementById("botonaceptar");
+
+            if (checkbox.checked) {
+                BotonParaProcesar.disabled = false;
+            } else {
+                BotonParaProcesar.disabled = true;
+            }
+        }
+
+        function mostrarModal(mensaje) {
+            // Insertar el mensaje en el cuerpo del modal
+            const modalMessage = document.getElementById("modal-message");
+            modalMessage.textContent = mensaje;
+
+            // Mostrar el modal usando Bootstrap
+            $('#responseModal').modal('show');
+        }
+
+        function registro() {
+            const formulario = document.getElementById("login-form");
+            const formData = new FormData(formulario);
+
+            fetch('../PHP/procesar_usuarios.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                         mostrarModal(data.message);
+                        window.location.href = 'registro.php'; 
+                    } else {
+                        mostrarModal(data.message);
+                    }
+                    formulario.reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    mostrarModal("Ocurrió un error al intentar registrar al usuario. Intente de nuevo.");
+                });
+        }
+
+    </script>
 </body>
 
 </html>
