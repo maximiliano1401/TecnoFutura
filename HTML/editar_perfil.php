@@ -32,79 +32,82 @@ mysqli_close($conexion);
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar perfil</title>
-    <link rel="stylesheet" href="../CSS/perfil.css">
+    <title>Editar Perfil</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../CSS/perfil.css">
 </head>
+
 <body>
-<div class="contenedor-login">
-
-  <div class="titulo">EDITA TUS DATOS DE USUARIO:</div>
-  <br>
-  <form id="login-form">
-<div class="etiqueta">Nombre Completo:</div>
-<div class="campo">
-  <div class="campo-fondo"></div>
-  <input class="campo-texto" type="text" name="nombreCompleto"  value="<?= $nombre ?>"  />
-  <img class="icono" src="../IMG/usuario.png" alt="Usuario Icono" />
-</div>
-<br>
-<div class="etiqueta">Correo Electrónico:</div>
-<div class="campo">
-  <div class="campo-fondo"></div>
-  <input class="campo-texto" type="email" name="correoElectronico"  value="<?= $correo ?>"  />
-  <img class="icono" src="../IMG/sobre 2.png" alt="Usuario Icono" />
-</div>
-<br>
-<div class="etiqueta">Número Telefónico:</div>
-<div class="campo">
-  <div class="campo-fondo"></div>
-  <input class="campo-texto" type="tel" name="numeroTelefonico"  value="<?= $telefono ?>"  />
-  <img class="icono" src="../IMG/wats.png" alt="Usuario Icono" />
-</div>
-<br>
-  <div class="etiqueta">Edad:</div>
-  <div class="campo">
-    <div class="campo-fondo"></div>
-    <input class="campo-texto" type="int" name="edad" value="<?= $edad ?>"  />
-    <img class="icono" src="../IMG/aaa.png" alt="Contraseña Icono" />
-  </div>
-
-</form>
-<div class="boton-aceptar">
-    <button type="button" onclick="actualizar()" class="boton-fondo">ACTUALIZAR DATOS</button>
-    <br><br>
-    <button class="boton-fondo" type="submit" onclick="window.location.href='perfil.php' ">REGRESAR</button>
-</div>
-
-<!-- Modal de Bootstrap -->
-<div class="modal fade" id="responseModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel">Mensaje</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+    <main class="editar-perfil">
+        <h1>Editar Perfil</h1>
+        <div class="contenedor">
+            <div class="perfil-y-formulario">
+                <div class="perfil">
+                    <div class="imagen-perfil">
+                        <img src="../IMG/repartidor 1.png" alt="Foto de perfil">
+                        <div class="editar-icono">✏️</div>
+                    </div>
+                </div>
+                <form class="formulario" id="login-form">
+                    <label for="nombre">Nombre Completo:</label>
+                    <div class="campo">
+                        <img src="../IMG/usuario.png" class="icono">
+                        <input type="text" id="nombre" name="nombreCompleto" value="<?= $nombre ?>" placeholder="Nombre Completo">
+                    </div>
+                    <label for="correo">Correo Electrónico</label>
+                    <div class="campo">
+                        <img src="../IMG/sobre 2.png" class="icono">
+                        <input type="email" id="correo" name="correoElectronico" value="<?= $correo ?>" placeholder="Correo Electrónico">
+                    </div>
+                    <label for="telefono">Télofono</label>
+                    <div class="campo">
+                        <img src="../IMG/wats.png" class="icono">
+                        <input type="tel" id="telefono" name="numeroTelefonico" value="<?= $telefono ?>" placeholder="Teléfono">
+                    </div>
+                    <label for="fecha">Edad:</label>
+                    <div class="campo">
+                        <img src="../IMG/aaa.png" class="icono">
+                        <input type="int" id="fecha" name="edad" value="<?= $edad ?>">
+                    </div>
+                </form>
             </div>
-            <div class="modal-body" id="modal-message">
-                <!-- El mensaje se mostrará aquí -->
+        </div>
+        <div class="boton-contenedor">
+            <button class="boton boton-regresar" onclick="window.location.href='perfil.php'">Regresar</button>
+            <button class="boton boton-guardar" onclick="actualizar()">Guardar</button>
+        </div>
+
+    </main>
+
+    <!-- Modal de Bootstrap -->
+    <div class="modal fade" id="responseModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Mensaje</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-message">
+                    <!-- El mensaje se mostrará aquí -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="document.location.reload();">Cerrar</button>
+                </div>
             </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="document.location.reload();">Cerrar</button>            </div>
         </div>
     </div>
-</div>
 
-<!-- Agregar jQuery completo y Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Agregar jQuery completo y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
+    <script>
         function checkboxverificador() {
             const checkbox = document.getElementById("terminos");
             const BotonParaProcesar = document.getElementById("botonaceptar");
@@ -126,42 +129,42 @@ mysqli_close($conexion);
         }
 
         function actualizar() {
-    const formulario = document.getElementById("login-form");
-    const formData = new FormData(formulario);
+            const formulario = document.getElementById("login-form");
+            const formData = new FormData(formulario);
 
-    // Verifico que se envien datos hayan o NO HAYAN sido editados
-    const nombre = document.querySelector('input[name="nombreCompleto"]').value || "<?= $nombre ?>";
-    const correo = document.querySelector('input[name="correoElectronico"]').value || "<?= $correo ?>";
-    const numero = document.querySelector('input[name="numeroTelefonico"]').value || "<?= $telefono ?>";
-    const edad = document.querySelector('input[name="edad"]').value || "<?= $edad ?>";
+            // Verifico que se envien datos hayan o NO HAYAN sido editados
+            const nombre = document.querySelector('input[name="nombreCompleto"]').value || "<?= $nombre ?>";
+            const correo = document.querySelector('input[name="correoElectronico"]').value || "<?= $correo ?>";
+            const numero = document.querySelector('input[name="numeroTelefonico"]').value || "<?= $telefono ?>";
+            const edad = document.querySelector('input[name="edad"]').value || "<?= $edad ?>";
 
 
-    //agrego los datos en el formdata
-    formData.set('nombreCompleto', nombre);
-    formData.set('correoElectronico', correo);
-    formData.set('numeroTelefonico', numero);
-    formData.set('edad', edad);
+            //agrego los datos en el formdata
+            formData.set('nombreCompleto', nombre);
+            formData.set('correoElectronico', correo);
+            formData.set('numeroTelefonico', numero);
+            formData.set('edad', edad);
 
-    fetch('../PHP/actualizar_usuarios.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === 'success') {
-                mostrarModal(data.message);
-                window.location.href = 'editar_perfil.php';
-            } else {
-                mostrarModal(data.message);
-            }
-            formulario.reset();
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            mostrarModal("Ocurrió un error al intentar actualizar al usuario. Intente de nuevo.");
-        });
-}
+            fetch('../PHP/actualizar_usuarios.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        mostrarModal(data.message);
+                        window.location.href = 'editar_perfil.php';
+                    } else {
+                        mostrarModal(data.message);
+                    }
+                    formulario.reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    mostrarModal("Ocurrió un error al intentar actualizar al usuario. Intente de nuevo.");
+                });
+        }
     </script>
-
 </body>
+
 </html>
