@@ -1,4 +1,5 @@
 <?php
+// conexión a la base de datos
 include "../PHP/conexion.php";
 
 // VERIFICACIÓN DE SESIÓN ACTIVA
