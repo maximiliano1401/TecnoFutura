@@ -59,6 +59,7 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
                         <div class="user-icon bg-success rounded-circle">
                             <h5 class="text-primary mt-2"><?php echo $_SESSION['Nombre']; ?></h5>
                         </div>
+                    </div>
                         <ul class="list-group mt-4">
                             <button class="list-group-item d-flex align-items-center" onclick="window.location.href='perfil.php'">
                                 <span class="fas fa-user me-3"></span> Mi perfil
@@ -90,7 +91,6 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
                                 <a href="../ADMINISTRACION/administracion.php" class="btn btn-primary mt-3">Acceder a Modo Administración</a>
                             <?php endif; ?>
                         </ul>
-                    </div>
                 </div>
             </div>
             <!-- Fin del menu desplegable -->
