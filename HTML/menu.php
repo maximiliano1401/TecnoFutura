@@ -126,7 +126,7 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
                 <img src="../IMG/1.png" alt="Teléfonos" onclick="window.location.href='telefonos.php'">
                 <img src="../IMG/2.png" alt="Televisores" onclick="window.location.href='television.php'">
                 <img src="../IMG/3.png" alt="Computadoras" onclick="window.location.href='computadora.php'">
-                <img src="../IMG/4.png" alt="Auriculares" onclick="window.location.href='Auriculares.php'">
+                <img src="../IMG/4.png" alt="Auriculares" onclick="window.location.href='auriculares.php'">
             </div>
         </section>
         <hr>
