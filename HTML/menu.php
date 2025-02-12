@@ -113,7 +113,7 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
                 </div>
                 <a href="carrito.php" class="cart">
                     <span class="cart-text">Mis compras</span>
-                    <img src="../IMG/carrito (2).png" alt="Carrito" class="cart-icon">
+                    <img src="../IMG/Shopping_cart.svg" alt="Carrito" class="cart-icon">
                 </a>
             </div>
         </nav>
