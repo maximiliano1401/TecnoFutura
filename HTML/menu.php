@@ -124,7 +124,7 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
             <h2 class="titulo-seccion">Categorías</h2>
             <div class="iconos-categorias">
                 <img src="../IMG/Smartphone.svg" alt="Teléfonos" onclick="window.location.href='telefonos.php'">
-                <img src="../IMG/Tv.svg" alt="Televisores" onclick="window.location.href='television.php'">
+                <img src="../IMG/Monitor.svg" alt="Televisores" onclick="window.location.href='television.php'">
                 <img src="../IMG/Laptop.svg" alt="Computadoras" onclick="window.location.href='computadora.php'">
                 <img src="../IMG/Headphones.svg" alt="Auriculares" onclick="window.location.href='auriculares.php'">
             </div>
