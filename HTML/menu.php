@@ -44,7 +44,7 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a href="#" class="navbar-brand">
+                <a href="menu.php" class="navbar-brand">
                     <img src="../IMG/logo.png" alt="Logo" class="logo">
                 </a>
             </div>
