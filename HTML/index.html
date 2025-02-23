@@ -26,14 +26,14 @@
             <label for="username">Usuario</label>
             <div class="input-with-icon">
               <img src="../IMG/usuario.png" alt="Usuario" class="input-icon" />
-              <input type="email" name="correo" placeholder="Ingresa tu usuario" class="form-control" />
+              <input type="email" name="correo" placeholder="Ingresa tu usuario" class="form-control" required />
             </div>
           </div>
           <div class="input-group">
             <label for="password">Contraseña</label>
             <div class="input-with-icon">
               <img src="../IMG/cerrar.png" alt="Contraseña" class="input-icon" />
-              <input type="password" name="contrasena" placeholder="Ingresa tu contraseña" class="form-control" />
+              <input type="password" name="contrasena" placeholder="Ingresa tu contraseña" class="form-control" required />
             </div>
           </div>
           <div class="buttons">
@@ -51,20 +51,25 @@
   <div id="loadingCircle" class="spinner-border" style="display: none;"></div>
 
   <!-- Modal para mensajes -->
-  <div class="modal fade" id="modalMessage" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+<!-- Modal de Bootstrap -->
+<div class="modal fade" id="modalMessage" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalLabel">Mensaje</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body" id="modalText"></div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">Mensaje</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <p id="modalText"></p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
       </div>
-    </div>
   </div>
+</div>
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -110,5 +115,4 @@
     }
   </script>
 </body>
-
 </html>
