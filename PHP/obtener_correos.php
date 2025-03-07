@@ -1,19 +1,10 @@
 <?php
 // Configuración de la base de datos
-$host = "localhost";
-$usuario = "root";
-$contraseña = "";
-$base_de_datos = "tecnofutura";
-
-// Conexión a MySQL
-$conn = new mysqli($host, $usuario, $contraseña, $base_de_datos);
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+include_once 'conexion.php';
 
 // Consulta para obtener los correos de usuarios registrados
 $sql = "SELECT Correo FROM clientes -- WHERE suscrito_marketing = 1";
-$result = $conn->query($sql);
+$result = $conexion->query($sql);
 
 $emails = [];
 if ($result->num_rows > 0) {
