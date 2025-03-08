@@ -1,6 +1,6 @@
 <?php
 // Configuración de la base de datos
-include_once 'conexion.php';
+include_once '../PHP/conexion.php';
 
 // Consulta para obtener los correos de usuarios registrados
 $sql = "SELECT Correo FROM clientes -- WHERE suscrito_marketing = 1";
