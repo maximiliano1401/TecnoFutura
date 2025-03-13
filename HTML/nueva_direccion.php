@@ -15,57 +15,48 @@ if (!isset($_SESSION['ID_Cliente'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Dirección</title>
-    <link rel="stylesheet" href="../CSS/direccion.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/direccion.css">
 </head>
 <body>
-<img class="boton" src="../IMG/Button.png" onclick="window.location.href='menu.php'">
-    <div class="contenedor-login">
-        <div class="titulo">REGISTRAR UNA NUEVA DIRECCION:</div>
-        <br>
-        <form id="login-form">
-            <div class="etiqueta">Calle:</div>
-            <div class="campo">
-                <div class="campo-fondo"></div>
-                <input class="campo-texto" type="text" name="calle" placeholder="Dirección y/o Domicilio"  />
-            </div>
-            <br>
-            <div class="etiqueta">Número exterior:</div>
-            <div class="campo">
-                <div class="campo-fondo"></div>
-                <input class="campo-texto" type="number" name="NumExt" placeholder="Ingresa tu numero exterior."  />
-            </div>
-            <br>
-            <div class="etiqueta">Número interior:</div>
-            <div class="campo">
-                <div class="campo-fondo"></div>
-                <input class="campo-texto" type="number" name="NumInt" placeholder="Ingresa tu numero interior. (OPCIONAL)"  />
-            </div>
-            <br>
-            <div class="etiqueta">¿Entre qué calles está?</div>
-            <div class="campo">
-                <div class="campo-fondo"></div>
-                <input class="campo-texto" type="text" name="entre" placeholder="Ingresa entre que calles se encuentra tu domicilio."  />
-            </div>
-            <br>
-            <div class="etiqueta">Número de contacto:</div>
-            <div class="campo">
-                <div class="campo-fondo"></div>
-                <input class="campo-texto" type="number" name="NumContacto" placeholder="Ingresa algun numero de contacto del domicilio."  />
-            </div>
-            <br>
-            <div class="etiqueta">Colonia:</div>
-            <div class="campo">
-                <div class="campo-fondo"></div>
-                <input class="campo-texto" type="text" name="colonia" placeholder="Ingresa la colonia."/>
-            </div>
-        </form>
-        <br>
-        <div class="boton-aceptar">
-            <button type="button"  onclick="direccion()" class="boton-fondo">REGISTRAR DIRECCION</button>
-        </div>
+    <header>
+        <button class="back-button" onclick="window.location.href='menu.php'">&#8592;</button>
+        <h1>Añadir Nueva Dirección</h1>
+    </header>
+    
+    <main>
+        <form id="direccion-form">
+            <label for="colonia">Colonia*:</label>
+            <input type="text" id="colonia" name="colonia" placeholder="Nombre De La Colonia" required>
 
-    </div>
+            <label for="calle">Calle*:</label>
+            <input type="text" id="calle" name="calle" placeholder="Nombre de calle" required>
+
+            <div class="row">
+                <div class="column">
+                    <label for="num_exterior">Número exterior:</label>
+                    <input type="text" id="num_exterior" name="num_ext" placeholder="(OPCIONAL)">
+                </div>
+                <div class="column">
+                    <label for="num_interior">Número interior:</label>
+                    <input type="text" id="num_interior" name="num_int" placeholder="(OPCIONAL)">
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="column">
+                    <label for="entre_calles">¿Entre qué calles está?</label>
+                    <input type="text" id="entre_calles" name="entre_calles" placeholder="(OPCIONAL)">
+                </div>
+                <div class="column">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="num_contacto" placeholder="Número telefónico">
+                </div>
+            </div>
+
+            <button type="submit" onclick="direccion()" class="guardar-btn">Guardar</button>
+        </form>
+    </main>
  
     <!-- Modal de Bootstrap -->
 <div class="modal fade" id="responseModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
