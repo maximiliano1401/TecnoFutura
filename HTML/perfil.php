@@ -47,7 +47,7 @@ mysqli_close($conexion);
     <nav class="navbar">
       <div class="navbar-left">
         <a href="menu.php" class="navbar-brand">
-          <img src="../IMG/logo.png" alt="Logo" class="logo">
+          <img src="../IMG/Arrow-left-circle.png" alt="Logo" class="logo">
         </a>
       </div>
     </nav>
@@ -58,7 +58,7 @@ mysqli_close($conexion);
       <div class="perfil-y-formulario">
         <div class="perfil">
           <div class="imagen-perfil">
-            <img src="../IMG/repartidor 1.png" alt="Foto de perfil">
+            <img src="../IMG/user-avatar.png" alt="Foto de perfil">
           </div>
           <br>
           <button class="boton boton-editar" onclick="window.location.href='editar_perfil.php'">Editar Perfil</button>

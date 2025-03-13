@@ -36,7 +36,9 @@ mysqli_close($conexion);
 
 <body>
     <header>
-        <button class="back-button" onclick="window.location.href='menu.php'">&#8592;</button>
+        <button class="back-button" onclick="window.location.href='menu.php'">
+            <img src="../IMG/Arrow-left-circle.png" alt="Logo" class="logo">
+        </button>
     </header>
     <div class="contenedor-login">
         <h1>Direcciones Registradas</h1>
