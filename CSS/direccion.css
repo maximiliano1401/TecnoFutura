@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #67B7F7, #ffffff);
+  background: linear-gradient(#48A2DE, #C8C8C8 50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,11 +10,9 @@ body {
 }
 
 header {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 20px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
 }
 
 .back-button {
@@ -73,21 +71,23 @@ input, select {
 }
 
 .guardar-btn {
-  background-color: #C6CBCF;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
   margin: 0 auto;
-  margin-top: 20px;
-  cursor: pointer;
+  margin-top: 50px;
   width: 50%;
-  border-radius: 40px;
+  font-size: 24px;
   font-weight: bold;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  background-color: #C6CBCF;
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  box-shadow: #000 2px 2px 5px; 
 }
 
 .guardar-btn:hover {
-  background-color: #ccc; /* Color más oscuro al pasar el mouse */
+  background-color: #b0b3b6;
 }
 
 table {

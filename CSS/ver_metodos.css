@@ -6,13 +6,27 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: #f0f0f0;
+    background: linear-gradient(#48A2DE, #C8C8C8 50%);
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
 .contenedor-login {
@@ -63,6 +77,7 @@ table tbody tr:hover {
 .boton-aceptar {
     margin-top: 20px;
 }
+
 .boton-fondo {
     padding: 10px 20px;
     background: #2400F9;
@@ -73,17 +88,17 @@ table tbody tr:hover {
     cursor: pointer;
     text-align: center;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     transition: background 0.3s;
 }
 
 .boton-fondo:hover {
-    background: #1d00d9; 
+    background: #1d00d9;
 }
 
-   /* Estilo base para los botones */
-   .btn-accion {
+/* Estilo base para los botones */
+.btn-accion {
     display: inline-block;
     padding: 8px 12px;
     margin: 5px;
@@ -101,7 +116,8 @@ table tbody tr:hover {
 
 /* Estilo para el botón Editar */
 .btn-editar {
-    background-color: #007bff; /* Azul */
+    background-color: #007bff;
+    /* Azul */
     color: white;
     border: 1px solid #0056b3;
     padding: 8px 20px;
@@ -114,7 +130,8 @@ table tbody tr:hover {
 
 /* Estilo para el botón Eliminar */
 .btn-eliminar {
-    background-color: #dc3545; /* Rojo */
+    background-color: #dc3545;
+    /* Rojo */
     color: white;
     border: 1px solid #bd2130;
 
@@ -124,39 +141,48 @@ table tbody tr:hover {
     background-color: #bd2130;
     color: #f8f9fa;
 }
+
 @media (max-width: 400px) {
     .contenedor-login {
         width: 100%;
         margin: 0 auto;
-        padding: 5px; /* Espaciado interior reducido */
-        overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
-margin-top: -60%;
+        padding: 5px;
+        /* Espaciado interior reducido */
+        overflow-x: auto;
+        /* Permite desplazamiento horizontal si es necesario */
+        margin-top: -60%;
     }
 
     .contenedor-login h1 {
-        font-size: 22px; /* Tamaño reducido del título */
+        font-size: 22px;
+        /* Tamaño reducido del título */
         position: absolute;
     }
 
     table {
-      
-        margin: 40px 0; /* Espaciado reducido */
+
+        margin: 40px 0;
+        /* Espaciado reducido */
 
     }
 
     table th,
     table td {
-        font-size: 12px; /* Tamaño reducido del título */
-        min-width: 103px;    }
+        font-size: 12px;
+        /* Tamaño reducido del título */
+        min-width: 103px;
+    }
 
     .boton-aceptar {
-        margin-top: 10px; /* Menor espaciado */
+        margin-top: 10px;
+        /* Menor espaciado */
     }
 
     .boton-fondo {
         margin-top: 20%;
-        font-size: 12px; /* Tamaño reducido del título */
-        padding: 8px 12px; /* Tamaño del botón ajustado */
+        font-size: 12px;
+        /* Tamaño reducido del título */
+        padding: 8px 12px;
+        /* Tamaño del botón ajustado */
     }
 }
-

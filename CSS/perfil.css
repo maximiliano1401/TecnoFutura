@@ -165,7 +165,7 @@ h1 {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
-    box-shadow: #00000077 0px 5px 10px;
+    box-shadow: #000 2px 2px 5px; 
 }
 
 .boton-contenedor .boton-regresar {

@@ -21,9 +21,9 @@ if (!isset($_SESSION['ID_Cliente'])) {
 <body>
     <header>
         <button class="back-button" onclick="window.location.href='menu.php'">&#8592;</button>
-        <h1>Añadir Nueva Dirección</h1>
     </header>
     
+    <h1>Añadir Nueva Dirección</h1>
     <main>
         <form id="direccion-form">
             <label for="colonia">Colonia*:</label>

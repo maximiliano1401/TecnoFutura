@@ -25,14 +25,19 @@ mysqli_close($conexion);
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Dirección</title>
-    <link rel="stylesheet" href="../CSS/ver_metodos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/ver_metodos.css">
 </head>
+
 <body>
+    <header>
+        <button class="back-button" onclick="window.location.href='menu.php'">&#8592;</button>
+    </header>
     <div class="contenedor-login">
         <h1>Direcciones Registradas</h1>
         <table border="1">
@@ -70,11 +75,11 @@ mysqli_close($conexion);
                 <?php endif; ?>
             </tbody>
         </table>
-        <center>
+        <!-- <center>
             <div class="boton-aceptar">
                 <button class="boton-fondo" type="button" onclick="window.location.href='menu.php'">REGRESAR</button>
             </div>
-        </center>
+        </center> -->
     </div>
 
     <!-- Modal de confirmación -->
@@ -112,4 +117,5 @@ mysqli_close($conexion);
     </script>
 
 </body>
+
 </html>
