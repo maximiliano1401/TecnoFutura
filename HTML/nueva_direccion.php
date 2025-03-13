@@ -35,22 +35,22 @@ if (!isset($_SESSION['ID_Cliente'])) {
             <div class="row">
                 <div class="column">
                     <label for="num_exterior">Número exterior:</label>
-                    <input type="text" id="num_exterior" name="num_ext" placeholder="(OPCIONAL)">
+                    <input type="text" id="num_exterior" name="NumExt" placeholder="(OPCIONAL)">
                 </div>
                 <div class="column">
                     <label for="num_interior">Número interior:</label>
-                    <input type="text" id="num_interior" name="num_int" placeholder="(OPCIONAL)">
+                    <input type="text" id="num_interior" name="NumInt" placeholder="(OPCIONAL)">
                 </div>
             </div>
             
             <div class="row">
                 <div class="column">
                     <label for="entre_calles">¿Entre qué calles está?</label>
-                    <input type="text" id="entre_calles" name="entre_calles" placeholder="(OPCIONAL)">
+                    <input type="text" id="entre_calles" name="entre" placeholder="(OPCIONAL)">
                 </div>
                 <div class="column">
                     <label for="telefono">Teléfono:</label>
-                    <input type="text" id="telefono" name="num_contacto" placeholder="Número telefónico">
+                    <input type="text" id="telefono" name="NumContacto" placeholder="Número telefónico">
                 </div>
             </div>
 
