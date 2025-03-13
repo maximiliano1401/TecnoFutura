@@ -61,7 +61,7 @@ if ($result->num_rows > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles de Envío</title>
-    <link rel="stylesheet" href="../css/detalles.css">
+    <link rel="stylesheet" href="../CSS/detalles.css">
 </head>
 <body>
     <section class="rastreo-pedidos">
