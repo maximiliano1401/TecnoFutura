@@ -9,7 +9,7 @@ header("Access-Control-Allow-Methods: GET");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 // Token de seguridad
-$token = "clave_secreta";
+$token = "";
 
 // Verificar el token en la URL
 if (!isset($_GET['token']) || $_GET['token'] !== $token) {
