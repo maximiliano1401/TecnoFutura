@@ -36,12 +36,14 @@ if (isset($_GET['busqueda'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">    
     <link rel="stylesheet" href="../CSS/buscar.css">
     <title>Resultados de búsqueda</title>
 </head>
 
 <body>
-    <img class="boton" src="../IMG/Button.png" onclick="window.location.href='menu.php'">
+    <?php include "navbar.php" ?>
+
     <div class="container resultados">
         <h1 class="titulo">Resultados de búsqueda</h1>
         <?php if (mysqli_num_rows($resultado) > 0): ?>

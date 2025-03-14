@@ -73,15 +73,18 @@ if (isset($_GET['id_producto'])) {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $producto['Nombre']; ?></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/producto.css">
 </head>
+
 <body>
-<img class="boton" src="../IMG/Button.png" onclick="window.location.href='menu.php'">
+    <?php include "navbar.php" ?>
     <section class="producto">
         <div class="detalles">
             <h2><?php echo $producto['Nombre']; ?></h2>
@@ -96,9 +99,9 @@ if (isset($_GET['id_producto'])) {
                             <img src="../IMG_ITEM/<?php echo $fotos['Ruta1']; ?>" class="d-block w-100 tamano" alt="<?php echo $producto['Nombre']; ?>">
                         </div>
                         <?php if (!empty($fotos['Ruta2'])): ?>
-                        <div class="carousel-item">
-                            <img src="../IMG_ITEM/<?php echo $fotos['Ruta2']; ?>" class="d-block w-100 tamano" alt="<?php echo $producto['Nombre']; ?>">
-                        </div>
+                            <div class="carousel-item">
+                                <img src="../IMG_ITEM/<?php echo $fotos['Ruta2']; ?>" class="d-block w-100 tamano" alt="<?php echo $producto['Nombre']; ?>">
+                            </div>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -110,7 +113,7 @@ if (isset($_GET['id_producto'])) {
                 </button>
             </div>
         </div>
-        
+
         <!-- Información del producto -->
         <div class="info">
             <p><strong>Marca:</strong> <?php echo $producto['Marca']; ?></p>
@@ -132,13 +135,13 @@ if (isset($_GET['id_producto'])) {
             <button class="btn btn-secondary">Cantidad: 1</button>
             <a href="compra.php?id_producto=<?php echo $id_producto; ?>" class="btn btn-success">Comprar</a>
         </div>
+        <section class="especificaciones">
+            <div class="caracteristica">
+                <p>Especificaciones <br><br><?php echo $producto['Descripcion']; ?></p>
+            </div>
+        </section>
     </section>
 
-    <section class="especificaciones">
-        <div class="caracteristica">
-            <p>Especificaciones <br><br><?php echo $producto['Descripcion']; ?></p>
-        </div>
-    </section>
 
     <section class="financiamiento">
         <p>Paga a meses sin intereses con tarjetas de crédito participantes</p>
@@ -149,25 +152,22 @@ if (isset($_GET['id_producto'])) {
     </section>
 
     <section class="recomendaciones">
-    <center>
-        <h3>Recomendaciones</h3>
-    </center>
-    <div class="container">
-    <?php foreach ($productos_recomendados as $producto_recomendado): ?>
-        <div class="rectangle">
-            <a href="producto.php?id_producto=<?php echo $producto_recomendado['ID_Producto']; ?>">
-                <img src="../IMG_ITEM/<?php echo $producto_recomendado['Ruta1']; ?>" 
-                     class="product-img img-fluid" 
-                     alt="<?php echo $producto_recomendado['Nombre']; ?>">
-                <p class="product-name"><?php echo $producto_recomendado['Nombre']; ?></p>
-                <p class="product-price">$<?php echo number_format($producto_recomendado['Precio'], 2); ?></p>
-            </a>
+        <center>
+            <h3>Recomendaciones</h3>
+        </center>
+        <div class="container">
+            <?php foreach ($productos_recomendados as $producto_recomendado): ?>
+                <div class="rectangle">
+                    <a href="producto.php?id_producto=<?php echo $producto_recomendado['ID_Producto']; ?>">
+                        <img src="../IMG_ITEM/<?php echo $producto_recomendado['Ruta1']; ?>"
+                            class="product-img img-fluid"
+                            alt="<?php echo $producto_recomendado['Nombre']; ?>">
+                        <p class="product-name"><?php echo $producto_recomendado['Nombre']; ?></p>
+                        <p class="product-price">$<?php echo number_format($producto_recomendado['Precio'], 2); ?></p>
+                    </a>
+                </div>
+            <?php endforeach; ?>
         </div>
-    <?php endforeach; ?>
-</div>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
 </html>
