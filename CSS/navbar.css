@@ -42,7 +42,7 @@
     border-radius: 20px;
     overflow: hidden;
     padding: 5px 10px;
-    width: 400px;
+    /* width: 400px; */
 }
 
 .search-input {
@@ -171,4 +171,30 @@
     height: 40px;
     margin-left: auto;
     padding-right: 10px !important;
+}
+
+@media (max-width: 768px) {
+    .navbar-right {
+        display: none;
+    }
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .search-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-right {
+        display: none;
+    }
+    .navbar {
+        flex-direction: column;
+        padding: 5px;
+    }
+    .search-form {
+        width: 100%;
+    }
 }
