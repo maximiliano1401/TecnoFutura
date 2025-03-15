@@ -44,7 +44,6 @@
     margin-bottom: 10px;
     transform: translateX(13%);
     margin-left: 20px;
-
 }
 
 .input-background {
@@ -221,17 +220,8 @@ button:disabled {
 }
 
 
-@media (max-width: 400px) {
-    .logo {
-        width: 80%;
-        height: 24%;
-        position: absolute;
-        top: 20px;
-        left: 44%;
-    }
-
-    
-.input {
+@media (max-width: 412px) {
+    .input {
     position: relative;
     margin-bottom: 10px;
     margin-left: -20px;

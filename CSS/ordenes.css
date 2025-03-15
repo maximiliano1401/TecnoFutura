@@ -253,3 +253,34 @@ body {
   margin-left: auto;
   padding-right: 10px !important;
 }
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .orden-item {
+    display: block;
+    width: 80%;
+  }
+
+  .orden-detalles {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .precio-detalles {
+    text-align: right;
+  }
+}
+
+@media (max-width: 1024px) {
+  .orden-item {
+    width: 70%;
+  }
+
+  .orden-detalles h2 {
+    font-size: 27px;
+  }
+
+  .precio {
+    font-size: 32px;
+  }
+}
