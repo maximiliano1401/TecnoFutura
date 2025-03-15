@@ -3,6 +3,9 @@ body {
     padding: 0;
     font-family: 'Arial', sans-serif;
     background: linear-gradient(#48A2DE, #C8C8C8 50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .header {
@@ -192,4 +195,69 @@ h1 {
     width: 20px;
     height: 20px;
     opacity: 0.6;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .perfil .imagen-perfil {
+        width: 120px;
+        height: 120px;
+    }
+
+    .perfil-y-formulario {
+        flex-direction: column;
+    }
+
+    .boton-contenedor .boton {
+        width: 140px;
+    }
+
+    .editar-perfil {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo {
+        height: 25px;
+    }
+
+    .contenedor {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .perfil .imagen-perfil {
+        width: 100px;
+        height: 100px;
+    }
+
+    .perfil-y-formulario {
+        flex-direction: column;
+    }
+
+    .boton-contenedor .boton {
+        width: 140px;
+    }
+
+    .boton {
+        width: 90%;
+    }
+
+    .editar-perfil {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    
 }
