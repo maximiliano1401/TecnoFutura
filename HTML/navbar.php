@@ -43,7 +43,7 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
                     <!-- Opción Mi Perfil -->
                     <li class="list-group-item d-flex align-items-center">
                         <span class="fas fa-user me-3"></span>
-                        <a href="perfil.php" class="w-100">Mi perfil</a>
+                        <button class="menu-btn w-100 text-start" onclick="location.href='perfil.php'">Mi perfil</button>
                     </li>
 
                     <!-- Opción Mis Direcciones -->
@@ -53,8 +53,8 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
                         <span class="fas fa-chevron-down"></span>
                     </li>
                     <ul class="collapse list-unstyled ps-4" id="direccionesSubmenu">
-                        <li class="list-group-item"><a href="nueva_direccion.php">Agregar Dirección</a></li>
-                        <li class="list-group-item"><a href="ver_direcciones.php">Ver Direcciones Registradas</a></li>
+                        <li class="list-group-item"><button class="menu-btn w-100 text-start" onclick="location.href='nueva_direccion.php'">Agregar Dirección</button></li>
+                        <li class="list-group-item"><button class="menu-btn w-100 text-start" onclick="location.href='ver_direcciones.php'">Ver Direcciones Registradas</button></li>
                     </ul>
 
                     <!-- Opción Métodos de Pago -->
@@ -64,8 +64,8 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
                         <span class="fas fa-chevron-down"></span>
                     </li>
                     <ul class="collapse list-unstyled ps-4" id="metodosPagoSubmenu">
-                        <li class="list-group-item"><a href="nuevo_metodo.php">Agregar Método de Pago</a></li>
-                        <li class="list-group-item"><a href="ver_metodos.php">Ver Métodos de Pago</a></li>
+                        <li class="list-group-item"><button class="menu-btn w-100 text-start" onclick="location.href='nuevo_metodo.php'">Agregar Método de Pago</button></li>
+                        <li class="list-group-item"><button class="menu-btn w-100 text-start" onclick="location.href='ver_metodos.php'">Ver Métodos de Pago</button></li>
                     </ul>
 
                     <!-- Opción Mis Compras -->
@@ -75,22 +75,23 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
                         <span class="fas fa-chevron-down"></span>
                     </li>
                     <ul class="collapse list-unstyled ps-4" id="comprasSubmenu">
-                        <li class="list-group-item"><a href="ordenes.php">Órdenes</a></li>
-                        <li class="list-group-item"><a href="historial.php">Historial de Compras</a></li>
+                        <li class="list-group-item"><button class="menu-btn w-100 text-start" onclick="location.href='ordenes.php'">Órdenes</button></li>
+                        <li class="list-group-item"><button class="menu-btn w-100 text-start" onclick="location.href='historial.php'">Historial de Compras</button></li>
                     </ul>
 
                     <!-- Cerrar sesión -->
                     <li class="list-group-item text-center">
-                        <a href="../SESIONES/cerrar.php" class="btn btn-danger cerrar-sesion w-100">Cerrar sesión</a>
+                        <button class="btn btn-danger cerrar-sesion w-100" onclick="location.href='../SESIONES/cerrar.php'">Cerrar sesión</button>
                     </li>
 
                     <!-- Botón de administración (solo visible si el usuario es administrador) -->
                     <?php if ($isAdmin): ?>
                         <li class="list-group-item text-center">
-                            <a href="../ADMINISTRACION/administracion.php" class="btn btn-primary modo-admin w-100">Acceder a Modo Administración</a>
+                            <button class="btn btn-primary modo-admin w-100" onclick="location.href='../ADMINISTRACION/administracion.php'">Acceder a Modo Administración</button>
                         </li>
                     <?php endif; ?>
                 </ul>
+
             </div>
         </div>
         <!-- Fin del menú desplegable -->
