@@ -57,9 +57,11 @@ $resultado = $conexion->query($sql_carrito);
             <div class="lista-productos">
                 <?php if ($resultado->num_rows > 0): ?>
                     <?php $total = 0; ?>
+                    <?php $cantidad = 0; ?>
                     <?php while ($producto = $resultado->fetch_assoc()):
                         $subtotal = $producto['Precio'] * $producto['Cantidad'];
                         $total += $subtotal;
+                        $cantidad += $producto['Cantidad'];
                     ?>
                         <div class="producto">
                             <img src="../IMG/<?php echo $producto['Foto']; ?>" alt="<?php echo $producto['Nombre']; ?>">
@@ -79,15 +81,17 @@ $resultado = $conexion->query($sql_carrito);
                     <?php endwhile; ?>
                 <?php else: ?>
                     <p>No tienes productos en tu carrito.</p>
+                    <?php $total = 0; ?>
                 <?php endif; ?>
             </div>
         </section>
         <aside class="resumen">
             <h3>Resumen</h3>
             <p>Subtotal: MXM <span>$<?php echo $total; ?></span></p>
-            <p>Costo de envío: MXM <span>$4000</span></p>
+            <p>Cantidad: <span><?php echo $cantidad; ?></span></p>
+            <!-- <p>Costo de envío: MXM <span>$4000</span></p> -->
             <p class="descuento">Cupón de descuento no aplica</p>
-            <p class="total">Total: MXM <span>$<?php echo $total + 4000; ?></span></p>
+            <p class="total">Total: MXM <span>$<?php echo $total?></span></p>
             <button class="pagar" onclick="window.location.href='compra_carrito.php'">Proceder a pagar</button>
         </aside>
     </main>
@@ -109,7 +113,7 @@ $resultado = $conexion->query($sql_carrito);
                         <input type="hidden" name="id_producto" id="id_producto">
                         <button type="submit" name="eliminar" class="btn btn-danger">Eliminar</button>
                     </form>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="margin-top: 24px;">Cancelar</button>
                 </div>
             </div>
         </div>
@@ -120,14 +124,21 @@ $resultado = $conexion->query($sql_carrito);
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> -->
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> 
+    
     <script>
         function openModal(idProducto) {
             document.getElementById('id_producto').value = idProducto;
             $('#deleteModal').modal('show');
         }
+
+        $(document).ready(function () {
+        $('.close, .btn-secondary').on('click', function () {
+            $('#deleteModal').modal('hide');
+        });
+    });
     </script>
 </body>
 

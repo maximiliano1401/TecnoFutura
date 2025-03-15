@@ -277,3 +277,53 @@ body {
   margin-left: auto;
   padding-right: 10px !important;
 }
+
+/* Pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+  .contenedor-carrito {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .carrito, .resumen {
+    width: 100%;
+    padding: 15px;
+  }
+  .producto {
+    flex-direction: column;
+    text-align: center;
+  }
+  .producto img {
+    width: 100px;
+    height: 100px;
+  }
+  .cantidad {
+    justify-content: center;
+  }
+  .resumen p {
+    text-align: center;
+  }
+  .pagar {
+    width: 100%;
+  }
+}
+
+/* Pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+  .producto img {
+    width: 80px;
+    height: 80px;
+  }
+  .detalles h3 {
+    font-size: 16px;
+  }
+  .precio {
+    font-size: 14px;
+  }
+  .cantidad button {
+    padding: 3px 7px;
+  }
+  .pagar {
+    padding: 8px;
+  }
+}

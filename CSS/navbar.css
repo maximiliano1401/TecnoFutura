@@ -173,6 +173,20 @@
     padding-right: 10px !important;
 }
 
+.fas, .fa {
+    color: black !important;
+}
+
+.offcanvas-body .list-group li a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.offcanvas-body .list-group li .cerrar-sesion,
+.offcanvas-body .list-group li .modo-admin {
+    color: #f1f1f1 !important;
+}
+
 @media (max-width: 768px) {
     .navbar-right {
         display: none;

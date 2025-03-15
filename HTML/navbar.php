@@ -10,13 +10,15 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
 ?>
 
 <head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../CSS/navbar.css">
 </head>
 
 <header class="header">
     <nav class="navbar">
         <div class="navbar-left">
-            <!-- Boton hamburguesa -->
+            <!-- Botón hamburguesa -->
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,7 +28,7 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
             </a>
         </div>
 
-        <!-- Menu desplegable -->
+        <!-- Menú desplegable -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <img class="boton" src="../IMG/Button.png" data-bs-dismiss="offcanvas" aria-label="Close">
@@ -38,40 +40,62 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
                     </div>
                 </div>
                 <ul class="list-group mt-4">
-                    <button class="list-group-item d-flex align-items-center" onclick="window.location.href='perfil.php'">
-                        <span class="fas fa-user me-3"></span> Mi perfil
-                    </button>
-                    <button class="list-group-item d-flex align-items-center dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#direccionesSubmenu">
-                        <span class="fas fa-shopping-bag me-3"></span> Mis Direcciones
-                    </button>
+                    <!-- Opción Mi Perfil -->
+                    <li class="list-group-item d-flex align-items-center">
+                        <span class="fas fa-user me-3"></span>
+                        <a href="perfil.php" class="w-100">Mi perfil</a>
+                    </li>
+
+                    <!-- Opción Mis Direcciones -->
+                    <li class="list-group-item d-flex align-items-center justify-content-between dropdown-toggle"
+                        data-bs-toggle="collapse" data-bs-target="#direccionesSubmenu">
+                        <div><span class="fas fa-map-marker-alt me-3"></span>Mis Direcciones</div>
+                        <span class="fas fa-chevron-down"></span>
+                    </li>
                     <ul class="collapse list-unstyled ps-4" id="direccionesSubmenu">
-                        <button class="list-group-item" onclick="window.location.href='nueva_direccion.php'">Agregar Dirección</button>
-                        <button class="list-group-item" onclick="window.location.href='ver_direcciones.php'">Ver Direcciones Registradas</button>
+                        <li class="list-group-item"><a href="nueva_direccion.php">Agregar Dirección</a></li>
+                        <li class="list-group-item"><a href="ver_direcciones.php">Ver Direcciones Registradas</a></li>
                     </ul>
-                    <button class="list-group-item d-flex align-items-center dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#metodosPagoSubmenu">
-                        <span class="fas fa-credit-card me-3"></span> Mis Métodos de Pago
-                    </button>
+
+                    <!-- Opción Métodos de Pago -->
+                    <li class="list-group-item d-flex align-items-center justify-content-between dropdown-toggle"
+                        data-bs-toggle="collapse" data-bs-target="#metodosPagoSubmenu">
+                        <div><span class="fas fa-credit-card me-3"></span>Mis Métodos de Pago</div>
+                        <span class="fas fa-chevron-down"></span>
+                    </li>
                     <ul class="collapse list-unstyled ps-4" id="metodosPagoSubmenu">
-                        <button class="list-group-item" onclick="window.location.href='nuevo_metodo.php'">Agregar Método de Pago</button>
-                        <button class="list-group-item" onclick="window.location.href='ver_metodos.php'">Ver Métodos de Pago</button>
+                        <li class="list-group-item"><a href="nuevo_metodo.php">Agregar Método de Pago</a></li>
+                        <li class="list-group-item"><a href="ver_metodos.php">Ver Métodos de Pago</a></li>
                     </ul>
-                    <button class="list-group-item d-flex align-items-center dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#comprasSubmenu">
-                        <span class="fas fa-shopping-bag me-3"></span> Mis Compras
-                    </button>
+
+                    <!-- Opción Mis Compras -->
+                    <li class="list-group-item d-flex align-items-center justify-content-between dropdown-toggle"
+                        data-bs-toggle="collapse" data-bs-target="#comprasSubmenu">
+                        <div><span class="fas fa-shopping-bag me-3"></span>Mis Compras</div>
+                        <span class="fas fa-chevron-down"></span>
+                    </li>
                     <ul class="collapse list-unstyled ps-4" id="comprasSubmenu">
-                        <button class="list-group-item" onclick="window.location.href='ordenes.php'">Órdenes</button>
-                        <button class="list-group-item" onclick="window.location.href='historial.php'">Historial de Compras</button>
+                        <li class="list-group-item"><a href="ordenes.php">Órdenes</a></li>
+                        <li class="list-group-item"><a href="historial.php">Historial de Compras</a></li>
                     </ul>
-                    <a href="../SESIONES/cerrar.php" class="btn btn-danger">Cerrar sesión</a>
-                    <!-- Botón de administracion (solo visible si el usuario es administrador) -->
+
+                    <!-- Cerrar sesión -->
+                    <li class="list-group-item text-center">
+                        <a href="../SESIONES/cerrar.php" class="btn btn-danger cerrar-sesion w-100">Cerrar sesión</a>
+                    </li>
+
+                    <!-- Botón de administración (solo visible si el usuario es administrador) -->
                     <?php if ($isAdmin): ?>
-                        <a href="../ADMINISTRACION/administracion.php" class="btn btn-primary mt-3">Acceder a Modo Administración</a>
+                        <li class="list-group-item text-center">
+                            <a href="../ADMINISTRACION/administracion.php" class="btn btn-primary modo-admin w-100">Acceder a Modo Administración</a>
+                        </li>
                     <?php endif; ?>
                 </ul>
             </div>
         </div>
-        <!-- Fin del menu desplegable -->
-        <!-- Barra de busqueda -->
+        <!-- Fin del menú desplegable -->
+
+        <!-- Barra de búsqueda -->
         <div class="navbar-center">
             <form class="search-form" action="buscar.php" method="GET">
                 <input type="text" class="search-input" name="busqueda" placeholder="Buscar...">
@@ -80,7 +104,8 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
                 </button>
             </form>
         </div>
-        <!-- Fin de la barra de busqueda -->
+
+        <!-- Sección derecha del navbar -->
         <div class="navbar-right">
             <div class="user-info">
                 <img src="../IMG/user-avatar.png" alt="Avatar" class="user-avatar">
@@ -97,7 +122,6 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
 </header>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
