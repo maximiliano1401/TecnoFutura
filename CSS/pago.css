@@ -220,7 +220,7 @@ button:disabled {
 }
 
 
-@media (max-width: 412px) {
+@media (max-width: 480px) {
     .input {
     position: relative;
     margin-bottom: 10px;

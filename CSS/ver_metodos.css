@@ -142,7 +142,7 @@ table tbody tr:hover {
     color: #f8f9fa;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     .contenedor-login {
         width: 100%;
         margin: 0 auto;

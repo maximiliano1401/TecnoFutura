@@ -119,3 +119,35 @@ body {
 .izquierda {
     margin-right: 8px;
 }
+@media (max-width: 700px) {
+    .registro-container {
+        flex-direction: column;
+        height: 100%;
+        margin-top: 20%;
+    }
+    .logo-section {
+        padding-top: 0;
+    }
+    .logo {
+        width: 200px;
+        margin-top: 0;
+    }
+    .form-section {
+        padding: 10px;
+    }
+    .instruction {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .button {
+        width: 100%;
+    }
+    .terms {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .izquierda {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
