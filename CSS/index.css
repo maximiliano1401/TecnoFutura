@@ -158,6 +158,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .logo {
+    width: 90%;
+  }
+
   .login-container {
     flex-direction: column;
     align-items: center;

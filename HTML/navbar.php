@@ -45,7 +45,7 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
                         <span class="fas fa-user me-3"></span>
                         <button class="menu-btn w-100 text-start" onclick="location.href='perfil.php'">Mi perfil</button>
                     </li>
-
+                    
                     <!-- Opción Mis Direcciones -->
                     <li class="list-group-item d-flex align-items-center justify-content-between dropdown-toggle"
                         data-bs-toggle="collapse" data-bs-target="#direccionesSubmenu">
@@ -78,6 +78,11 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
                         <li class="list-group-item"><button class="menu-btn w-100 text-start" onclick="location.href='ordenes.php'">Órdenes</button></li>
                         <li class="list-group-item"><button class="menu-btn w-100 text-start" onclick="location.href='historial.php'">Historial de Compras</button></li>
                     </ul>
+
+                    <li class="list-group-item d-flex align-items-center">
+                        <span class="fas fa-cart-shopping me-3"></span>
+                        <button class="menu-btn w-100 text-start" onclick="location.href='carrito.php'">Carrito</button>
+                    </li>
 
                     <!-- Cerrar sesión -->
                     <li class="list-group-item text-center">
