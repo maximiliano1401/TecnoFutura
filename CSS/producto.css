@@ -359,10 +359,10 @@ body {
     }
 
     .carousel-container {
-        width: 100%;
-        height: auto;
+        /* width: 100%;
+        height: auto; */
         margin-left: 0;
-        margin-bottom: 20px;
+        margin-bottom: 100px;
     }
 
     .logos img {

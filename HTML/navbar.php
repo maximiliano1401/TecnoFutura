@@ -35,7 +35,7 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
             </div>
             <div class="offcanvas-body unu">
                 <div class="user-info text-center">
-                    <div class="user-icon bg-success rounded-circle">
+                    <div class="user-icon rounded-circle">
                         <h5 class="text-primary mt-2"><?php echo $_SESSION['Nombre']; ?></h5>
                     </div>
                 </div>

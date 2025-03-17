@@ -214,8 +214,8 @@
         display: none;
     }
     .navbar {
-        flex-direction: column;
-        padding: 10px;
+        flex-direction: row;
+        padding: 5px;
     }
     .search-form {
         width: 100%;
@@ -227,7 +227,7 @@
         display: none;
     }
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
         padding: 5px;
     }
     .search-form {
