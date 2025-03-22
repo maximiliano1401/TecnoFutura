@@ -7,6 +7,8 @@
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(#48A2DE, #C8C8C8 50%);
+    background-size: cover;
+    background-attachment: fixed; 
     color: #333;
     display: flex;
     justify-content: center;

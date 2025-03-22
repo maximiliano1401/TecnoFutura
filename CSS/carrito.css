@@ -2,7 +2,8 @@ body {
   font-family: Arial, sans-serif;
   background: linear-gradient(#48A2DE, #C8C8C8 50%);
   background-size: cover;
-  background-attachment: fixed;  margin: 0;
+  background-attachment: fixed;  
+  margin: 0;
   padding: 0;
 }
 
