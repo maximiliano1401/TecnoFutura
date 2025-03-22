@@ -62,7 +62,7 @@ if ($result_carrito->num_rows > 0) {
     </script>
 </head>
 <body>
-<img class="boton" src="../IMG/Button.png" onclick="window.location.href='carrito.php'">
+<img class="boton" src="../IMG/Arrow-left-circle.png" onclick="window.location.href='carrito.php'">
     <div class="contenedor-compra">
         <h1>Confirmar Compra</h1>
 

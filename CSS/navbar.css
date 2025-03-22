@@ -213,6 +213,9 @@
     .navbar-right {
         display: none;
     }
+    .navbar-center {
+        width: 50%;
+    }
     .navbar {
         flex-direction: row;
         padding: 5px;

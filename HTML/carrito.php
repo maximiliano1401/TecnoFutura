@@ -70,18 +70,23 @@ $resultado = $conexion->query($sql_carrito);
                                 <p class="precio">$<?php echo $producto['Precio']; ?></p>
                             </div>
                             <div class="cantidad">
-                                <!-- <button>-</button> -->
-                                <!-- <span><?php echo $producto['Cantidad']; ?></span> -->
-                                <!-- <button>+</button> -->
-                            </div>
+        <button class="btn-decrementar" data-id="<?php echo $producto['ID_Producto']; ?>">-</button>
+        <span id="cantidad-<?php echo $producto['ID_Producto']; ?>"><?php echo $producto['Cantidad']; ?></span>
+        <button class="btn-incrementar" data-id="<?php echo $producto['ID_Producto']; ?>">+</button>
+    </div>
                             <div class="remove-item">
-                                <button class="btn btn-danger" onclick="openModal(<?php echo $producto['ID_Producto']; ?>)">Eliminar</button>
+                                <button class="btn" onclick="openModal(<?php echo $producto['ID_Producto']; ?>)">
+                                <i class="fas fa-trash"></i>
+                                </button>
                             </div>
                         </div>
                     <?php endwhile; ?>
                 <?php else: ?>
                     <p>No tienes productos en tu carrito.</p>
-                    <?php $total = 0; ?>
+                    <?php 
+                    $total = 0; 
+                    $cantidad = 0;
+                    ?>
                 <?php endif; ?>
             </div>
         </section>
@@ -125,8 +130,8 @@ $resultado = $conexion->query($sql_carrito);
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- jQuery completo -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
         function openModal(idProducto) {
@@ -138,6 +143,59 @@ $resultado = $conexion->query($sql_carrito);
         $('.close, .btn-secondary').on('click', function () {
             $('#deleteModal').modal('hide');
         });
+    });
+
+    $(document).ready(function () {
+        // Incrementar cantidad
+        $('.btn-incrementar').on('click', function () {
+            const idProducto = $(this).data('id');
+            const cantidadActual = parseInt($('#cantidad-' + idProducto).text());
+            const nuevaCantidad = cantidadActual + 1;
+
+            // Actualiza la cantidad en el DOM
+            $('#cantidad-' + idProducto).text(nuevaCantidad);
+
+            // Llamada AJAX para actualizar en el servidor
+            actualizarCantidad(idProducto, nuevaCantidad);
+        });
+
+        // Decrementar cantidad
+        $('.btn-decrementar').on('click', function () {
+            const idProducto = $(this).data('id');
+            const cantidadActual = parseInt($('#cantidad-' + idProducto).text());
+
+            if (cantidadActual > 1) {
+                const nuevaCantidad = cantidadActual - 1;
+                $('#cantidad-' + idProducto).text(nuevaCantidad);
+                actualizarCantidad(idProducto, nuevaCantidad);
+            }
+        });
+
+        // Función para actualizar la cantidad vía AJAX
+        function actualizarCantidad(idProducto, nuevaCantidad) {
+            $.ajax({
+                url: '../PHP/actualizar_carrito.php',
+                type: 'POST',
+                data: { id_producto: idProducto, cantidad: nuevaCantidad },
+                success: function (response) {
+                    try {
+                        const data = JSON.parse(response);
+                        if (data.success) {
+                            console.log('Carrito actualizado:', data.success);
+                            // Actualizar el subtotal y total si es necesario
+                            location.reload(); // Recarga la página para reflejar cambios en el total
+                        } else {
+                            console.error('Error:', data.error);
+                        }
+                    } catch (e) {
+                        console.error('Error en la respuesta del servidor:', e);
+                    }
+                },
+                error: function (error) {
+                    console.error('Error AJAX:', error);
+                }
+            });
+        }
     });
     </script>
 </body>

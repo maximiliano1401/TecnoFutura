@@ -10,7 +10,7 @@ if (!isset($_SESSION['ID_Cliente'])) {
 
 $id_cliente = $_SESSION['ID_Cliente'];
 
-//Validacion para verificar datos recibidos
+// Validación para verificar datos recibidos
 if (!isset($_POST['metodo_pago']) || !isset($_POST['direccion'])) {
     echo "Método de pago o dirección no seleccionados.";
     exit;
@@ -19,10 +19,11 @@ if (!isset($_POST['metodo_pago']) || !isset($_POST['direccion'])) {
 $id_metodo = $_POST['metodo_pago'];
 $id_direccion = $_POST['direccion'];
 
-//Obtenemos los productos del carrito
+// Obtener los productos del carrito
 $sql_carrito = "
-    SELECT c.ID_Producto, c.Cantidad
+    SELECT c.ID_Producto, c.Cantidad, p.Stock 
     FROM carrito_compras c
+    JOIN productos p ON c.ID_Producto = p.ID_Producto
     WHERE c.ID_Cliente = ?";
 $stmt_carrito = $conexion->prepare($sql_carrito);
 $stmt_carrito->bind_param("i", $id_cliente);
@@ -30,26 +31,37 @@ $stmt_carrito->execute();
 $result_carrito = $stmt_carrito->get_result();
 
 if ($result_carrito->num_rows > 0) {
-
-    //Se hace conexion a la BD para empezar la compra (Usamos transaction para confirmar o revertir cambios)
+    // Iniciar transacción para asegurar consistencia
     $conexion->begin_transaction();
     try {
-        // Insertar detalles de cada producto en detalles_pedidos
+        // Consulta para insertar detalles de pedido
         $sql_detalles = "INSERT INTO detalles_pedido (ID_Estado, ID_Producto, Cantidad, ID_Cliente, ID_Metodo, ID_Direccion) 
                          VALUES (?, ?, ?, ?, ?, ?)";
         $stmt_detalles = $conexion->prepare($sql_detalles);
 
-        //Estado inicial para el pedido
-        $id_estado = 1; // Ejemplo: 1 = "Pendiente"
+        // Estado inicial del pedido (1 = Pendiente)
+        $id_estado = 1;
 
-        //Insertar cada producto
         while ($producto = $result_carrito->fetch_assoc()) {
             $id_producto = $producto['ID_Producto'];
             $cantidad = $producto['Cantidad'];
+            $stock_disponible = $producto['Stock'];
 
-            // Usamos parametros de validacion donde esperamos recibir datos i osea tipo INT
+            // Validar stock disponible
+            if ($cantidad > $stock_disponible) {
+                throw new Exception("Stock insuficiente para el producto con ID: $id_producto.");
+            }
+
+            // Registrar detalles del pedido
             $stmt_detalles->bind_param("iiiiii", $id_estado, $id_producto, $cantidad, $id_cliente, $id_metodo, $id_direccion);
             $stmt_detalles->execute();
+
+            // Restar la cantidad comprada del stock
+            $nuevo_stock = $stock_disponible - $cantidad;
+            $sql_actualizar_stock = "UPDATE productos SET Stock = ? WHERE ID_Producto = ?";
+            $stmt_stock = $conexion->prepare($sql_actualizar_stock);
+            $stmt_stock->bind_param("ii", $nuevo_stock, $id_producto);
+            $stmt_stock->execute();
         }
 
         // Vaciar carrito después de procesar la compra
@@ -64,7 +76,7 @@ if ($result_carrito->num_rows > 0) {
         echo "Compra procesada exitosamente.";
         header("Location: ../HTML/compra_exitosa.html");
     } catch (Exception $e) {
-        // Revertir transacción en caso de error
+        // Revertir cambios en caso de error
         $conexion->rollback();
         echo "Error al procesar la compra: " . $e->getMessage();
     }

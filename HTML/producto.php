@@ -122,18 +122,30 @@ if (isset($_GET['id_producto'])) {
             <p class="envio">
                 <img src="../IMG/coche.png" alt="Envío"> ENVÍO GRATIS
             </p>
-            <form action="../PHP/procesar_carrito.php" method="post">
-                <input type="hidden" name="id_producto" value="<?php echo $id_producto; ?>">
-                <input type="hidden" name="id_cliente" value="<?php echo $_SESSION['ID_Cliente']; ?>">
-                <button type="submit" class="btn btn-primary aa">Agregar al carrito</button>
-            </form>
+
+            <!-- Validación de stock para mostrar mensaje o formulario -->
+            <?php if ($producto['Stock'] > 0): ?>
+                <form action="../PHP/procesar_carrito.php" method="post">
+                    <input type="hidden" name="id_producto" value="<?php echo $id_producto; ?>">
+                    <input type="hidden" name="id_cliente" value="<?php echo $_SESSION['ID_Cliente']; ?>">
+                    <button type="submit" class="btn btn-primary aa">Agregar al carrito</button>
+                </form>
+            <?php else: ?>
+                <p class="text-danger"><strong>Sin stock disponible</strong></p>
+            <?php endif; ?>
         </div>
 
         <!-- Precio y acciones -->
         <div class="precio">
             <h3>$<?php echo number_format($producto['Precio'], 2); ?></h3>
-            <button class="btn btn-secondary">Cantidad: 1</button>
-            <a href="compra.php?id_producto=<?php echo $id_producto; ?>" class="btn btn-success">Comprar</a>
+            <!-- <button class="btn btn-secondary" disabled>Cantidad: 1</button> -->
+
+            <!-- Botón de compra desactivado si no hay stock -->
+            <?php if ($producto['Stock'] > 0): ?>
+                <a href="compra.php?id_producto=<?php echo $id_producto; ?>" class="btn btn-success">Compra Inmediata</a>
+            <?php else: ?>
+                <button class="btn btn-danger" disabled>Compra Inmediata</button>
+            <?php endif; ?>
         </div>
         <section class="especificaciones">
             <div class="caracteristica">
@@ -170,4 +182,5 @@ if (isset($_GET['id_producto'])) {
         </div>
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
+
 </html>

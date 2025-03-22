@@ -217,6 +217,7 @@ hr {
 @media (max-width: 768px) {
     .productos-grid {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        margin: 10px;
     }
     .producto-imagen {
         width: 80px;
@@ -232,7 +233,8 @@ hr {
 
 @media (max-width: 480px) {
     .productos-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        margin: 20px;
     }
     .producto-imagen {
         width: 70px;

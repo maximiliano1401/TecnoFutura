@@ -135,12 +135,17 @@ body {
   padding: 10px;
   border-radius: 10px;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .producto img {
   width: 80px;
   height: 80px;
   border-radius: 5px;
+}
+
+.detalles {
+  width: 100%;
 }
 
 .detalles h3 {
