@@ -46,12 +46,14 @@ mysqli_close($conexion);
         <h1>Editar Perfil</h1>
         <div class="contenedor">
             <div class="perfil-y-formulario">
-                <div class="perfil">
-                    <div class="imagen-perfil">
-                        <img src="../IMG/user-avatar.png" alt="Foto de perfil">
-                        <div class="editar-icono">✏️</div>
-                    </div>
-                </div>
+            <div class="perfil">
+    <div class="imagen-perfil">
+        <img id="preview" src="<?= file_exists("../PERFILES/$id_cliente.jpg") ? "../PERFILES/$id_cliente.jpg" : "../IMG/user-avatar.png" ?>" alt="Foto de perfil">
+        <input type="file" id="fotoPerfil" name="fotoPerfil" accept="image/*" style="display: none;">
+        <div class="editar-icono" onclick="document.getElementById('fotoPerfil').click();">✏️</div>
+    </div>
+</div>
+
                 <form class="formulario" id="login-form">
                     <label for="nombre">Nombre Completo:</label>
                     <div class="campo">
@@ -108,6 +110,17 @@ mysqli_close($conexion);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        document.getElementById('fotoPerfil').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('preview').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
         function checkboxverificador() {
             const checkbox = document.getElementById("terminos");
             const BotonParaProcesar = document.getElementById("botonaceptar");
@@ -129,41 +142,36 @@ mysqli_close($conexion);
         }
 
         function actualizar() {
-            const formulario = document.getElementById("login-form");
-            const formData = new FormData(formulario);
+    const formulario = document.getElementById("login-form");
+    const formData = new FormData(formulario);
 
-            // Verifico que se envien datos hayan o NO HAYAN sido editados
-            const nombre = document.querySelector('input[name="nombreCompleto"]').value || "<?= $nombre ?>";
-            const correo = document.querySelector('input[name="correoElectronico"]').value || "<?= $correo ?>";
-            const numero = document.querySelector('input[name="numeroTelefonico"]').value || "<?= $telefono ?>";
-            const edad = document.querySelector('input[name="edad"]').value || "<?= $edad ?>";
+    // Agregar la imagen si fue seleccionada
+    const fileInput = document.getElementById('fotoPerfil');
+    if (fileInput.files.length > 0) {
+        formData.append('fotoPerfil', fileInput.files[0]);
+    }
 
-
-            //agrego los datos en el formdata
-            formData.set('nombreCompleto', nombre);
-            formData.set('correoElectronico', correo);
-            formData.set('numeroTelefonico', numero);
-            formData.set('edad', edad);
-
-            fetch('../PHP/actualizar_usuarios.php', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status === 'success') {
-                        mostrarModal(data.message);
-                        window.location.href = 'editar_perfil.php';
-                    } else {
-                        mostrarModal(data.message);
-                    }
-                    formulario.reset();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    mostrarModal("Ocurrió un error al intentar actualizar al usuario. Intente de nuevo.");
-                });
+    fetch('../PHP/actualizar_usuarios.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            mostrarModal(data.message);
+            setTimeout(() => {
+                location.reload();
+            }, 2000);
+        } else {
+            mostrarModal(data.message);
         }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        mostrarModal("Ocurrió un error al intentar actualizar el perfil.");
+    });
+}
+
     </script>
 </body>
 

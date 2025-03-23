@@ -7,6 +7,16 @@ if (!isset($_SESSION['ID_Cliente'])) {
 
 // Verificar si el usuario tiene el correo "administrador@gmail.com"
 $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
+
+// Con esa variable consulto en la BD
+$sql_foto = "SELECT FotoPerfil FROM clientes WHERE ID_Cliente = '$_SESSION[ID_Cliente]'";
+$result_foto = mysqli_query($conexion, $sql_foto);
+
+if ($result_foto && mysqli_num_rows($result_foto) > 0) {
+  // Asigno los datos en una variable
+  $row = mysqli_fetch_assoc($result_foto);
+  $foto_perfil = $row['FotoPerfil']; // Aquí obtengo la ruta de la imagen del perfil
+}
 ?>
 
 <head>
@@ -31,13 +41,12 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
         <!-- Menú desplegable -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-                <img class="boton" src="../IMG/Button.png" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img class="boton-navbar" src="../IMG/Arrow-left-circle.png" data-bs-dismiss="offcanvas" aria-label="Close">
             </div>
             <div class="offcanvas-body unu">
                 <div class="user-info text-center">
-                    <div class="user-icon rounded-circle">
-                        <h5 class="text-primary mt-2"><?php echo $_SESSION['Nombre']; ?></h5>
-                    </div>
+                    <img src="<?= $foto_perfil ? $foto_perfil : '../IMG/user-avatar.png' ?>" alt="Avatar" class="user-icon rounded-circle" >
+                    <h5 class="text-primary mt-2"><?php echo $_SESSION['Nombre']; ?></h5>
                 </div>
                 <ul class="list-group mt-4">
                     <!-- Opción Mi Perfil -->
@@ -114,7 +123,7 @@ $isAdmin = $_SESSION['Correo'] == 'administrador@gmail.com';
         <!-- Sección derecha del navbar -->
         <div class="navbar-right">
             <div class="user-info">
-                <img src="../IMG/user-avatar.png" alt="Avatar" class="user-avatar">
+                <img src="<?= $foto_perfil ? $foto_perfil : '../IMG/user-avatar.png' ?>" alt="Avatar" class="user-avatar">
                 <a href="perfil.php" class="user-name">
                     <span class="user-name"><strong>Hola</strong> <br> <?php echo $_SESSION['Nombre']; ?></span>
                 </a>

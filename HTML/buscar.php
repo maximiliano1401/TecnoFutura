@@ -9,15 +9,37 @@ if (!isset($_SESSION['ID_Cliente'])) {
 }
 
 if (isset($_GET['busqueda'])) {
-    $busqueda = $_GET['busqueda'];
+    $busqueda = mysqli_real_escape_string($conexion, $_GET['busqueda']);
 
-    // Consultar en la base de datos, uso LEFT JOIN para unificar ambas tablas con datos parciales a RUTA1
+    $sinonimos = [
+        "celulares" => "teléfonos",
+        "moviles" => "teléfonos",
+        "computadoras" => "cómputo",
+        "laptops" => "cómputo",
+        "notebooks" => "cómputo",
+        "televisiones" => "televisores",
+        "pantallas" => "televisores",
+        "auriculares" => "audio",
+        "audífonos" => "audio",
+        "headphones" => "audio"
+    ];
+
+    // Reemplazar términos si existe un sinónimo
+    $busqueda = strtolower($busqueda); // Convertir a minúsculas para evitar errores
+    if (isset($sinonimos[$busqueda])) {
+        $busqueda = $sinonimos[$busqueda];
+    }
+
+    // Consultar en la base de datos: buscar en productos y en categorías
     $sql = "
-        SELECT p.*, pf.Ruta1 AS Foto
+        SELECT p.*, pf.Ruta1 AS Foto 
         FROM productos p
         LEFT JOIN productos_fotos pf ON p.ID_Producto = pf.ID_Producto
-        WHERE p.Nombre LIKE '%$busqueda%'
+        LEFT JOIN categorias c ON p.ID_Categoria = c.ID_Categoria
+        WHERE p.Nombre LIKE '%$busqueda%' 
+        OR c.Nombre LIKE '%$busqueda%'
     ";
+    
     $resultado = mysqli_query($conexion, $sql);
 
     if (!$resultado) {
@@ -62,7 +84,7 @@ if (isset($_GET['busqueda'])) {
                 <?php endwhile; ?>
             </ul>
         <?php else: ?>
-            <p class="mensaje-no-encontrado">No se encontraron resultados para "<?php echo $busqueda; ?>"</p>
+            <p class="mensaje-no-encontrado">No se encontraron resultados para "<?php echo htmlspecialchars($_GET['busqueda']); ?>"</p>
         <?php endif; ?>
     </div>
 </body>

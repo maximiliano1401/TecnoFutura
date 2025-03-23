@@ -147,6 +147,7 @@
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    margin-right: 20px;
 }
 
 .list-group-item {
@@ -186,8 +187,7 @@
     margin-top: 10px;
 }
 
-.boton {
-    transform: rotate(90deg);
+.boton-navbar {
     max-width: 15%;
     width: 50px;
     height: 40px;

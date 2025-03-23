@@ -8,22 +8,23 @@ if (!isset($_SESSION['ID_Cliente'])) {
   exit;
 }
 
-//Guardo la id en una variable
+// Guardo la id en una variable
 $id_cliente = $_SESSION['ID_Cliente'];
 
-//Con esa variable consulto en la BD
-$sql = "SELECT Nombre, Correo, Telefono, Edad FROM clientes WHERE ID_Cliente = '$id_cliente'";
+// Con esa variable consulto en la BD
+$sql = "SELECT Nombre, Correo, Telefono, Edad, FotoPerfil FROM clientes WHERE ID_Cliente = '$id_cliente'";
 $result = mysqli_query($conexion, $sql);
 
 if ($result && mysqli_num_rows($result) > 0) {
-  //Asigno los datos en una variable
+  // Asigno los datos en una variable
   $row = mysqli_fetch_assoc($result);
   $nombre = $row['Nombre'];
   $correo = $row['Correo'];
   $telefono = $row['Telefono'];
   $edad = $row['Edad'];
+  $foto_perfil = $row['FotoPerfil']; // Aquí obtengo la ruta de la imagen del perfil
 } else {
-  //En caso de no encontrar mantener al usuario en la pagina
+  // En caso de no encontrar mantener al usuario en la pagina
   header("Location: perfil.php");
   exit;
 }
@@ -58,7 +59,8 @@ mysqli_close($conexion);
       <div class="perfil-y-formulario">
         <div class="perfil">
           <div class="imagen-perfil">
-            <img src="../IMG/user-avatar.png" alt="Foto de perfil">
+            <!-- Mostrar la foto de perfil -->
+            <img src="<?= $foto_perfil ? $foto_perfil : '../IMG/user-avatar.png' ?>" alt="Foto de perfil">
           </div>
           <br>
           <button class="boton boton-editar" onclick="window.location.href='editar_perfil.php'">Editar Perfil</button>
@@ -74,7 +76,7 @@ mysqli_close($conexion);
             <img src="../IMG/sobre 2.png" class="icono">
             <input type="email" id="correo" name="correoElectronico" value="<?= $correo ?>" placeholder="Correo Electrónico" disabled>
           </div>
-          <label for="telefono">Télofono</label>
+          <label for="telefono">Teléfono</label>
           <div class="campo">
             <img src="../IMG/wats.png" class="icono">
             <input type="tel" id="telefono" name="numeroTelefonico" value="<?= $telefono ?>" placeholder="Teléfono" disabled>
