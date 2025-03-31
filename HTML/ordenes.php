@@ -25,7 +25,6 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 $stmt->close();
-$conexion->close();
 ?>
 
 <!DOCTYPE html>
@@ -81,6 +80,10 @@ $conexion->close();
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+  <?php 
+  $conexion->close();
+  ?>
 </body>
 
 </html>

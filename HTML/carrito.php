@@ -97,7 +97,11 @@ $resultado = $conexion->query($sql_carrito);
             <!-- <p>Costo de envío: MXM <span>$4000</span></p> -->
             <p class="descuento">Cupón de descuento no aplica</p>
             <p class="total">Total: MXM <span>$<?php echo $total?></span></p>
+            <?php if ($cantidad <= 0): ?>
+                <button class="pagar btn-secondary" disabled>Carrito Vacío</button>
+                <?php else: ?>
             <button class="pagar" onclick="window.location.href='compra_carrito.php'">Proceder a pagar</button>
+            <?php endif; ?>
         </aside>
     </main>
     <!-- Modal -->

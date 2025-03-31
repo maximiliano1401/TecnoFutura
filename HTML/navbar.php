@@ -14,8 +14,8 @@ $result_foto = mysqli_query($conexion, $sql_foto);
 
 if ($result_foto && mysqli_num_rows($result_foto) > 0) {
   // Asigno los datos en una variable
-  $row = mysqli_fetch_assoc($result_foto);
-  $foto_perfil = $row['FotoPerfil']; // Aquí obtengo la ruta de la imagen del perfil
+  $row_foto = mysqli_fetch_assoc($result_foto);
+  $foto_perfil = $row_foto['FotoPerfil']; // Aquí obtengo la ruta de la imagen del perfil
 }
 ?>
 
