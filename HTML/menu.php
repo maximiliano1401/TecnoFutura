@@ -15,7 +15,6 @@ $sql = "
     FROM productos p
     JOIN categorias c ON p.ID_Categoria = c.ID_Categoria
     LEFT JOIN productos_fotos pf ON p.ID_Producto = pf.ID_Producto
-    WHERE c.ID_Categoria = 1
     ORDER BY RAND()
 ";
 $result = $conexion->query($sql);

@@ -41,7 +41,9 @@
 
                 <div class="terms">
                     <input class="izquierda" type="checkbox" id="terminos" onclick="checkboxverificador()">
-                    <label for="terminos" onclick="window.location.href='terminos_condiciones.html'">Estoy de acuerdo con los Términos de servicio y la política de privacidad.</label>
+                    <label for="terminos">
+                        <a href="terminos_condiciones.html" target="_blank">Estoy de acuerdo con los Términos de servicio y la política de privacidad.</a>
+                    </label>
                 </div>
 
                 <center>
@@ -111,12 +113,12 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.status === 'success') {
-                         mostrarModal(data.message);
-                        window.location.href = 'registro.php'; 
-                    } else {
                         mostrarModal(data.message);
+                        formulario.reset(); // Reinicia el formulario solo si el registro es exitoso
+                        window.location.href = 'index.html';
+                    } else {
+                        mostrarModal(data.message); // Muestra el mensaje de error sin reiniciar el formulario
                     }
-                    formulario.reset();
                 })
                 .catch(error => {
                     console.error('Error:', error);

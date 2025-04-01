@@ -31,16 +31,18 @@ if (!isset($_SESSION['ID_Cliente'])) {
     <h1>Añadir Nueva Dirección</h1>
     <main>
         <form id="login-form">
+        <div class="row">
             <label for="colonia">Colonia*:</label>
             <input type="text" id="colonia" name="colonia" placeholder="Nombre De La Colonia" required>
-
+        </div>
+        <div class="row">
             <label for="calle">Calle*:</label>
             <input type="text" id="calle" name="calle" placeholder="Nombre de calle" required>
-
+        </div>
             <div class="row">
                 <div class="column">
-                    <label for="num_exterior">Número exterior:</label>
-                    <input type="text" id="num_exterior" name="NumExt" placeholder="(OPCIONAL)">
+                    <label for="num_exterior">Número exterior*:</label>
+                    <input type="text" id="num_exterior" name="NumExt" placeholder="Número de casa" required>
                 </div>
                 <div class="column">
                     <label for="num_interior">Número interior:</label>
@@ -50,16 +52,16 @@ if (!isset($_SESSION['ID_Cliente'])) {
 
             <div class="row">
                 <div class="column">
-                    <label for="entre_calles">¿Entre qué calles está?</label>
-                    <input type="text" id="entre_calles" name="entre" placeholder="(OPCIONAL)">
+                    <label for="entre_calles">¿Entre qué calles está?*</label>
+                    <input type="text" id="entre_calles" name="entre" placeholder=" Entre calles" required>
                 </div>
                 <div class="column">
-                    <label for="telefono">Teléfono:</label>
+                    <label for="telefono">Teléfono*:</label>
                     <input type="text" id="telefono" name="NumContacto" placeholder="Número telefónico">
                 </div>
             </div>
 
-            <button type="submit" onclick="direccion()" class="guardar-btn">Guardar</button>
+            <button type="submit" class="guardar-btn">Guardar</button>
         </form>
     </main>
 
@@ -88,19 +90,91 @@ if (!isset($_SESSION['ID_Cliente'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        // Función para mostrar el modal con el mensaje correspondiente
         function mostrarModal(mensaje) {
-            // Insertar el mensaje en el cuerpo del modal
             const modalMessage = document.getElementById("modal-message");
             modalMessage.textContent = mensaje;
-
-            // Mostrar el modal usando Bootstrap
             $('#responseModal').modal('show');
         }
+        // Event listener para manejar el envío del formulario
+        const form = document.getElementById("login-form");
+        form.addEventListener("submit", direccion);
 
-        function direccion() {
+        // Función para marcar los campos con error (clase is-invalid de Bootstrap)
+        function marcarCamposError(campo, mensaje) {
+            campo.classList.add("is-invalid"); // Marca el campo como inválido
+            let errorElement = campo.parentElement.querySelector(".invalid-feedback");
+            if (!errorElement) {
+                errorElement = document.createElement("div");
+                errorElement.classList.add("invalid-feedback");
+                campo.parentElement.appendChild(errorElement);
+            }
+            errorElement.textContent = mensaje;
+        }
+
+        // Función para limpiar errores previos
+        function limpiarErrores(formulario) {
+            const campos = formulario.querySelectorAll("input");
+            campos.forEach(campo => {
+                campo.classList.remove("is-invalid"); // Eliminar clase de error
+                const errorElement = campo.parentElement.querySelector(".invalid-feedback");
+                if (errorElement) {
+                    errorElement.remove(); // Eliminar mensaje de error
+                }
+            });
+        }
+
+        // Función para validar el formulario antes de enviar
+        function direccion(event) {
+            event.preventDefault(); // Prevenir el envío del formulario
+
             const formulario = document.getElementById("login-form");
             const formData = new FormData(formulario);
 
+            // Limpiar errores previos
+            limpiarErrores(formulario);
+
+            // Variables de los campos del formulario
+            const calle = document.getElementById("calle").value.trim();
+            const NumExt = document.getElementById("num_exterior").value.trim();
+            const NumContacto = document.getElementById("telefono").value.trim();
+            const colonia = document.getElementById("colonia").value.trim();
+            const entreCalles = document.getElementById("entre_calles").value.trim();
+
+            let hayErrores = false;
+
+            // Validación de los campos
+            if (!calle) {
+                marcarCamposError(document.getElementById("calle"), "Este campo es obligatorio.");
+                hayErrores = true;
+            }
+
+            if (!NumExt) {
+                marcarCamposError(document.getElementById("num_exterior"), "Este campo es obligatorio.");
+                hayErrores = true;
+            }
+
+            if (!entreCalles) {
+                marcarCamposError(document.getElementById("entre_calles"), "Este campo es obligatorio.");
+                hayErrores = true;
+            }
+
+            if (!colonia) {
+                marcarCamposError(document.getElementById("colonia"), "Este campo es obligatorio.");
+                hayErrores = true;
+            }
+
+            if (!NumContacto || !/^[0-9]{10,}$/.test(NumContacto)) {
+                marcarCamposError(document.getElementById("telefono"), "El número de teléfono debe contener al menos 10 dígitos numéricos.");
+                hayErrores = true;
+            }
+
+            // Si hay errores, no continuar con la petición fetch
+            if (hayErrores) {
+                return; // Detener el envío del formulario
+            }
+
+            // Si no hay errores, realizar la solicitud AJAX
             fetch('../PHP/procesar_direccion.php', {
                     method: 'POST',
                     body: formData
@@ -108,16 +182,15 @@ if (!isset($_SESSION['ID_Cliente'])) {
                 .then(response => response.json())
                 .then(data => {
                     if (data.status === 'success') {
-                        mostrarModal(data.message);
-                        window.location.href = 'nueva_direccion.php';
+                        mostrarModal(data.message); // Mostrar mensaje de éxito
+                        formulario.reset(); // Reiniciar el formulario solo si es exitoso
                     } else {
-                        mostrarModal(data.message);
+                        mostrarModal(data.message); // Mostrar mensaje de error
                     }
-                    formulario.reset();
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    mostrarModal("Ocurrió un error al intentar registrar la direccion. Intente de nuevo.");
+                    mostrarModal("Ocurrió un error al intentar registrar la dirección. Intente de nuevo.");
                 });
         }
     </script>
