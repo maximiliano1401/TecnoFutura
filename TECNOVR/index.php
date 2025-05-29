@@ -47,6 +47,28 @@
 
     <!-- Ejemplo básico de escena A-Frame con botón de VR siempre visible -->
     <a-scene cursor="rayOrigin: mouse" vr-mode-ui="enabled: true">
+        
+    <a-assets>
+      <a-asset-item id="mac-obj" src="assets/laptop1/mac laptop.obj"></a-asset-item>
+      <a-asset-item id="mac-mtl" src="assets/laptop1/mac laptop.mtl"></a-asset-item>
+
+      <a-asset-item id="rack-obj" src="assets/rack/ElectronicRack.obj"></a-asset-item>
+      <a-asset-item id="rack-mtl" src="assets/rack/ElectronicRack.mtl"></a-asset-item>
+    
+      <a-asset-item id="asus-obj" src="assets/laptop2/Laptop_Obj/Laptop.obj"></a-asset-item>
+      <a-asset-item id="asus-mtl" src="assets/laptop2/Laptop_Obj/Laptop.mtl"></a-asset-item>
+
+      <a-asset-item id="store-obj" src="assets/Store/Store.obj"></a-asset-item>
+      <a-asset-item id="store-mtl" src="assets/Store/Store.mtl"></a-asset-item>
+
+    </a-assets>
+
+    <!-- <a-entity obj-model="obj: #mac-obj; mtl: #mac-mtl" position="0 0 0" scale="1 1 1"></a-entity> -->
+    <!-- <a-entity obj-model="obj: #rack-obj; mtl: #rack-mtl" position="1 1 1" scale="1 1 1"></a-entity> -->
+    <!-- <a-entity obj-model="obj: #asus-obj; mtl: #asus-mtl" position="2 2 2" scale="1 1 1"></a-entity> -->
+    
+    <a-entity obj-model="obj: #store-obj; mtl: #store-mtl" position="-250 -10 150" scale="0.5 0.5 0.5" rotation="-90 0 0"></a-entity>
+        
         <!-- Cámara con cursor para selección por mirada -->
         <a-entity id="rig" position="0 1.6 0">
             <a-entity id="main-camera" camera look-controls="touchEnabled: true; reverseMouseDrag: false" wasd-controls>
