@@ -1,0 +1,44 @@
+newmtl Default4Mtl
+Material Color
+Ka 0.00120174 0.0033027 0.00552174
+Kd 0.00120174 0.0033027 0.00552174
+Ks 0.000475983 0.00130813 0.00218704 
+
+d 1
+
+Ns 0
+
+newmtl Default1Mtl
+Material Color
+Ka 0.373615 0.368591 0.383775
+Kd 0.373615 0.368591 0.383775
+Ks 0.0234425 0.0231273 0.02408 
+
+d 1
+
+Ns 0
+
+newmtl Default2Mtl
+Material Color
+Ka 1 1 1
+Kd 1 1 1
+Ks 0.0627451 0.0627451 0.0627451 
+
+d 1
+
+Ns 0
+
+map_Ka Default2_diff.png
+map_Kd Default2_diff.png
+map_d Default2_diff.png
+
+newmtl Default3Mtl
+Material Color
+Ka 1 0 0
+Kd 1 0 0
+Ks 0.0901961 0 0 
+
+d 1
+
+Ns 0
+
