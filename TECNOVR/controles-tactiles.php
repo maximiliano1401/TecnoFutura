@@ -1,5 +1,5 @@
   <!-------- [[CONTROLES TÁCTILES]] -------->
-  <div id="touch-controls" class="touch-controls" style="display: grid">
+  <div id="touch-controls" class="touch-controls" style="display: none;">
     <div class="touch-row-top">
       <button class="touch-btn" id="btn-forward">&#8593;</button>
     </div>

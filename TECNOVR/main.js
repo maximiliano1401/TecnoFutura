@@ -1,5 +1,6 @@
  function isMobile() {
-      return AFRAME.utils.device.isMobile();
+      // Verificar si es un dispositivo táctil
+      return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
     }
 
     function simulateKey(key, type = 'keydown') {
@@ -15,45 +16,70 @@
 
     function addTouchEvents(btnId, key) {
       var btn = document.getElementById(btnId);
+      if (!btn) return;
+      
       btn.addEventListener('touchstart', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         simulateKey(key, 'keydown');
+        btn.style.background = 'rgba(44, 195, 217, 0.8)';
       });
+      
       btn.addEventListener('touchend', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         simulateKey(key, 'keyup');
+        btn.style.background = 'rgba(44, 195, 217, 0.5)';
       });
+      
       btn.addEventListener('touchcancel', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         simulateKey(key, 'keyup');
+        btn.style.background = 'rgba(44, 195, 217, 0.5)';
+      });
+
+      // También agregar eventos de mouse para pruebas en desktop
+      btn.addEventListener('mousedown', function(e) {
+        e.preventDefault();
+        simulateKey(key, 'keydown');
+        btn.style.background = 'rgba(44, 195, 217, 0.8)';
+      });
+      
+      btn.addEventListener('mouseup', function(e) {
+        e.preventDefault();
+        simulateKey(key, 'keyup');
+        btn.style.background = 'rgba(44, 195, 217, 0.5)';
       });
     }
 
+    // Esperar a que A-Frame esté completamente cargado
     document.addEventListener('DOMContentLoaded', function() {
-      var menuBtn = document.querySelector('#menu-btn');
-      var userMenu = document.querySelector('#user-menu');
-      var closeBtn = document.querySelector('#close-btn');
-      var camera = document.querySelector('#main-camera');
-      var touchControls = document.getElementById('touch-controls');
+      // Esperar un momento adicional para asegurar que A-Frame esté listo
+      setTimeout(function() {
+        var touchControls = document.getElementById('touch-controls');
+        var camera = document.querySelector('#main-camera');
 
-      menuBtn.addEventListener('click', function() {
-        userMenu.setAttribute('visible', true);
-      });
+        if (isMobile()) {
+          console.log('Dispositivo móvil detectado - Mostrando controles táctiles');
+          if (touchControls) {
+            touchControls.style.display = 'grid';
+            
+            // Configurar eventos táctiles
+            addTouchEvents('btn-forward', 'w');
+            addTouchEvents('btn-back', 's');
+            addTouchEvents('btn-left', 'a');
+            addTouchEvents('btn-right', 'd');
+          }
+        } else {
+          console.log('Dispositivo desktop detectado - Ocultando controles táctiles');
+          if (touchControls) {
+            touchControls.style.display = 'none';
+          }
+        }
 
-      closeBtn.addEventListener('click', function() {
-        userMenu.setAttribute('visible', false);
-      });
-
-      if (isMobile()) {
-        touchControls.style.display = 'grid';
-        addTouchEvents('btn-forward', 'w');
-        addTouchEvents('btn-back', 's');
-        addTouchEvents('btn-left', 'a');
-        addTouchEvents('btn-right', 'd');
-      } else {
-        camera.setAttribute('wasd-controls', '');
-        touchControls.style.display = 'none';
-      }
-
-      camera.setAttribute('rotation', '0 0 0');
+        if (camera) {
+          camera.setAttribute('rotation', '0 0 0');
+        }
+      }, 100);
     });

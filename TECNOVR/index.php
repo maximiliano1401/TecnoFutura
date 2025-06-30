@@ -32,12 +32,20 @@
       background: rgba(44, 195, 217, 0.5);
       color: #fff;
       font-size: 2em;
-      border: none;
+      border: 2px solid rgba(44, 195, 217, 0.7);
       pointer-events: auto;
       display: flex;
       align-items: center;
       justify-content: center;
       user-select: none;
+      transition: all 0.1s ease;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+
+    .touch-btn:active {
+      background: rgba(44, 195, 217, 0.8);
+      transform: scale(0.95);
     }
 
     .touch-row-top {
@@ -45,6 +53,27 @@
       justify-content: center;
       margin-bottom: 5px;
     }
+
+    /* Estilos responsivos para dispositivos móviles */
+    @media (max-width: 768px) {
+      .touch-controls {
+        left: 10%;
+        bottom: 20px;
+      }
+      
+      .touch-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5em;
+      }
+    }
+
+    /* Ocultar controles en desktop por defecto */
+    /* @media (min-width: 769px) {
+      .touch-controls {
+        display: none !important;
+      }
+    } */
 
     #demo-banner-div {
       position: fixed;
