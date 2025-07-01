@@ -1,3 +1,13 @@
+<?php
+// Incluir archivos de configuración y conexión a la base de datos
+include "../PHP/conexion.php";
+session_start();
+// VERIFICACIÓN DE SESIÓN ACTIVA
+if (!isset($_SESSION['ID_Cliente'])) {
+    header("Location: ../HTML/index.html");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 

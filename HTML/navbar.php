@@ -13,9 +13,9 @@ $sql_foto = "SELECT FotoPerfil FROM clientes WHERE ID_Cliente = '$_SESSION[ID_Cl
 $result_foto = mysqli_query($conexion, $sql_foto);
 
 if ($result_foto && mysqli_num_rows($result_foto) > 0) {
-  // Asigno los datos en una variable
-  $row_foto = mysqli_fetch_assoc($result_foto);
-  $foto_perfil = $row_foto['FotoPerfil']; // Aquí obtengo la ruta de la imagen del perfil
+    // Asigno los datos en una variable
+    $row_foto = mysqli_fetch_assoc($result_foto);
+    $foto_perfil = $row_foto['FotoPerfil']; // Aquí obtengo la ruta de la imagen del perfil
 }
 ?>
 
@@ -45,7 +45,7 @@ if ($result_foto && mysqli_num_rows($result_foto) > 0) {
             </div>
             <div class="offcanvas-body unu">
                 <div class="user-info text-center">
-                    <img src="<?= $foto_perfil ? $foto_perfil : '../IMG/user-avatar.png' ?>" alt="Avatar" class="user-icon rounded-circle" >
+                    <img src="<?= $foto_perfil ? $foto_perfil : '../IMG/user-avatar.png' ?>" alt="Avatar" class="user-icon rounded-circle">
                     <h5 class="text-primary mt-2"><?php echo $_SESSION['Nombre']; ?></h5>
                 </div>
                 <ul class="list-group mt-4">
@@ -54,7 +54,7 @@ if ($result_foto && mysqli_num_rows($result_foto) > 0) {
                         <span class="fas fa-user me-3"></span>
                         <button class="menu-btn w-100 text-start" onclick="location.href='perfil.php'">Mi perfil</button>
                     </li>
-                    
+
                     <!-- Opción Mis Direcciones -->
                     <li class="list-group-item d-flex align-items-center justify-content-between dropdown-toggle"
                         data-bs-toggle="collapse" data-bs-target="#direccionesSubmenu">
@@ -91,6 +91,13 @@ if ($result_foto && mysqli_num_rows($result_foto) > 0) {
                     <li class="list-group-item d-flex align-items-center">
                         <span class="fas fa-cart-shopping me-3"></span>
                         <button class="menu-btn w-100 text-start" onclick="location.href='carrito.php'">Carrito</button>
+                    </li>
+
+                    <!-- Botón para acceder a la tienda virtual -->
+                    <li class="list-group-item text-center">
+                        <a href="https://tecnofutura.shop/TECNOVR/" target="_blank" class="btn btn-info w-100">
+                            Acceder a la Tienda Virtual
+                        </a>
                     </li>
 
                     <!-- Cerrar sesión -->
