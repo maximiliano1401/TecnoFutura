@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   products.forEach(product => {
-    product.addEventListener('mouseenter', () => {
+    product.addEventListener('click', () => {
       // Obtiene el id de producto para el fetch
       const productId = product.getAttribute('data-product');
       fetch(`get_product.php?id=${productId}`)

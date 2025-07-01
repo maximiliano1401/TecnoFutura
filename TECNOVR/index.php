@@ -87,6 +87,39 @@
       font-size: 1.2em;
       z-index: 2000;
     }
+
+    /* Estilos adicionales para el cursor mejorado */
+    #cursor-container {
+      pointer-events: none;
+    }
+    
+    /* Efectos de brillo para elementos interactivos */
+    .clickable {
+      transition: all 0.3s ease;
+    }
+    
+    .clickable:hover {
+      filter: brightness(1.2) drop-shadow(0 0 10px rgba(76, 195, 217, 0.5));
+    }
+
+    /* Estilo para elementos que están siendo apuntados */
+    .cursor-hovering {
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        filter: brightness(1) drop-shadow(0 0 5px rgba(76, 195, 217, 0.3));
+      }
+      to {
+        filter: brightness(1.3) drop-shadow(0 0 15px rgba(76, 195, 217, 0.8));
+      }
+    }
+
+    /* Ocultar cursor del navegador en la escena VR */
+    a-scene {
+      cursor: none !important;
+    }
   </style>
 </head>
 
@@ -109,18 +142,15 @@
 
     <!------- [[CÁMARA PRINCIPAL DEL USUARIO]] ------->
     <a-entity id="rig" position="0 1.6 0">
-      <a-entity id="main-camera" camera look-controls="touchEnabled: true; reverseMouseDrag: false" wasd-controls>
-        <a-cursor fuse="true" fuse-timeout="1000" color="#4CC3D9" raycaster="objects: .clickable"></a-cursor>
-        <!-- <a-image id="menu-btn" src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" position="0.7 0.4 -1" width="0.15" height="0.15" class="clickable"></a-image>
-
-        <a-entity id="user-menu" visible="false" position="0 0 -1.2">
-          <a-plane width="1.5" height="0.8" color="#222" opacity="0.85"></a-plane>
-          <a-text value="Menu Usuario" color="#FFF" position="0 0.28 0.01" align="center" width="1.4"></a-text>
-          <a-text value="Perfil" color="#4CC3D9" position="0 0.10 0.01" align="center" width="1" class="clickable" onclick="window.location.href='../HTML/perfil.php'"></a-text>
-          <a-text value="Menu Principal" color="#4CC3D9" position="0 -0.05 0.01" align="center" width="1" class="clickable" onclick="window.location.href='../HTML/menu.php'"></a-text>
-          <a-text value="Cerrar sesión" color="#EF2D5E" position="0 -0.20 0.01" align="center" width="1" class="clickable" onclick="window.location.href='../PHP/logout.php'"></a-text>
-          <a-image id="close-btn" src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" position="0.65 0.32 0.02" width="0.08" height="0.08" class="clickable"></a-image>
-        </a-entity> -->
+      <a-entity id="main-camera" camera look-controls="touchEnabled: true; reverseMouseDrag: false" wasd-controls position="0 0 0">
+        <a-cursor 
+          fuse="true" 
+          fuse-timeout="1500" 
+          color="#4CC3D9"
+          raycaster="objects: .clickable"
+          animation__fusing="property: scale; from: 1 1 1; to: 0.5 0.5 0.5; startEvents: fusing"
+          animation__mouseleave="property: scale; to: 1 1 1; startEvents: mouseleave"
+        ></a-cursor>
       </a-entity>
     </a-entity>
 
