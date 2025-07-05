@@ -12,52 +12,29 @@
 
 <a-entity id="celular1"
   obj-model="obj: #celular1-obj; mtl: #celular1-mtl"
-  position="2 2 2"
+  position="65.2 -15.4 36.7"
   scale="0.4 0.4 0.4"
   rotation="0 30 0"
   class="clickable product"
   data-product="celular1"></a-entity>
 
-<!-- <a-entity id="celular2"
-  obj-model="obj: #celular2-obj; mtl: #celular2-mtl"
-  position="-28 1 22"
-  scale="0.4 0.4 0.4"
-  rotation="0 -20 0"
-  class="clickable product"
-  data-product="celular2"></a-entity> -->
-
 <a-entity id="monitor1"
   obj-model="obj: #monitor1-obj; mtl: #monitor1-mtl"
-  position="1 1 1"
+  position="54.7 -15.4 36.7"
   scale="0.6 0.6 0.6"
-  rotation="0 10 0"
+  rotation="0 180 0"
   class="clickable product"
   data-product="monitor1"></a-entity>
 
 <a-entity id="monitor2"
   obj-model="obj: #monitor2-obj; mtl: #monitor2-mtl"
-  position="3 3 3"
+  position="35.7 -29.6 97"
   scale="0.6 0.6 0.6"
-  rotation="0 -15 0"
+  rotation="0 180 0"
   class="clickable product"
   data-product="monitor2"></a-entity>
 
-<!-- <a-entity id="pc1"
-  obj-model="obj: #pc1-obj; mtl: #pc1-mtl"
-  position="-32 1 20"
-  scale="0.5 0.5 0.5"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="pc1"></a-entity>
-
-<a-entity id="pc2"
-  obj-model="obj: #pc2-obj; mtl: #pc2-mtl"
-  position="-34 1 18"
-  scale="0.5 0.5 0.5"
-  rotation="0 25 0"
-  class="clickable product"
-  data-product="pc2"></a-entity> -->
-
+  
 <!-- CUBOS DE PRUEBA -->
 <a-box id="cube1" class="clickable product" data-product="cube1" position="-2 1 -4" color="#4CC3D9"></a-box>
 <a-box id="cube2" class="clickable product" data-product="cube2" position="0 1 -4" color="#EF2D5E"></a-box>

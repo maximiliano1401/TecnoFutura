@@ -15,8 +15,4 @@
       <a-asset-item id="monitor2-obj" src="assets/monitor_2/monitor2.obj"></a-asset-item>
       <a-asset-item id="monitor2-mtl" src="assets/monitor_2/monitor2.mtl"></a-asset-item>
 
-      <!-- <a-asset-item id="pc1-obj" src="assets/pc(1)/pc(1).obj"></a-asset-item>
-      <a-asset-item id="pc1-mtl" src="assets/pc(1)/pc(1).mtl"></a-asset-item>
-
-      <a-asset-item id="pc2-obj" src="assets/pc(2)/pc2.obj"></a-asset-item>
-      <a-asset-item id="pc2-mtl" src="assets/pc(2)/pc2.mtl"></a-asset-item> -->
+      
