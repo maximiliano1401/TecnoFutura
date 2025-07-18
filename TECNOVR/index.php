@@ -67,7 +67,7 @@ if (!isset($_SESSION['ID_Cliente'])) {
     /* Estilos responsivos para dispositivos móviles */
     @media (max-width: 768px) {
       .touch-controls {
-        left: 10%;
+        left: 15%;
         bottom: 20px;
       }
       

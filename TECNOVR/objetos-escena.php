@@ -20,7 +20,7 @@
 
 <a-entity id="monitor1"
   obj-model="obj: #monitor1-obj; mtl: #monitor1-mtl"
-  position="54.7 -15.4 36.7"
+  position="-0.2 -36.17 -22.7"
   scale="0.6 0.6 0.6"
   rotation="0 180 0"
   class="clickable product"
@@ -28,9 +28,9 @@
 
 <a-entity id="monitor2"
   obj-model="obj: #monitor2-obj; mtl: #monitor2-mtl"
-  position="35.7 -29.6 97"
+  position="15.3 -29.6 97.1"
   scale="0.6 0.6 0.6"
-  rotation="0 180 0"
+  rotation="0 0 0"
   class="clickable product"
   data-product="monitor2"></a-entity>
 
