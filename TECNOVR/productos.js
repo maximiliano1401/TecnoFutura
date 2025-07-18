@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fetch(`get_product.php?id=${productId}`)
         .then(response => response.json())
         .then(data => {
-          nameText.setAttribute('value', `Nombre: ${data.Nombre || ''}`);
+          nameText.setAttribute('value', `${data.Nombre || ''}`);
           priceText.setAttribute('value', `Precio: $${data.Precio || ''}`);
 
           // Recorta la descripción si es muy larga
