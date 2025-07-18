@@ -95,7 +95,7 @@ if ($result_foto && mysqli_num_rows($result_foto) > 0) {
 
                     <!-- Botón para acceder a la tienda virtual -->
                     <li class="list-group-item text-center">
-                        <a href="https://tecnofutura.shop/TECNOVR/" target="_blank" class="btn btn-info w-100">
+                        <a href="../TECNOVR/" target="_blank" class="btn btn-info w-100">
                             Acceder a la Tienda Virtual
                         </a>
                     </li>
