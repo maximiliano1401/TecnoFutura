@@ -91,19 +91,42 @@
           animation__descappear="property: opacity; from: 0; to: 1; dur: 600; delay: 600; startEvents: panelshow">
   </a-text>
   
+  <!-- Botón de cerrar clickeable con A-Frame -->
+  <a-plane id="close-panel-btn"
+           class="clickable"
+           width="0.3" 
+           height="0.3" 
+           color="#FF6B6B" 
+           opacity="0.8"
+           position="1.3 0.6 0.03"
+           animation__closeappear="property: opacity; from: 0; to: 0.8; dur: 600; delay: 800; startEvents: panelshow"
+           animation__closehover="property: scale; from: 1 1 1; to: 1.1 1.1 1.1; dur: 200; startEvents: mouseenter"
+           animation__closeleave="property: scale; from: 1.1 1.1 1.1; to: 1 1 1; dur: 200; startEvents: mouseleave">
+    
+    <a-text value="✖"
+            font="https://cdn.aframe.io/fonts/Roboto-msdf.json"
+            color="#FFFFFF" 
+            position="0 0 0.01" 
+            width="2" 
+            align="center"
+            baseline="center" 
+            font-size="0.8">
+    </a-text>
+  </a-plane>
+  
   <!-- Indicadores de interacción -->
-  <a-text value="👆 Clic para más detalles"
+  <a-text value="👆 Clic para más detalles | ✖️ Clic en X o ESC para cerrar"
           font="https://cdn.aframe.io/fonts/Roboto-msdf.json"
           color="#FF6B6B" 
           position="0.1 -0.55 0.01" 
           width="1.2" 
           align="left"
           baseline="top" 
-          wrap-count="30" 
+          wrap-count="40" 
           height="0.2" 
           side="double"
           line-height="50" 
-          font-size="0.12"
+          font-size="0.11"
           animation__ctaappear="property: opacity; from: 0; to: 1; dur: 600; delay: 700; startEvents: panelshow"
           animation__ctapulse="property: color; from: #FF6B6B; to: #FFB6B6; dur: 1500; dir: alternate; loop: true">
   </a-text>

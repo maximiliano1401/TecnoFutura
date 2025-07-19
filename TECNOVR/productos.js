@@ -79,6 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
           imageEl.setAttribute('src', data.Ruta1 || '');
           showPanelBehindCamera(panel); // o la función que uses para mostrar el panel
           panel.setAttribute('visible', true);
+          // Disparar animación de aparición
+          panel.emit('panelshow');
         })
         .catch(error => {
           nameText.setAttribute('value', 'Error al cargar producto');
@@ -87,11 +89,45 @@ document.addEventListener('DOMContentLoaded', () => {
           imageEl.setAttribute('src', '');
           showPanelBehindCamera(panel);
           panel.setAttribute('visible', true);
+          // Disparar animación de aparición
+          panel.emit('panelshow');
         });
     });
 
-    product.addEventListener('mouseleave', () => {
-      panel.setAttribute('visible', false);
+    // Remover el mouseleave que ocultaba el panel
+    // product.addEventListener('mouseleave', () => {
+    //   panel.setAttribute('visible', false);
+    // });
+  });
+
+  // Agregar funcionalidad para cerrar el panel
+  const closeBtn = document.querySelector('#close-panel-btn');
+  
+  // Cerrar con clic en el botón X
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      panel.emit('panelhide');
+      setTimeout(() => {
+        panel.setAttribute('visible', false);
+      }, 300);
     });
+  }
+  
+  // Cerrar con clic en el panel mismo (mantener funcionalidad original)
+  panel.addEventListener('click', () => {
+    panel.emit('panelhide');
+    setTimeout(() => {
+      panel.setAttribute('visible', false);
+    }, 300); // Esperar a que termine la animación
+  });
+
+  // Cerrar con tecla Escape
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && panel.getAttribute('visible') === 'true') {
+      panel.emit('panelhide');
+      setTimeout(() => {
+        panel.setAttribute('visible', false);
+      }, 300);
+    }
   });
 });

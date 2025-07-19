@@ -34,7 +34,7 @@ if (!isset($_SESSION['ID_Cliente'])) {
     .touch-controls {
       position: fixed;
       bottom: 20px;
-      right: 20px;
+      left: 20px;
       z-index: 1000;
       pointer-events: none;
       filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
@@ -43,7 +43,7 @@ if (!isset($_SESSION['ID_Cliente'])) {
     .touch-grid {
       display: grid;
       grid-template-columns: 70px 70px 70px;
-      grid-template-rows: 70px 70px;
+      grid-template-rows: 70px;
       gap: 15px;
       justify-items: center;
       align-items: center;
@@ -112,6 +112,29 @@ if (!isset($_SESSION['ID_Cliente'])) {
         rgba(78, 205, 196, 0.6));
     }
 
+    /* Estilo para botón presionado */
+    .touch-btn.btn-pressed {
+      transform: translateY(-2px) scale(0.95);
+      background: linear-gradient(145deg, 
+        rgba(76, 195, 217, 0.9), 
+        rgba(78, 205, 196, 0.7)) !important;
+      box-shadow: 
+        0 5px 20px rgba(76, 195, 217, 0.6),
+        inset 0 2px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    /* Animación para efecto ripple */
+    @keyframes ripple {
+      0% {
+        transform: scale(0);
+        opacity: 0.6;
+      }
+      100% {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+
     .touch-row-top {
       display: flex;
       justify-content: center;
@@ -121,7 +144,7 @@ if (!isset($_SESSION['ID_Cliente'])) {
     /* Estilos responsivos para dispositivos móviles */
     @media (max-width: 768px) {
       .touch-controls {
-        right: 15px;
+        left: 15px;
         bottom: 25px;
       }
       
@@ -133,7 +156,7 @@ if (!isset($_SESSION['ID_Cliente'])) {
       
       .touch-grid {
         grid-template-columns: 60px 60px 60px;
-        grid-template-rows: 60px 60px;
+        grid-template-rows: 60px;
         gap: 12px;
       }
     }

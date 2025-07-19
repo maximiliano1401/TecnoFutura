@@ -22,31 +22,12 @@
         <span style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">◀</span>
       </button>
       
-      <!-- Centro con indicador de posición -->
-      <div style="display: flex; align-items: center; justify-content: center;
-                  width: 50px; height: 50px; 
-                  border-radius: 50%;
-                  background: radial-gradient(circle, rgba(78, 205, 196, 0.3) 0%, rgba(76, 195, 217, 0.1) 100%);
-                  border: 1px solid rgba(255, 255, 255, 0.2);
-                  backdrop-filter: blur(10px);
-                  pointer-events: none;">
-        <div style="width: 8px; height: 8px; 
-                    background: #4ECDC4; 
-                    border-radius: 50%;
-                    box-shadow: 0 0 10px rgba(78, 205, 196, 0.8);
-                    animation: centerPulse 2s ease-in-out infinite;">
-        </div>
-      </div>
+      <button class="touch-btn" id="btn-back" title="Retroceder">
+        <span style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">▼</span>
+      </button>
       
       <button class="touch-btn" id="btn-right" title="Derecha">
         <span style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">▶</span>
-      </button>
-    </div>
-    
-    <!-- Botón inferior en segunda fila -->
-    <div style="display: flex; justify-content: center; margin-top: 10px;">
-      <button class="touch-btn" id="btn-back" title="Retroceder">
-        <span style="text-shadow: 0 0 10px rgba(255,255,255,0.5);">▼</span>
       </button>
     </div>
     
