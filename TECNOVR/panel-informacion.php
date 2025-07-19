@@ -1,19 +1,135 @@
 <a-entity id="product-info-panel" visible="false" position="0 2.5 -4">
-  <a-plane width="2.6" height="1.3" color="#181818" opacity="0.92"></a-plane>
-  <a-image id="product-image" position="-0.75 0 0.02" width="0.8" height="0.8" visible="true"></a-image>
+  <!-- Panel principal con efecto glassmorphism -->
+  <a-plane width="3.0" height="1.6" 
+           color="#1a1a2e" 
+           opacity="0.85"
+           material="transparent: true"
+           geometry="primitive: plane"
+           animation__appear="property: scale; from: 0.1 0.1 0.1; to: 1 1 1; dur: 500; easing: easeOutBack; startEvents: panelshow"
+           animation__disappear="property: scale; from: 1 1 1; to: 0.1 0.1 0.1; dur: 300; easing: easeInBack; startEvents: panelhide">
+  </a-plane>
+  
+  <!-- Borde brillante -->
+  <a-plane width="3.05" height="1.65" 
+           color="#4CC3D9" 
+           opacity="0.3"
+           position="0 0 -0.01"
+           material="transparent: true">
+  </a-plane>
+  
+  <!-- Imagen del producto con marco mejorado -->
+  <a-plane width="1.0" height="1.0" 
+           color="#2a2a3e" 
+           opacity="0.8"
+           position="-0.85 0.1 0.01">
+  </a-plane>
+  
+  <a-image id="product-image" 
+           position="-0.85 0.1 0.02" 
+           width="0.9" 
+           height="0.9" 
+           visible="true"
+           animation__imageappear="property: opacity; from: 0; to: 1; dur: 600; delay: 200; startEvents: panelshow">
+  </a-image>
+  
+  <!-- Título del producto con fuente mejorada -->
   <a-text id="product-name" 
           font="https://cdn.aframe.io/fonts/Roboto-msdf.json"
-          value="" color="#FFF" position="0.05 0.32 0.01" width="1.6" align="left"
-          baseline="top" wrap-count="32" height="0.3" side="double"
-          line-height="60" font-size="0.22"></a-text>
+          value="" 
+          color="#FFFFFF" 
+          position="0.1 0.45 0.01" 
+          width="1.8" 
+          align="left"
+          baseline="top" 
+          wrap-count="28" 
+          height="0.35" 
+          side="double"
+          line-height="55" 
+          font-size="0.26"
+          animation__textappear="property: opacity; from: 0; to: 1; dur: 600; delay: 300; startEvents: panelshow">
+  </a-text>
+  
+  <!-- Precio con estilo destacado -->
   <a-text id="product-price"
           font="https://cdn.aframe.io/fonts/Roboto-msdf.json"
-          value="" color="#4CC3D9" position="0.05 0.13 0.01" width="1.6" align="left"
-          baseline="top" wrap-count="32" height="0.2" side="double"
-          line-height="60" font-size="0.22"></a-text>
+          value="" 
+          color="#4ECDC4" 
+          position="0.1 0.2 0.01" 
+          width="1.8" 
+          align="left"
+          baseline="top" 
+          wrap-count="28" 
+          height="0.25" 
+          side="double"
+          line-height="55" 
+          font-size="0.28"
+          animation__priceappear="property: opacity; from: 0; to: 1; dur: 600; delay: 400; startEvents: panelshow">
+  </a-text>
+  
+  <!-- Línea separadora -->
+  <a-plane width="1.6" height="0.005" 
+           color="#4CC3D9" 
+           opacity="0.6"
+           position="0.1 0.05 0.01"
+           animation__lineappear="property: width; from: 0; to: 1.6; dur: 800; delay: 500; startEvents: panelshow">
+  </a-plane>
+  
+  <!-- Descripción mejorada -->
   <a-text id="product-description"
           font="https://cdn.aframe.io/fonts/Roboto-msdf.json"
-          value="" color="#DDD" position="0.05 -0.08 0.01" width="1.2" align="left"
-          baseline="top" wrap-count="32" height="0.6" side="double"
-          line-height="60" font-size="0.14"></a-text>
+          value="" 
+          color="#E0E0E0" 
+          position="0.1 -0.15 0.01" 
+          width="1.4" 
+          align="left"
+          baseline="top" 
+          wrap-count="35" 
+          height="0.7" 
+          side="double"
+          line-height="50" 
+          font-size="0.16"
+          animation__descappear="property: opacity; from: 0; to: 1; dur: 600; delay: 600; startEvents: panelshow">
+  </a-text>
+  
+  <!-- Indicadores de interacción -->
+  <a-text value="👆 Clic para más detalles"
+          font="https://cdn.aframe.io/fonts/Roboto-msdf.json"
+          color="#FF6B6B" 
+          position="0.1 -0.55 0.01" 
+          width="1.2" 
+          align="left"
+          baseline="top" 
+          wrap-count="30" 
+          height="0.2" 
+          side="double"
+          line-height="50" 
+          font-size="0.12"
+          animation__ctaappear="property: opacity; from: 0; to: 1; dur: 600; delay: 700; startEvents: panelshow"
+          animation__ctapulse="property: color; from: #FF6B6B; to: #FFB6B6; dur: 1500; dir: alternate; loop: true">
+  </a-text>
+  
+  <!-- Efectos de partículas decorativas -->
+  <a-sphere position="-1.3 0.6 0.03" 
+            radius="0.02" 
+            color="#4CC3D9" 
+            opacity="0.6"
+            animation__float1="property: position; from: -1.3 0.6 0.03; to: -1.2 0.8 0.03; dur: 3000; dir: alternate; loop: true"
+            animation__glow1="property: opacity; from: 0.3; to: 0.8; dur: 2000; dir: alternate; loop: true">
+  </a-sphere>
+  
+  <a-sphere position="1.2 0.4 0.03" 
+            radius="0.015" 
+            color="#4ECDC4" 
+            opacity="0.5"
+            animation__float2="property: position; from: 1.2 0.4 0.03; to: 1.3 0.6 0.03; dur: 4000; dir: alternate; loop: true"
+            animation__glow2="property: opacity; from: 0.2; to: 0.7; dur: 2500; dir: alternate; loop: true">
+  </a-sphere>
+  
+  <a-sphere position="0.8 -0.4 0.03" 
+            radius="0.018" 
+            color="#FF6B6B" 
+            opacity="0.4"
+            animation__float3="property: position; from: 0.8 -0.4 0.03; to: 0.9 -0.2 0.03; dur: 3500; dir: alternate; loop: true"
+            animation__glow3="property: opacity; from: 0.1; to: 0.6; dur: 1800; dir: alternate; loop: true">
+  </a-sphere>
 </a-entity>

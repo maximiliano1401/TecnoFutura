@@ -17,64 +17,124 @@ if (!isset($_SESSION['ID_Cliente'])) {
   <title>TecnoVR</title>
   <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
   <style>
+    :root {
+      --glass-bg: rgba(76, 195, 217, 0.1);
+      --glass-border: rgba(255, 255, 255, 0.2);
+      --text-light: #ffffff;
+      --accent-blue: #4CC3D9;
+      --accent-teal: #4ECDC4;
+      --accent-red: #FF6B6B;
+    }
+
+    @keyframes floatAnimation {
+      0% { transform: translateY(0px) rotate(0deg); }
+      100% { transform: translateY(-20px) rotate(5deg); }
+    }
+
     .touch-controls {
       position: fixed;
-      bottom: 15px;
-      left: 20%;
-      transform: translateX(-50%);
+      bottom: 20px;
+      right: 20px;
       z-index: 1000;
       pointer-events: none;
+      filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
     }
 
     .touch-grid {
       display: grid;
-      grid-template-columns: 60px 60px 60px;
-      grid-template-rows: 60px 60px;
-      gap: 10px;
+      grid-template-columns: 70px 70px 70px;
+      grid-template-rows: 70px 70px;
+      gap: 15px;
       justify-items: center;
       align-items: center;
     }
 
     .touch-btn {
-      width: 60px;
-      height: 60px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
-      background: rgba(44, 195, 217, 0.5);
-      color: #fff;
-      font-size: 2em;
-      border: 2px solid rgba(44, 195, 217, 0.7);
+      background: linear-gradient(145deg, 
+        rgba(76, 195, 217, 0.3), 
+        rgba(78, 205, 196, 0.2));
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      color: var(--text-light);
+      font-size: 2.2em;
+      font-weight: 600;
+      border: 2px solid var(--glass-border);
       pointer-events: auto;
       display: flex;
       align-items: center;
       justify-content: center;
       user-select: none;
-      transition: all 0.1s ease;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       cursor: pointer;
       touch-action: manipulation;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .touch-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent);
+      transition: left 0.5s;
+    }
+
+    .touch-btn:hover::before {
+      left: 100%;
+    }
+
+    .touch-btn:hover {
+      transform: translateY(-5px) scale(1.05);
+      background: linear-gradient(145deg, 
+        rgba(76, 195, 217, 0.6), 
+        rgba(78, 205, 196, 0.4));
+      box-shadow: 
+        0 15px 40px rgba(76, 195, 217, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
     }
 
     .touch-btn:active {
-      background: rgba(44, 195, 217, 0.8);
-      transform: scale(0.95);
+      transform: translateY(-2px) scale(0.98);
+      background: linear-gradient(145deg, 
+        rgba(76, 195, 217, 0.8), 
+        rgba(78, 205, 196, 0.6));
     }
 
     .touch-row-top {
       display: flex;
       justify-content: center;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
 
     /* Estilos responsivos para dispositivos móviles */
     @media (max-width: 768px) {
       .touch-controls {
-        left: 15%;
-        bottom: 20px;
+        right: 15px;
+        bottom: 25px;
       }
       
       .touch-btn {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5em;
+        width: 60px;
+        height: 60px;
+        font-size: 1.8em;
+      }
+      
+      .touch-grid {
+        grid-template-columns: 60px 60px 60px;
+        grid-template-rows: 60px 60px;
+        gap: 12px;
       }
     }
 
@@ -87,15 +147,43 @@ if (!isset($_SESSION['ID_Cliente'])) {
 
     #demo-banner-div {
       position: fixed;
-      bottom: 10px;
+      bottom: 15px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: rgba(255, 0, 0, 0.8);
+      background: linear-gradient(135deg, 
+        rgba(255, 107, 107, 0.9), 
+        rgba(255, 69, 69, 0.8));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 1.2em;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-size: 1.1em;
+      font-weight: 600;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       z-index: 2000;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 
+        0 8px 32px rgba(255, 107, 107, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      animation: demoPulse 3s ease-in-out infinite;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      letter-spacing: 0.5px;
+    }
+
+    @keyframes demoPulse {
+      0%, 100% { 
+        transform: translateX(-50%) scale(1); 
+        box-shadow: 
+          0 8px 32px rgba(255, 107, 107, 0.3),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      }
+      50% { 
+        transform: translateX(-50%) scale(1.02); 
+        box-shadow: 
+          0 12px 40px rgba(255, 107, 107, 0.5),
+          inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      }
     }
 
     /* Estilos adicionales para el cursor mejorado */
