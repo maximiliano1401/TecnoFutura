@@ -102,8 +102,8 @@
            animation__closeappear="property: opacity; from: 0; to: 0.8; dur: 600; delay: 800; startEvents: panelshow"
            animation__closehover="property: scale; from: 1 1 1; to: 1.1 1.1 1.1; dur: 200; startEvents: mouseenter"
            animation__closeleave="property: scale; from: 1.1 1.1 1.1; to: 1 1 1; dur: 200; startEvents: mouseleave">
-    
-    <a-text value="✖"
+
+    <a-text value="X"
             font="https://cdn.aframe.io/fonts/Roboto-msdf.json"
             color="#FFFFFF" 
             position="0 0 0.01" 
