@@ -127,7 +127,7 @@
            animation__detailshover="property: scale; from: 1 1 1; to: 1.05 1.05 1.05; dur: 200; startEvents: mouseenter"
            animation__detailsleave="property: scale; from: 1.05 1.05 1.05; to: 1 1 1; dur: 200; startEvents: mouseleave">
     
-    <a-text value="Ver más detalles"
+    <a-text value="Ver mas detalles"
             font="https://cdn.aframe.io/fonts/Roboto-msdf.json"
             color="#FFFFFF" 
             position="0 0 0.01" 
