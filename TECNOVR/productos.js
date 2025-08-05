@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const descText = document.querySelector('#product-description');
   const imageEl = document.querySelector('#product-image');
   const products = document.querySelectorAll('.product');
+  let currentProductId = null; // Variable para almacenar el ID actual del producto
 
   // Función para mostrar el panel enfrente de la cámara
   // function showPanelInFrontOfCamera(panel) {
@@ -68,6 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
       fetch(`get_product.php?id=${productId}`)
         .then(response => response.json())
         .then(data => {
+          // Almacenar el ID del producto para el botón de detalles
+          currentProductId = data.ID_Producto;
+          
           nameText.setAttribute('value', `${data.Nombre || ''}`);
           priceText.setAttribute('value', `Precio: $${data.Precio || ''}`);
 
@@ -102,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Agregar funcionalidad para cerrar el panel
   const closeBtn = document.querySelector('#close-panel-btn');
+  const detailsBtn = document.querySelector('#details-btn');
   
   // Cerrar con clic en el botón X
   if (closeBtn) {
@@ -110,6 +115,16 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         panel.setAttribute('visible', false);
       }, 300);
+    });
+  }
+
+  // Funcionalidad del botón "Ver más detalles"
+  if (detailsBtn) {
+    detailsBtn.addEventListener('click', () => {
+      if (currentProductId) {
+        // Abrir la página del producto en una nueva pestaña
+        window.open(`https://tecnofutura.shop/HTML/producto.php?id_producto=${currentProductId}`, '_blank');
+      }
     });
   }
   

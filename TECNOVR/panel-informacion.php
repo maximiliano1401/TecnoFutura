@@ -115,21 +115,28 @@
   </a-plane>
   
   <!-- Indicadores de interacción -->
-  <a-text value="👆 Clic para más detalles | ✖️ Clic en X o ESC para cerrar"
-          font="https://cdn.aframe.io/fonts/Roboto-msdf.json"
-          color="#FF6B6B" 
-          position="0.1 -0.55 0.01" 
-          width="1.2" 
-          align="left"
-          baseline="top" 
-          wrap-count="40" 
-          height="0.2" 
-          side="double"
-          line-height="50" 
-          font-size="0.11"
-          animation__ctaappear="property: opacity; from: 0; to: 1; dur: 600; delay: 700; startEvents: panelshow"
-          animation__ctapulse="property: color; from: #FF6B6B; to: #FFB6B6; dur: 1500; dir: alternate; loop: true">
-  </a-text>
+  <!-- Botón Ver más detalles -->
+  <a-plane id="details-btn"
+           class="clickable"
+           width="0.8" 
+           height="0.15" 
+           color="#4ECDC4" 
+           opacity="0.7"
+           position="0.9 -0.65 0.03"
+           animation__detailsappear="property: opacity; from: 0; to: 0.8; dur: 600; delay: 600; startEvents: panelshow"
+           animation__detailshover="property: scale; from: 1 1 1; to: 1.05 1.05 1.05; dur: 200; startEvents: mouseenter"
+           animation__detailsleave="property: scale; from: 1.05 1.05 1.05; to: 1 1 1; dur: 200; startEvents: mouseleave">
+    
+    <a-text value="Ver más detalles"
+            font="https://cdn.aframe.io/fonts/Roboto-msdf.json"
+            color="#FFFFFF" 
+            position="0 0 0.01" 
+            width="2" 
+            align="center"
+            baseline="center" 
+            font-size="0.4">
+    </a-text>
+  </a-plane>
   
   <!-- Efectos de partículas decorativas -->
   <a-sphere position="-1.3 0.6 0.03" 
