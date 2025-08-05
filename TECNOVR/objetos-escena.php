@@ -34,8 +34,109 @@
   class="clickable product"
   data-product="monitor2"></a-entity>
 
+<a-entity id="lapgamer"
+  obj-model="obj: #laptopgamer-obj; mtl: #laptopgamer-mtl"
+  position="15.3 -29.6 97.1"
+  scale="0.6 0.6 0.6"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="lapgamer"></a-entity>
+
+<!---->
+<!---->
+<!---->
+
+<a-entity id="lapgamer1"
+  obj-model="obj: #laptopgamer1-obj; mtl: #laptopgamer1-mtl"
+  position="0 0 0"
+  scale="0.6 0.6 0.6"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="lapgamer1"></a-entity>
+
+<a-entity id="lapgamer2"
+  obj-model="obj: #laptopgamer2-obj; mtl: #laptopgamer2-mtl"
+  position="-17 46 17"
+  scale="0.6 0.6 0.6"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="lapgamer2"></a-entity>
+
+<a-entity id="lapgamer3"
+  obj-model="obj: #laptopgamer3-obj; mtl: #laptopgamer3-mtl"
+  position="-64 76.5 61"
+  scale="0.6 0.6 0.6"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="lapgamer3"></a-entity>
+
+<a-entity id="lapgamer5"
+  obj-model="obj: #laptopgamer5-obj; mtl: #laptopgamer5-mtl"
+  position="-90 108.3 1.3"
+  scale="0.6 0.6 0.6"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="lapgamer5"></a-entity>
+
+
+<!---->
+<!---->
+<!---->
+
+<a-entity id="pc1"
+  obj-model="obj: #pc1-obj; mtl: #pc1-mtl"
+  position="0 0 0"
+  scale="0.6 0.6 0.6"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="pc1"></a-entity>
+
+<a-entity id="pc2"
+  obj-model="obj: #pc2-obj; mtl: #pc2-mtl"
+  position="0 0 0"
+  scale="0.6 0.6 0.6"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="pc2"></a-entity>
+
+<a-entity id="pc3"
+  obj-model="obj: #pc3-obj; mtl: #pc3-mtl"
+  position="-5.3 162.8 1.74"
+  scale="0.6 0.6 0.6"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="pc3"></a-entity>
+
+<a-entity id="pc4"
+  obj-model="obj: #pc4-obj; mtl: #pc4-mtl"
+  position="0 0 0"
+  scale="0.6 0.6 0.6"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="pc4"></a-entity>
+
+<a-entity id="pc5"
+  obj-model="obj: #pc5-obj; mtl: #pc5-mtl"
+  position="0 0 0"
+  scale="0.6 0.6 0.6"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="pc5"></a-entity>
+
+<a-entity id="pc6"
+  obj-model="obj: #pc6-obj; mtl: #pc6-mtl"
+  position="0 0 0"
+  scale="0.6 0.6 0.6"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="pc6"></a-entity>
+
+
+<!---->
+<!---->
+<!---->
   
 <!-- CUBOS DE PRUEBA -->
-<a-box id="cube1" class="clickable product" data-product="cube1" position="-2 1 -4" color="#4CC3D9"></a-box>
+<!-- <a-box id="cube1" class="clickable product" data-product="cube1" position="-2 1 -4" color="#4CC3D9"></a-box>
 <a-box id="cube2" class="clickable product" data-product="cube2" position="0 1 -4" color="#EF2D5E"></a-box>
-<a-box id="cube3" class="clickable product" data-product="cube3" position="2 1 -4" color="#FFC65D"></a-box>
+<a-box id="cube3" class="clickable product" data-product="cube3" position="2 1 -4" color="#FFC65D"></a-box> -->

@@ -11,13 +11,28 @@ if (!isset($_GET['id'])) {
 
 // Mapeo de ID de objeto a ID_Producto (esto puede reemplazarse por una tabla de relación si prefieres)
 $mapa_objetos = [
-    'laptop1'   => 19, // HP Pavilion x360
-    'celular1'  => 6,  // Samsung Galaxy S23 Ultra
-    'monitor1'  => 34, // Samsung S90C (QD-OLED)
-    'monitor2'  => 38, // Sony X90J (OLED)
-    'cube1'     => 1,  // iPhone 15 Pro Max (ejemplo)
-    'cube2'     => 2,  // JBL TUNE 520 (ejemplo)
-    'cube3'     => 3,  // Samsung TV 50 4K (ejemplo)
+    'laptop1'    => 19, // HP Pavilion x360
+    'celular1'   => 6,  // Samsung Galaxy S23 Ultra
+    'monitor1'   => 34, // Samsung S90C (QD-OLED)
+    'monitor2'   => 38, // Sony X90J (OLED)
+    'cube1'      => 1,  // iPhone 15 Pro Max (ejemplo)
+    'cube2'      => 2,  // JBL TUNE 520 (ejemplo)
+    'cube3'      => 3,  // Samsung TV 50 4K (ejemplo)
+    
+    // Laptops gamer
+    'lapgamer'   => 4,  // MSI KATANA 15
+    'lapgamer1'  => 20, // Dell Inspiron 14
+    'lapgamer2'  => 21, // Lenovo IdeaPad 3
+    'lapgamer3'  => 22, // Asus VivoBook 15
+    'lapgamer5'  => 23, // Acer Aspire 5
+    
+    // PCs gamer
+    'pc1'        => 5,  // PC Gamer Fury
+    'pc2'        => 15, // Digital Master PC Gamer SILVER PRO
+    'pc3'        => 16, // PC Gamer Spartan Imagine
+    'pc4'        => 17, // Xtreme PC Gaming CM-05505
+    'pc5'        => 18, // PC Gamer Delios 80
+    'pc6'        => 5,  // PC Gamer Fury (duplicado para tener suficientes PCs)
 ];
 
 $objetoId = $_GET['id'];
