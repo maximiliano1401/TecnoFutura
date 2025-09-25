@@ -136,7 +136,44 @@
 <!---->
 <!---->
   
-<!-- CUBOS DE PRUEBA -->
-<!-- <a-box id="cube1" class="clickable product" data-product="cube1" position="-2 1 -4" color="#4CC3D9"></a-box>
-<a-box id="cube2" class="clickable product" data-product="cube2" position="0 1 -4" color="#EF2D5E"></a-box>
-<a-box id="cube3" class="clickable product" data-product="cube3" position="2 1 -4" color="#FFC65D"></a-box> -->
+<!-- MOSTRADOR FIJO CON SISTEMA DE NAVEGACIÓN -->
+<!-- Posición del producto actual (inicialmente cube1) -->
+<a-box id="product-display" 
+       position="0 1 -4" 
+       color="#4CC3D9" 
+       scale="1.2 1.2 1.2"
+       animation="property: rotation; to: 0 360 0; dur: 8000; loop: true; easing: linear">
+</a-box>
+
+<!-- Botón Anterior (izquierda) -->
+<a-box id="btn-anterior" 
+       class="clickable nav-button" 
+       position="-3 1 -4" 
+       color="#FF6B6B" 
+       scale="0.5 0.8 0.2"
+       text="value: ◀ ANTERIOR; position: 0 0 0.15; align: center; color: white; width: 12"
+       animation__hover="property: scale; to: 0.55 0.85 0.25; startEvents: mouseenter; dur: 200"
+       animation__leave="property: scale; to: 0.5 0.8 0.2; startEvents: mouseleave; dur: 200">
+</a-box>
+
+<!-- Botón Siguiente (derecha) -->
+<a-box id="btn-siguiente" 
+       class="clickable nav-button" 
+       position="3 1 -4" 
+       color="#4ECDC4" 
+       scale="0.5 0.8 0.2"
+       text="value: SIGUIENTE ▶; position: 0 0 0.15; align: center; color: white; width: 12"
+       animation__hover="property: scale; to: 0.55 0.85 0.25; startEvents: mouseenter; dur: 200"
+       animation__leave="property: scale; to: 0.5 0.8 0.2; startEvents: mouseleave; dur: 200">
+</a-box>
+
+<!-- Base del mostrador -->
+<a-cylinder id="mostrador-base" 
+            position="0 0 -4" 
+            radius="2" 
+            height="0.2" 
+            color="#333333">
+</a-cylinder>
+
+<!-- PANEL DE INFORMACIÓN FIJO -->
+<?php include 'panel-fijo.php' ?>

@@ -113,7 +113,52 @@
             font-size="0.8">
     </a-text>
   </a-plane>
-  
+
+  <!-- Controles de navegación para mostrador -->
+  <!-- Flecha izquierda -->
+  <a-plane id="nav-prev"
+           class="clickable nav-arrow"
+           width="0.2" 
+           height="0.4" 
+           color="#FF6B6B" 
+           opacity="0.7"
+           position="-1.3 0.1 0.03"
+           visible="false"
+           animation__prevhover="property: scale; from: 1 1 1; to: 1.1 1.1 1.1; dur: 200; startEvents: mouseenter"
+           animation__prevleave="property: scale; from: 1.1 1.1 1.1; to: 1 1 1; dur: 200; startEvents: mouseleave">
+    
+    <a-text value="◀"
+            color="#FFFFFF" 
+            position="0 0 0.01" 
+            width="4" 
+            align="center"
+            baseline="center" 
+            font-size="1">
+    </a-text>
+  </a-plane>
+
+  <!-- Flecha derecha -->
+  <a-plane id="nav-next"
+           class="clickable nav-arrow"
+           width="0.2" 
+           height="0.4" 
+           color="#FF6B6B" 
+           opacity="0.7"
+           position="1.3 0.1 0.03"
+           visible="false"
+           animation__nexthover="property: scale; from: 1 1 1; to: 1.1 1.1 1.1; dur: 200; startEvents: mouseenter"
+           animation__nextleave="property: scale; from: 1.1 1.1 1.1; to: 1 1 1; dur: 200; startEvents: mouseleave">
+    
+    <a-text value="▶"
+            color="#FFFFFF" 
+            position="0 0 0.01" 
+            width="4" 
+            align="center"
+            baseline="center" 
+            font-size="1">
+    </a-text>
+  </a-plane>
+
   <!-- Indicadores de interacción -->
   <!-- Botón Ver más detalles -->
   <a-plane id="details-btn"

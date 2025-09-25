@@ -282,6 +282,8 @@ if (!isset($_SESSION['ID_Cliente'])) {
   <script src="main.js"></script>
   <!-- SCRIPT DINÁMICO DE PRODUCTOS -->
   <script src="productos.js"></script>
+  <!-- SCRIPT DEL SISTEMA DE MOSTRADORES -->
+  <script src="mostrador.js"></script>
 
 </body>
 

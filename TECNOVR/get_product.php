@@ -4,8 +4,35 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
 // Validación básica de entrada
+if (isset($_GET['categoria'])) {
+    // Nuevo endpoint: obtener productos por categoría
+    $categoria_id = (int)$_GET['categoria'];
+    
+    // Consulta SQL segura para obtener todos los productos de una categoría
+    $stmt = $conexion->prepare("
+        SELECT p.ID_Producto, p.Nombre, p.Descripcion, p.Precio, p.Stock, pf.Ruta1, pf.Ruta2
+        FROM productos p
+        LEFT JOIN productos_fotos pf ON p.ID_Producto = pf.ID_Producto
+        WHERE p.ID_Categoria = ?
+        ORDER BY p.Nombre ASC
+    ");
+    $stmt->bind_param("i", $categoria_id);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+    
+    $productos = [];
+    while ($row = $resultado->fetch_assoc()) {
+        $productos[] = $row;
+    }
+    
+    echo json_encode($productos, JSON_UNESCAPED_UNICODE);
+    $stmt->close();
+    $conexion->close();
+    exit;
+}
+
 if (!isset($_GET['id'])) {
-    echo json_encode(['error' => 'Falta parámetro id']);
+    echo json_encode(['error' => 'Falta parámetro id o categoria']);
     exit;
 }
 
