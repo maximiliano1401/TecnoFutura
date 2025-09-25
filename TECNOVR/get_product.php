@@ -60,6 +60,24 @@ $mapa_objetos = [
     'pc4'        => 17, // Xtreme PC Gaming CM-05505
     'pc5'        => 18, // PC Gamer Delios 80
     'pc6'        => 5,  // PC Gamer Fury (duplicado para tener suficientes PCs)
+    
+    // NUEVOS CUBOS AGREGADOS PARA TESTING
+    
+    // Cubos adicionales para Teléfonos (Categoría 1)
+    'phone_cube1' => 8,  // iPhone SE o similar
+    'phone_cube2' => 10, // Samsung Galaxy A54
+    'phone_cube3' => 11, // Xiaomi Redmi Note 12
+    
+    // Cubos adicionales para Cómputo (Categoría 2)
+    'comp_cube1'  => 21, // Lenovo IdeaPad 3 (reutilizado)
+    'comp_cube2'  => 22, // Asus VivoBook 15 (reutilizado)
+    'comp_cube3'  => 23, // Acer Aspire 5 (reutilizado)
+    'comp_cube4'  => 24, // MacBook Air M2 o similar
+    
+    // Cubos adicionales para Televisores (Categoría 3)
+    'tv_cube1'    => 35, // LG OLED C3
+    'tv_cube2'    => 36, // Sony Bravia X85J
+    'tv_cube3'    => 37, // TCL QLED C735
 ];
 
 $objetoId = $_GET['id'];
