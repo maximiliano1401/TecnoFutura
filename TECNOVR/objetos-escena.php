@@ -135,45 +135,253 @@
 <!---->
 <!---->
 <!---->
+
+<!-- CUBOS ADICIONALES PARA TESTING -->
+
+<!-- Cubos básicos originales (faltaban en la escena) -->
+<a-box id="cube1"
+       position="0 0 0"
+       color="#4CC3D9"
+       scale="0.8 0.8 0.8"
+       class="clickable product"
+       data-product="cube1"
+       visible="false"></a-box>
+
+<a-box id="cube2"
+       position="0 0 0"
+       color="#1E90FF"
+       scale="0.8 0.8 0.8"
+       class="clickable product"
+       data-product="cube2"
+       visible="false"></a-box>
+
+<a-box id="cube3"
+       position="0 0 0"
+       color="#FFC65D"
+       scale="0.8 0.8 0.8"
+       class="clickable product"
+       data-product="cube3"
+       visible="false"></a-box>
+
+<!-- Cubos adicionales para Teléfonos -->
+<a-box id="phone_cube1"
+       position="0 0 0"
+       color="#87CEEB"
+       scale="0.8 0.8 0.8"
+       class="clickable product"
+       data-product="phone_cube1"
+       visible="false"></a-box>
+
+<a-box id="phone_cube2"
+       position="0 0 0"
+       color="#4169E1"
+       scale="0.8 0.8 0.8"
+       class="clickable product"
+       data-product="phone_cube2"
+       visible="false"></a-box>
+
+<a-box id="phone_cube3"
+       position="0 0 0"
+       color="#0080FF"
+       scale="0.8 0.8 0.8"
+       class="clickable product"
+       data-product="phone_cube3"
+       visible="false"></a-box>
+
+<!-- Cubos adicionales para Cómputo -->
+<a-box id="comp_cube1"
+       position="0 0 0"
+       color="#FF6B6B"
+       scale="0.8 0.8 0.8"
+       class="clickable product"
+       data-product="comp_cube1"
+       visible="false"></a-box>
+
+<a-box id="comp_cube2"
+       position="0 0 0"
+       color="#C44569"
+       scale="0.8 0.8 0.8"
+       class="clickable product"
+       data-product="comp_cube2"
+       visible="false"></a-box>
+
+<a-box id="comp_cube3"
+       position="0 0 0"
+       color="#F8B500"
+       scale="0.8 0.8 0.8"
+       class="clickable product"
+       data-product="comp_cube3"
+       visible="false"></a-box>
+
+<a-box id="comp_cube4"
+       position="0 0 0"
+       color="#FF4757"
+       scale="0.8 0.8 0.8"
+       class="clickable product"
+       data-product="comp_cube4"
+       visible="false"></a-box>
+
+<!-- Cubos adicionales para Televisores -->
+<a-box id="tv_cube1"
+       position="0 0 0"
+       color="#FFEB3B"
+       scale="0.8 0.8 0.8"
+       class="clickable product"
+       data-product="tv_cube1"
+       visible="false"></a-box>
+
+<a-box id="tv_cube2"
+       position="0 0 0"
+       color="#FF9800"
+       scale="0.8 0.8 0.8"
+       class="clickable product"
+       data-product="tv_cube2"
+       visible="false"></a-box>
+
+<a-box id="tv_cube3"
+       position="0 0 0"
+       color="#FF5722"
+       scale="0.8 0.8 0.8"
+       class="clickable product"
+       data-product="tv_cube3"
+       visible="false"></a-box>
   
-<!-- MOSTRADOR FIJO CON SISTEMA DE NAVEGACIÓN -->
-<!-- Posición del producto actual (inicialmente cube1) -->
-<a-box id="product-display" 
-       position="0 1 -4" 
-       color="#4CC3D9" 
-       scale="1.2 1.2 1.2"
-       animation="property: rotation; to: 0 360 0; dur: 8000; loop: true; easing: linear">
-</a-box>
+<!-- SISTEMA DE 3 MOSTRADORES POR CATEGORÍAS -->
 
-<!-- Botón Anterior (izquierda) -->
-<a-box id="btn-anterior" 
-       class="clickable nav-button" 
-       position="-3 1 -4" 
-       color="#FF6B6B" 
-       scale="0.5 0.8 0.2"
-       text="value: ◀ ANTERIOR; position: 0 0 0.15; align: center; color: white; width: 12"
-       animation__hover="property: scale; to: 0.55 0.85 0.25; startEvents: mouseenter; dur: 200"
-       animation__leave="property: scale; to: 0.5 0.8 0.2; startEvents: mouseleave; dur: 200">
-</a-box>
+<!-- MOSTRADOR 1: TELÉFONOS -->
+<a-entity id="mostrador-telefonos" position="-8 0 -4">
+  <!-- Producto display -->
+  <a-box id="product-display-1" 
+         position="0 1 0" 
+         color="#4CC3D9" 
+         scale="1.2 1.2 1.2"
+         animation="property: rotation; to: 0 360 0; dur: 8000; loop: true; easing: linear">
+  </a-box>
+  
+  <!-- Botón Anterior -->
+  <a-box id="btn-anterior-1" 
+         class="clickable nav-button" 
+         position="-2.5 1 0" 
+         color="#FF6B6B" 
+         scale="0.4 0.6 0.15"
+         text="value: ◀; position: 0 0 0.1; align: center; color: white; width: 15"
+         animation__hover="property: scale; to: 0.45 0.65 0.2; startEvents: mouseenter; dur: 200"
+         animation__leave="property: scale; to: 0.4 0.6 0.15; startEvents: mouseleave; dur: 200">
+  </a-box>
+  
+  <!-- Botón Siguiente -->
+  <a-box id="btn-siguiente-1" 
+         class="clickable nav-button" 
+         position="2.5 1 0" 
+         color="#4ECDC4" 
+         scale="0.4 0.6 0.15"
+         text="value: ▶; position: 0 0 0.1; align: center; color: white; width: 15"
+         animation__hover="property: scale; to: 0.45 0.65 0.2; startEvents: mouseenter; dur: 200"
+         animation__leave="property: scale; to: 0.4 0.6 0.15; startEvents: mouseleave; dur: 200">
+  </a-box>
+  
+  <!-- Base del mostrador -->
+  <a-cylinder position="0 0 0" radius="1.5" height="0.2" color="#333333"></a-cylinder>
+  
+  <!-- Etiqueta de categoría -->
+  <a-text value="TELÉFONOS" 
+          position="0 2 0" 
+          align="center" 
+          color="#4CC3D9" 
+          width="8"
+          font-size="0.8">
+  </a-text>
+</a-entity>
 
-<!-- Botón Siguiente (derecha) -->
-<a-box id="btn-siguiente" 
-       class="clickable nav-button" 
-       position="3 1 -4" 
-       color="#4ECDC4" 
-       scale="0.5 0.8 0.2"
-       text="value: SIGUIENTE ▶; position: 0 0 0.15; align: center; color: white; width: 12"
-       animation__hover="property: scale; to: 0.55 0.85 0.25; startEvents: mouseenter; dur: 200"
-       animation__leave="property: scale; to: 0.5 0.8 0.2; startEvents: mouseleave; dur: 200">
-</a-box>
+<!-- MOSTRADOR 2: CÓMPUTO -->
+<a-entity id="mostrador-computo" position="0 0 -4">
+  <!-- Producto display -->
+  <a-box id="product-display-2" 
+         position="0 1 0" 
+         color="#EF2D5E" 
+         scale="1.2 1.2 1.2"
+         animation="property: rotation; to: 0 360 0; dur: 8000; loop: true; easing: linear">
+  </a-box>
+  
+  <!-- Botón Anterior -->
+  <a-box id="btn-anterior-2" 
+         class="clickable nav-button" 
+         position="-2.5 1 0" 
+         color="#FF6B6B" 
+         scale="0.4 0.6 0.15"
+         text="value: ◀; position: 0 0 0.1; align: center; color: white; width: 15"
+         animation__hover="property: scale; to: 0.45 0.65 0.2; startEvents: mouseenter; dur: 200"
+         animation__leave="property: scale; to: 0.4 0.6 0.15; startEvents: mouseleave; dur: 200">
+  </a-box>
+  
+  <!-- Botón Siguiente -->
+  <a-box id="btn-siguiente-2" 
+         class="clickable nav-button" 
+         position="2.5 1 0" 
+         color="#4ECDC4" 
+         scale="0.4 0.6 0.15"
+         text="value: ▶; position: 0 0 0.1; align: center; color: white; width: 15"
+         animation__hover="property: scale; to: 0.45 0.65 0.2; startEvents: mouseenter; dur: 200"
+         animation__leave="property: scale; to: 0.4 0.6 0.15; startEvents: mouseleave; dur: 200">
+  </a-box>
+  
+  <!-- Base del mostrador -->
+  <a-cylinder position="0 0 0" radius="1.5" height="0.2" color="#333333"></a-cylinder>
+  
+  <!-- Etiqueta de categoría -->
+  <a-text value="CÓMPUTO" 
+          position="0 2 0" 
+          align="center" 
+          color="#EF2D5E" 
+          width="8"
+          font-size="0.8">
+  </a-text>
+</a-entity>
 
-<!-- Base del mostrador -->
-<a-cylinder id="mostrador-base" 
-            position="0 0 -4" 
-            radius="2" 
-            height="0.2" 
-            color="#333333">
-</a-cylinder>
+<!-- MOSTRADOR 3: TELEVISORES -->
+<a-entity id="mostrador-televisores" position="8 0 -4">
+  <!-- Producto display -->
+  <a-box id="product-display-3" 
+         position="0 1 0" 
+         color="#FFC65D" 
+         scale="1.2 1.2 1.2"
+         animation="property: rotation; to: 0 360 0; dur: 8000; loop: true; easing: linear">
+  </a-box>
+  
+  <!-- Botón Anterior -->
+  <a-box id="btn-anterior-3" 
+         class="clickable nav-button" 
+         position="-2.5 1 0" 
+         color="#FF6B6B" 
+         scale="0.4 0.6 0.15"
+         text="value: ◀; position: 0 0 0.1; align: center; color: white; width: 15"
+         animation__hover="property: scale; to: 0.45 0.65 0.2; startEvents: mouseenter; dur: 200"
+         animation__leave="property: scale; to: 0.4 0.6 0.15; startEvents: mouseleave; dur: 200">
+  </a-box>
+  
+  <!-- Botón Siguiente -->
+  <a-box id="btn-siguiente-3" 
+         class="clickable nav-button" 
+         position="2.5 1 0" 
+         color="#4ECDC4" 
+         scale="0.4 0.6 0.15"
+         text="value: ▶; position: 0 0 0.1; align: center; color: white; width: 15"
+         animation__hover="property: scale; to: 0.45 0.65 0.2; startEvents: mouseenter; dur: 200"
+         animation__leave="property: scale; to: 0.4 0.6 0.15; startEvents: mouseleave; dur: 200">
+  </a-box>
+  
+  <!-- Base del mostrador -->
+  <a-cylinder position="0 0 0" radius="1.5" height="0.2" color="#333333"></a-cylinder>
+  
+  <!-- Etiqueta de categoría -->
+  <a-text value="TELEVISORES" 
+          position="0 2 0" 
+          align="center" 
+          color="#FFC65D" 
+          width="8"
+          font-size="0.8">
+  </a-text>
+</a-entity>
 
 <!-- PANEL DE INFORMACIÓN FIJO -->
 <?php include 'panel-fijo.php' ?>

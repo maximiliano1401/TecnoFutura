@@ -279,9 +279,9 @@ if (!isset($_SESSION['ID_Cliente'])) {
   </a-scene>
 
   <!-- SCRIPT DE CÁMARA, MENÚ Y TECLADO TOUCH -->
-  <script src="main.js"></script>
+  <!-- <script src="main.js"></script> --> <!-- COMENTADO: Conflicto con sistema de mostradores -->
   <!-- SCRIPT DINÁMICO DE PRODUCTOS -->
-  <script src="productos.js"></script>
+  <!-- <script src="productos.js"></script> --> <!-- COMENTADO: Conflicto con sistema de mostradores -->
   <!-- SCRIPT DEL SISTEMA DE MOSTRADORES -->
   <script src="mostrador.js"></script>
 
