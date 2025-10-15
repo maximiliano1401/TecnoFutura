@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(#48A2DE, #C8C8C8 50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header {
+    background-color: #C8C8C8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #000000;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.editar-perfil {
+    width: 100%;
+}
+
+.contenedor {
+    background-color: #F0F0F0;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.perfil-y-formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.perfil .imagen-perfil {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* overflow: hidden; */
+    border: 2px solid #ccc;
+    margin-right: 10px;
+}
+
+.perfil .imagen-perfil img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.perfil .editar-icono {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.campo label {
+    font-size: 0.9rem;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+.campo input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.campo input:focus {
+    border-color: #87CEEB;
+    background-color: #ffffff;
+}
+
+.boton-contenedor {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.boton-contenedor .boton,
+.perfil .boton-editar {
+    width: 200px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: #000 2px 2px 5px; 
+}
+
+.boton-contenedor .boton-regresar {
+    background-color: rgba(76, 125, 221, 0.78);
+    color: #000;
+}
+
+.boton-contenedor .boton-regresar:hover {
+    background-color: #5aaed6;
+}
+
+.boton-contenedor .boton-guardar,
+.perfil .boton-editar {
+    background-color: #c6cbcf;
+    color: #000;
+}
+
+.boton-contenedor .boton-guardar:hover,
+.perfil .boton-editar:hover {
+    background-color: #c0c0c0;
+}
+
+.icono {
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .perfil .imagen-perfil {
+        width: 120px;
+        height: 120px;
+    }
+
+    .perfil-y-formulario {
+        flex-direction: column;
+    }
+
+    .boton-contenedor .boton {
+        width: 140px;
+    }
+
+    .editar-perfil {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .contenedor {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .perfil .imagen-perfil {
+        width: 100px;
+        height: 100px;
+    }
+
+    .perfil-y-formulario {
+        flex-direction: column;
+    }
+
+    .boton-contenedor .boton {
+        width: 140px;
+    }
+
+    .boton {
+        width: 90%;
+    }
+
+    .editar-perfil {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    
+}

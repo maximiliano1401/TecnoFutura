@@ -1,0 +1,328 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+.Menu {
+  width: 1200px;
+  height: 800px;
+  position: relative;
+}
+.mennu {
+  width: 170px;
+  height: 50px;
+  left: 500px;
+  top: 46px;  
+  position: absolute;
+  background: white;
+  border-radius: 12px;
+}
+
+
+.Categorizador {
+width: 400px;
+height: 50px;
+left: 67px;
+top: 184px;
+position: absolute;
+transform-origin: 0 0;
+}
+
+.marcas {
+  font-size: 25px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.marcas img {
+  margin: 10px; /* Agrega 10px de separación alrededor de cada imagen */
+}
+
+
+.Categorizador {
+position: absolute;
+transform-origin: 0 0;
+left: -160px;
+top: 260px;
+font-size: 25px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.Categorizador img {
+margin-top: 10px; 
+width: auto;
+max-width: 15%;
+
+}
+
+.dropdown-item {
+  font-size: 20px;
+
+}
+.icono-imagen {
+  width: 40px; 
+  height: 40px;
+}
+
+
+.nav-link .mr-auto {
+  margin-right: auto;
+  font-size: 25px;
+}
+
+.boton {
+  margin-top: 15px;
+  width: 30px; 
+  height: 30px;
+  transform: rotate(90deg);
+
+}
+
+body {
+          display: flex;
+          justify-content: center;
+          padding: 30px;
+          margin: 0;
+      }
+      
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 40px 120px 120px; /* Reduciendo 40px del padding superior */
+    }
+    
+      
+      .rectangle {
+        width: 200px;
+        height: auto;
+        background-color: rgba(42, 39, 71, 0.2);
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        align-items: flex-start;
+        
+    }
+              .navbar {
+                  padding: 10px; 
+                  width: 240px; 
+                  height: 80px;
+                  margin: -20px;
+              }
+
+          
+    
+            .product-img {
+              width: 160px; /* Ancho del contenedor */
+              height: 150px; /* Altura del contenedor */
+        
+            }
+
+            .product-name {
+              text-decoration: none;
+                font-size: 16px;
+                font-weight: bold;
+                margin-top: 10px;
+                color: #333;
+            }
+    
+            .product-description {
+                font-size: 14px;
+                color: #666;
+                margin-top: 5px;
+                text-decoration: none;
+
+            }
+    
+            .product-price {
+                font-size: 18px;
+                color: #333;
+                margin-top: 10px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+                  
+      .rectangle a {
+        text-decoration: none;
+
+    }
+    .precio{
+      margin-bottom: 0px;
+    }
+            
+    .rectangle .descripcion{
+      height: auto;
+      min-height: 100px !important;   
+      block-size: auto;
+    }
+    
+    .rectangle .precio{
+      flex: 1;
+      align-items: end;
+    }
+
+    .nombre{
+      height: auto;
+      min-height: 50px !important;   
+      block-size: auto; 
+    }
+    /* Aseguramos que la página se vea bien en pantallas pequeñas */
+    @media (max-width: 767px) {
+      body {
+          padding: 10px;
+          font-size: 16px; /* Ajustamos la fuente para mayor legibilidad */
+      }
+    
+      .Menu {
+          width: 100%; /* Se asegura que ocupe todo el ancho en móviles */
+          height: auto;
+          padding: 20px 10px; /* Reducimos el padding */
+      }
+    
+      .Categorizador {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        display: flex; 
+        flex-direction: row; /* Elementos en fila */
+        align-items: center; /* Centra las imágenes verticalmente */
+        justify-content: center; /* Centra las imágenes horizontalmente */
+        margin-top: 20px; /* Espacio desde la parte superior de la página */
+        margin-left: 58%;
+        margin-top: -67%;
+    }
+    
+      .Categorizador p {
+          font-size: 18px; /* Ajustamos el tamaño del texto */
+          margin-top: 8px;
+      }
+    
+      .Categorizador img {
+          width: 30%; /* Ajustamos el tamaño de las imágenes */
+          margin: 10px; /* Espaciado entre imágenes */
+      }
+    
+      /* Ajuste de marcas disponibles */
+      .marcas {
+          width: 100%;
+          text-align: center;
+          padding: 13px;
+          display: flex;
+          flex-direction: column; /* Colocamos las imágenes en columna */
+          align-items: center; /* Centra las imágenes */
+          width: 100%;
+          flex-direction: row; /* Elementos en fila */
+          align-items: center; /* Centra las imágenes verticalmente */
+          justify-content: center; /* Centra las imágenes horizontalmente */
+          margin-top: 20px; /* Espacio desde la parte superior de la página */
+          margin-left: 2%;
+          margin-top: 0%;
+      }
+    
+      .marcas p {
+          font-size: 16px; /* Ajustamos el tamaño del texto */
+      }
+    
+      .marcas img {
+          width: 15.5%; /* Ajustamos el tamaño de las imágenes */
+          margin: 10px; /* Espaciado entre imágenes */
+      }
+    
+      /* El contenedor de los productos se adapta a pantallas pequeñas */
+      .container {
+          display: grid;
+          grid-template-columns: 1fr 1fr; /* Dos columnas en móviles */
+          gap: 10px;
+          padding: 20px 10px;
+      }
+    
+      .rectangle {
+          width: 100%;
+          height: auto;
+          background-color: rgba(42, 39, 71, 0.2);
+          border-radius: 10px;
+          border: 1px solid #ddd;
+          margin: 10px 0;
+          padding: 10px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          box-sizing: border-box;
+      }
+    
+      .product-img {
+          width: 100%;
+          object-fit: contain;
+      }
+    
+      .product-name {
+          font-size: 18px; /* Ajustamos el tamaño de la fuente */
+          font-weight: bold;
+          margin-top: 10px;
+          color: #333;
+      }
+    
+      .product-description {
+          font-size: 14px;
+          color: #666;
+          margin-top: 5px;
+      }
+    
+      .product-price {
+          font-size: 16px;
+          color: #333;
+          margin-top: 10px;
+          font-weight: bold;
+      }
+    
+      .boton {
+          width: 40px;
+          height: 40px;
+          margin: 10px;
+      }
+    
+      .dropdown-item, .dropdown-item1, .dropdown-item2 {
+          font-size: 18px; /* Reducción del tamaño de texto */
+          width: auto;
+          padding-left: 20px; /* Menos padding */
+          text-align: left; /* Alineación a la izquierda */
+      }
+    
+      .dropdown-menu {
+          width: 100%;
+          height: auto;
+          background-color: rgba(255, 255, 255, 0.9);
+      }
+    
+      .icono-imagen {
+          width: 25px;
+          height: 25px;
+          margin: 5px;
+      }
+    
+      .navbar {
+          width: 100%;
+          height: auto;
+          padding: 10px;
+      }
+    }
+    

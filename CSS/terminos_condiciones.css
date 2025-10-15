@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(0deg, #D9D9D9 0%, #D9D9D9 100%);
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.title {
+    text-align: center;
+    color: #1E1E1E;
+    font-size: 27px;
+    font-style: italic;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+
+.logo {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button.accept {
+    background-color: #00A3FF;
+}
+
+.button.return {
+    background-color: #2400F9;
+}
+
+.button-text {
+    z-index: 2;
+}
+
+.content {
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+.content-title {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.content-text {
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .content {
+        font-size: 14px;
+    }
+    .content-title {
+        font-size: 16px;
+    }
+    .button {
+        width: 90%;
+    }
+}

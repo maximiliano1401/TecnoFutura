@@ -1,0 +1,387 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#48A2DE, #C8C8C8 50%);
+    background-size: cover;
+    background-attachment: fixed; 
+    color: #333;
+}
+
+/* Títulos */
+.titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Producto */
+.producto {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    align-items: start;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f068;
+    height: fit-content;
+}
+
+.informacion-producto {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imagen-producto {
+    width: 200px;
+    height: auto;
+}
+
+.detalles-producto {
+    flex-grow: 1;
+}
+
+.detalles-producto h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Botones */
+.botones {
+    display: flex;
+    gap: 10px;
+}
+
+.agregar-carrito,
+.comprar,
+.cantidad {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.agregar-carrito {
+    background-color: #28a745;
+}
+
+.comprar,
+.cantidad {
+    background-color: #0056f2;
+}
+
+.cantidad {
+    background-color: #8ec9ff;
+    color: #000;
+}
+
+.especificaciones {
+    grid-column: 4 / 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    transform: translateY(-60px);
+}
+
+.caracteristica {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #eaeaea;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.caracteristica img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.caracteristica p {
+    font-size: 0.85rem;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Descripción y reseñas */
+.descripcion,
+.reseñas {
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+.reseñas h3 {
+    font-size: 1.2rem;
+}
+
+.reseña {
+    margin-bottom: 10px;
+}
+
+.reseña span {
+    color: #f39c12;
+}
+
+/* Finanzas y Logos */
+.financiamiento,
+.logos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.logos img {
+    width: 40%;
+    height: auto;
+}
+
+.recomendaciones {
+    margin-top: 20px;
+}
+
+.recomendaciones h3 {
+    margin-bottom: 10px;
+}
+
+.productos-recomendados {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Navegar */
+.navegar {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    color: #333;
+}
+
+.navegar:hover {
+    color: #007bff;
+}
+
+/* Carrusel */
+.carousel-container {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    margin-left: -20px;
+    margin-top: -60px;
+}
+
+.carousel-inner .carousel-item {
+    transition: none;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-top: 80px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 80%;
+    z-index: 10;
+    background-color: #000;
+    border-radius: 5px;
+}
+
+.carousel-control-prev {
+    left: -30px;
+}
+
+.carousel-control-next {
+    right: -30px;
+}
+
+/* Envío */
+.envio {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.envio img {
+    width: 40px;
+    height: auto;
+    margin-right: 5px;
+}
+
+/* Rectángulo de productos */
+.rectangle {
+    background: #DDD;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+
+.rectangle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen y nombre del producto */
+.product-img {
+    width: 160px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.product-name,
+.product-price {
+    text-align: center;
+    font-weight: bold;
+}
+
+.product-name {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.product-price {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.rectangle a {
+    text-decoration: none;
+    color: inherit;
+}
+/* 
+.rectangle a:hover {
+    text-decoration: underline;
+} */
+
+/* Grid y Layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.galeria,
+.detalles,
+.precio {
+    grid-column: 1 / 2;
+    margin: 0 auto;
+}
+
+.detalles {
+    grid-column: 2 / 3;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.galeria img{
+    height: inherit;
+    object-fit: contain;
+}
+
+.precio {
+    grid-column: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* Carrusel para móviles */
+@media (max-width: 768px) {
+    .producto {
+        display: flex;
+        /* grid-template-columns: 1fr; */
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .galeria,
+    .detalles,
+    .precio {
+        grid-column: 1 / 2;
+        margin: auto;
+    }
+
+    .precio {
+        padding-bottom: 40px;
+    }
+
+    .carousel-container {
+        /* width: 100%;
+        height: auto; */
+        margin-left: 0;
+        margin-bottom: 100px;
+    }
+
+    .logos img {
+        width: 360px;
+        height: auto;
+    }
+
+    .logos img:not(:first-child) {
+        display: none;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        margin-top: 25px;
+    }
+
+    .rectangle {
+        width: 150px;
+    }
+}

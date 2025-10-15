@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#48A2DE, #C8C8C8 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+main {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  width: 48%;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.guardar-btn {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #C6CBCF;
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  box-shadow: #000 2px 2px 5px; 
+}
+
+.guardar-btn:hover {
+  background-color: #b0b3b6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+@media (max-width: 600px) {
+  .row {
+      flex-direction: column;
+  }
+  .column {
+      width: 100%;
+  }
+}

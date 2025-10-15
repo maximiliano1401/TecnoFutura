@@ -1,0 +1,286 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#48A2DE, #C8C8C8 50%);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  background-color: #C8C8C8;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: #000000;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+.logo {
+  height: 40px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 5px 10px;
+  width: 400px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.cart-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.cart-text {
+  font-size: 14px;
+}
+
+
+.titulo-container {
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ordenes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.orden-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #D9D9D9;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.orden-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.orden-detalles {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.orden-detalles h2 {
+  color: #0500FF;
+  font-size: 27px;
+}
+
+.precio-detalles {
+  text-align: right;
+}
+
+.precio {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.ver-detalles {
+  background: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.ver-detalles:hover {
+  background: darkblue;
+}
+
+.mensaje-vacio {
+  text-align: center;
+  font-size: 18px;
+  color: gray;
+}
+
+/* Menú desplegable */
+.offcanvas {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid #ffffff;
+}
+
+.offcanvas-body {
+  padding: 20px;
+}
+
+.user-info {
+  text-align: center;
+}
+
+.user-menu {
+  width: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.user-info .user-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.list-group-item {
+  border: none;
+  cursor: pointer;
+}
+
+.list-group-item i {
+  font-size: 18px;
+}
+
+.list-group-item:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.collapse {
+  margin-left: 20px;
+}
+
+.btn-danger {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.boton {
+  transform: rotate(90deg);
+  max-width: 15%;
+  width: 50px;
+  height: 40px;
+  margin-left: auto;
+  padding-right: 10px !important;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .orden-item {
+    display: block;
+    width: 80%;
+  }
+
+  .orden-detalles {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .precio-detalles {
+    text-align: right;
+  }
+}
+
+@media (max-width: 1024px) {
+  .orden-item {
+    width: 70%;
+  }
+
+  .orden-detalles h2 {
+    font-size: 27px;
+  }
+
+  .precio {
+    font-size: 32px;
+  }
+}
