@@ -1,6 +1,6 @@
-const CACHE_NAME = 'tecnoapk-v2';
-const STATIC_CACHE = 'tecnoapk-static-v2';
-const DYNAMIC_CACHE = 'tecnoapk-dynamic-v2';
+const CACHE_NAME = 'tecnoapk-v3';
+const STATIC_CACHE = 'tecnoapk-static-v3';
+const DYNAMIC_CACHE = 'tecnoapk-dynamic-v3';
 
 // Archivos esenciales para offline (solo los críticos)
 const STATIC_FILES = [
