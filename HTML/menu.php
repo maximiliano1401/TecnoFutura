@@ -29,10 +29,26 @@ $result = $conexion->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#007bff">
+    <meta name="description" content="TecnoAPK - Explora lo último en tecnología. Teléfonos, computadoras, televisores y más.">
+    
+    <!-- PWA iOS Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="TecnoAPK">
+    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="../manifest.json">
+    
+    <!-- Stylesheets -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/menu.css">
-    <title>Menú</title>
+    
+    <title>TecnoAPK - Menú Principal</title>
 </head>
 
 <body>
@@ -99,6 +115,55 @@ $result = $conexion->query($sql);
             </div>
         </section>
     </main>
+
+    <!-- PWA Scripts -->
+    <script>
+        // Registro del Service Worker (solo si no está ya registrado)
+        if ('serviceWorker' in navigator && !navigator.serviceWorker.controller) {
+            navigator.serviceWorker.register('../sw.js')
+                .then(registration => console.log('SW registrado:', registration))
+                .catch(error => console.log('Error SW:', error));
+        }
+
+        // Verificar si la app está en modo standalone (instalada)
+        if (window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches) {
+            document.body.classList.add('pwa-mode');
+            console.log('App ejecutándose en modo PWA');
+        }
+
+        // Funcionalidad offline
+        window.addEventListener('online', () => {
+            console.log('Conexión restaurada');
+            showNetworkStatus('Conexión restaurada', 'success');
+        });
+
+        window.addEventListener('offline', () => {
+            console.log('Sin conexión');
+            showNetworkStatus('Sin conexión - Modo offline', 'warning');
+        });
+
+        function showNetworkStatus(message, type) {
+            // Crear toast de notificación
+            const toast = document.createElement('div');
+            toast.className = `alert alert-${type} position-fixed`;
+            toast.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 250px;';
+            toast.textContent = message;
+            
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        // Optimización de imágenes para PWA
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.producto-imagen');
+            images.forEach(img => {
+                img.loading = 'lazy'; // Lazy loading
+                img.onerror = function() {
+                    this.src = '../IMG/placeholder.png'; // Imagen placeholder si falla
+                };
+            });
+        });
+    </script>
 </body>
 
 </html>
