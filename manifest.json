@@ -6,7 +6,6 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
-  "orientation": "portrait-primary",
   "scope": "/",
   "lang": "es",
   "categories": ["shopping", "technology"],
