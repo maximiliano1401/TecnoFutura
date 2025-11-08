@@ -1,8 +1,9 @@
-      <!-- TIENDA -->
-      <a-asset-item id="estructura-obj" src="assets/estructura/estructura.obj"></a-asset-item>
-      <a-asset-item id="estructura-mtl" src="assets/estructura/estructura.mtl"></a-asset-item>
+<!-- TIENDA -->
+<a-asset-item id="estructura-obj" src="assets/baseTecnofutura/baseTecnofutura.obj"></a-asset-item>
+<a-asset-item id="estructura-mtl" src="assets/baseTecnofutura/baseTecnofutura.mtl"></a-asset-item>      
+
+<!-- PRODUCTOS -->
       
-      <!-- PRODUCTOS -->
       <a-asset-item id="laptop1-obj" src="assets/laptop1/lap1.obj"></a-asset-item>
       <a-asset-item id="laptop1-mtl" src="assets/laptop1/lap1.mtl"></a-asset-item>
 

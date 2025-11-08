@@ -1,5 +1,5 @@
 <!-- TIENDA -->
-<a-entity obj-model="obj: #estructura-obj; mtl: #estructura-mtl" position="-25 -8 2" scale="0.5 0.5 0.5" rotation="0 0 0"></a-entity>
+<a-entity obj-model="obj: #estructura-obj; mtl: #estructura-mtl" position="0.403 -0.665 2.000" scale="0.300 0.300 0.300" rotation="0 0 0"></a-entity>
 
 <!-- PRODUCTOS -->
 <a-entity id="laptop1"
@@ -250,7 +250,7 @@
 <!-- SISTEMA DE 3 MOSTRADORES POR CATEGORÍAS -->
 
 <!-- MOSTRADOR 1: TELÉFONOS -->
-<a-entity id="mostrador-telefonos" position="-8 0 -4">
+<a-entity id="mostrador-telefonos" position="-2.490 0.000 -2.367">
   <!-- Producto display -->
   <a-box id="product-display-1" 
          position="0 1 0" 
@@ -295,7 +295,7 @@
 </a-entity>
 
 <!-- MOSTRADOR 2: CÓMPUTO -->
-<a-entity id="mostrador-computo" position="0 0 -4">
+<a-entity id="mostrador-computo" position="6.171 0.000 3.542" rotation="0.000 -90.0 0.000">
   <!-- Producto display -->
   <a-box id="product-display-2" 
          position="0 1 0" 
