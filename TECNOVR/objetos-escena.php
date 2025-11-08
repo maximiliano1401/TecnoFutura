@@ -2,7 +2,7 @@
 <a-entity obj-model="obj: #estructura-obj; mtl: #estructura-mtl" position="0.403 -0.665 2.000" scale="0.300 0.300 0.300" rotation="0 0 0"></a-entity>
 
 <!-- PRODUCTOS -->
-<a-entity id="laptop1"
+<!-- <a-entity id="laptop1"
   obj-model="obj: #laptop1-obj; mtl: #laptop1-mtl"
   position="-33.594 1.084 26.464"
   scale="0.5 0.5 0.5"
@@ -32,7 +32,7 @@
   scale="0.6 0.6 0.6"
   rotation="0 0 0"
   class="clickable product"
-  data-product="monitor2"></a-entity>
+  data-product="monitor2"></a-entity> -->
 
 <!-- COMENTADO: Modelos 3D faltantes - descomentar cuando se transfieran desde Windows -->
 <!--<a-entity id="lapgamer"
@@ -340,7 +340,7 @@
 </a-entity>
 
 <!-- MOSTRADOR 3: TELEVISORES -->
-<a-entity id="mostrador-televisores" position="8 0 -4">
+<a-entity id="mostrador-televisores" position="-4.047 0.000 17.205" rotation="0.000 180.00 0.000">
   <!-- Producto display -->
   <a-box id="product-display-3" 
          position="0 1 0" 
