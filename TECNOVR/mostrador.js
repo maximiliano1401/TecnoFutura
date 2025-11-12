@@ -3,36 +3,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Configuración de productos por categoría
   const configuracionCategorias = {
-    1: { // Teléfonos - Solo modelos disponibles
+    1: { // Teléfonos - Modelos 3D reales
       productos: [
-        { id: 'cube1', color: '#4CC3D9', productId: 1 }, // iPhone 15 Pro Max
-        { id: 'celular1', color: '#00BFFF', productId: 6 }, // Samsung Galaxy S23 Ultra
-        { id: 'cube2', color: '#1E90FF', productId: 7 },  // Xiaomi 13T
-        { id: 'phone_cube1', color: '#87CEEB', productId: 8 }, // Otro teléfono
-        { id: 'phone_cube2', color: '#4169E1', productId: 10 }, // iPhone SE
-        { id: 'phone_cube3', color: '#0080FF', productId: 11 }  // Samsung A54
+        { id: 'mobile1', color: '#4CC3D9', productId: 1 },  // iPhone 15 Pro Max
+        { id: 'mobile2', color: '#00BFFF', productId: 6 },  // Samsung Galaxy S23 Ultra
+        { id: 'mobile3', color: '#1E90FF', productId: 7 },  // Xiaomi 13T
+        { id: 'mobile4', color: '#87CEEB', productId: 8 },  // iPhone 16 Pro Max
+        { id: 'mobile5', color: '#4169E1', productId: 10 }  // Xiaomi 14 Ultra
       ]
     },
-    2: { // Cómputo - Solo modelos disponibles (laptop1 es el único disponible)
+    2: { // Cómputo - Modelos 3D reales
       productos: [
-        { id: 'laptop1', color: '#EF2D5E', productId: 19 }, // HP Pavilion x360
-        { id: 'comp_cube1', color: '#FF6B6B', productId: 21 }, // Lenovo ThinkPad
-        { id: 'comp_cube2', color: '#C44569', productId: 22 }, // MacBook Air
-        { id: 'comp_cube3', color: '#F8B500', productId: 23 }, // ASUS ROG
-        { id: 'comp_cube4', color: '#FF4757', productId: 24 }  // Acer Aspire
-        // COMENTADO: Modelos faltantes
-        // { id: 'lapgamer1', color: '#FF1493', productId: 20 }, // Dell Inspiron 14
-        // { id: 'pc1', color: '#DC143C', productId: 5 },  // PC Gamer Fury
+        { id: 'pc1', color: '#EF2D5E', productId: 19 },  // HP Pavilion x360
+        { id: 'pc2', color: '#FF6B6B', productId: 21 },  // Lenovo ThinkPad
+        { id: 'pc3', color: '#C44569', productId: 22 },  // MacBook Air
+        { id: 'pc4', color: '#F8B500', productId: 23 },  // ASUS ROG
+        { id: 'pc5', color: '#FF4757', productId: 24 }   // Acer Aspire
       ]
     },
-    3: { // Televisores - Solo modelos disponibles
+    3: { // Televisores - Modelos 3D reales
       productos: [
-        { id: 'cube3', color: '#FFC65D', productId: 3 }, // Samsung TV 50 4K
-        { id: 'monitor1', color: '#FFD700', productId: 34 }, // Samsung S90C
-        { id: 'monitor2', color: '#FFA500', productId: 38 }, // Sony X90J
-        { id: 'tv_cube1', color: '#FFEB3B', productId: 35 }, // LG OLED
-        { id: 'tv_cube2', color: '#FF9800', productId: 36 }, // Sony Bravia
-        { id: 'tv_cube3', color: '#FF5722', productId: 37 }  // TCL QLED
+        { id: 'tv1', color: '#FFC65D', productId: 3 },   // Samsung TV 50 4K
+        { id: 'tv2', color: '#FFD700', productId: 34 },  // Samsung S90C
+        { id: 'tv3', color: '#FFA500', productId: 38 },  // Sony X90J
+        { id: 'tv4', color: '#FFEB3B', productId: 35 },  // LG OLED
+        { id: 'tv5', color: '#FF9800', productId: 36 }   // Sony Bravia
       ]
     }
   };
@@ -109,8 +104,42 @@ document.addEventListener('DOMContentLoaded', () => {
         this.productDisplay.emit('change-product');
       }
       
-      // NO modificar otros elementos de la escena para evitar cubos duplicados
+      // Gestionar visibilidad de modelos 3D
+      // Ocultar todos los productos de esta categoría
+      this.productos.forEach(producto => {
+        const entity = document.querySelector(`#${producto.id}`);
+        if (entity) {
+          entity.setAttribute('visible', 'false');
+        }
+      });
+      
+      // Mostrar solo el producto actual
+      const currentEntity = document.querySelector(`#${currentProduct.id}`);
+      if (currentEntity) {
+        currentEntity.setAttribute('visible', 'true');
+        
+        // Posicionar el modelo sobre el mostrador
+        const mostradorPosition = this.getDisplayPosition();
+        currentEntity.setAttribute('position', mostradorPosition);
+        
+        // Agregar rotación automática
+        currentEntity.setAttribute('animation', 
+          'property: rotation; to: 0 360 0; dur: 8000; loop: true; easing: linear');
+        
+        console.log(`Modelo 3D ${currentProduct.id} visible sobre mostrador ${this.categoriaId}`);
+      }
+      
       console.log(`Mostrador ${this.categoriaId} mostrando: ${currentProduct.id} (${currentProduct.color})`);
+    }
+    
+    getDisplayPosition() {
+      // Posiciones sobre cada mostrador según categoría
+      const positions = {
+        1: '-2.490 2.0 -2.367',  // Teléfonos
+        2: '6.171 2.0 3.542',     // Cómputo
+        3: '-4.047 2.0 17.205'    // Televisores
+      };
+      return positions[this.categoriaId] || '0 2 0';
     }
 
     async updateInfoPanel() {

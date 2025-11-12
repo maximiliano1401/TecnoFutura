@@ -45,45 +45,28 @@ if (!isset($_GET['id'])) {
 }
 
 // Mapeo de ID de objeto a ID_Producto
-// SOLO productos con modelos 3D disponibles o cubos placeholder
+// Modelos 3D reales implementados
 $mapa_objetos = [
-    // Modelos 3D disponibles
-    'laptop1'    => 19, // HP Pavilion x360 - Modelo disponible
-    'celular1'   => 6,  // Samsung Galaxy S23 Ultra - Modelo disponible
-    'monitor1'   => 34, // Samsung S90C - Modelo disponible
-    'monitor2'   => 38, // Sony X90J - Modelo disponible
+    // MÓVILES - Modelos 3D reales
+    'mobile1' => 1,  // iPhone 15 Pro Max
+    'mobile2' => 6,  // Samsung Galaxy S23 Ultra
+    'mobile3' => 7,  // Xiaomi 13T
+    'mobile4' => 8,  // iPhone 16 Pro Max
+    'mobile5' => 10, // Xiaomi 14 Ultra
     
-    // Cubos placeholder para categoría Teléfonos
-    'cube1'      => 1,  // iPhone 15 Pro Max
-    'cube2'      => 7,  // Xiaomi 13T
-    'phone_cube1' => 8,  // iPhone 16 Pro Max
-    'phone_cube2' => 10, // Xiaomi 14 Ultra
-    'phone_cube3' => 11, // OnePlus 12
+    // COMPUTADORAS / PCs - Modelos 3D reales
+    'pc1' => 19, // HP Pavilion x360
+    'pc2' => 21, // Lenovo ThinkPad
+    'pc3' => 22, // MacBook Air
+    'pc4' => 23, // ASUS ROG
+    'pc5' => 24, // Acer Aspire
     
-    // Cubos placeholder para categoría Cómputo
-    'comp_cube1'  => 20, // Dell Inspiron 14
-    'comp_cube2'  => 21, // Lenovo IdeaPad 3
-    'comp_cube3'  => 22, // Asus VivoBook 15
-    'comp_cube4'  => 23, // Acer Aspire 5
-    
-    // Cubos placeholder para categoría Televisores
-    'cube3'      => 3,  // Samsung TV 50 4K
-    'tv_cube1'    => 35, // TCL QM851G
-    'tv_cube2'    => 36, // Samsung The Frame
-    'tv_cube3'    => 37, // Samsung Neo QLED
-    
-    // COMENTADO: Modelos 3D faltantes (descomentar cuando se transfieran desde Windows)
-    // 'lapgamer'   => 4,  // MSI KATANA 15
-    // 'lapgamer1'  => 20, // Dell Inspiron 14
-    // 'lapgamer2'  => 21, // Lenovo IdeaPad 3
-    // 'lapgamer3'  => 22, // Asus VivoBook 15
-    // 'lapgamer5'  => 23, // Acer Aspire 5
-    // 'pc1'        => 5,  // PC Gamer Fury
-    // 'pc2'        => 15, // Digital Master PC Gamer SILVER PRO
-    // 'pc3'        => 16, // PC Gamer Spartan Imagine
-    // 'pc4'        => 17, // Xtreme PC Gaming CM-05505
-    // 'pc5'        => 18, // PC Gamer Delios 80
-    // 'pc6'        => 5,  // PC Gamer Fury (duplicado)
+    // TELEVISORES - Modelos 3D reales
+    'tv1' => 3,  // Samsung TV 50 4K
+    'tv2' => 34, // Samsung S90C
+    'tv3' => 38, // Sony X90J
+    'tv4' => 35, // LG OLED
+    'tv5' => 36, // Sony Bravia
 ];
 
 $objetoId = $_GET['id'];

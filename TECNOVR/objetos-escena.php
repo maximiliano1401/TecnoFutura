@@ -137,115 +137,145 @@
 <!---->
 <!---->
 
-<!-- CUBOS ADICIONALES PARA TESTING -->
+<!-- MODELOS 3D REALES DE PRODUCTOS -->
 
-<!-- Cubos básicos originales (faltaban en la escena) -->
-<a-box id="cube1"
-       position="0 0 0"
-       color="#4CC3D9"
-       scale="0.8 0.8 0.8"
-       class="clickable product"
-       data-product="cube1"
-       visible="false"></a-box>
+<!-- MÓVILES -->
+<a-entity id="mobile1"
+  obj-model="obj: #mobile1-obj; mtl: #mobile1-mtl"
+  position="0 0 0"
+  scale="0.5 0.5 0.5"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="mobile1"
+  visible="false"></a-entity>
 
-<a-box id="cube2"
-       position="0 0 0"
-       color="#1E90FF"
-       scale="0.8 0.8 0.8"
-       class="clickable product"
-       data-product="cube2"
-       visible="false"></a-box>
+<a-entity id="mobile2"
+  obj-model="obj: #mobile2-obj; mtl: #mobile2-mtl"
+  position="0 0 0"
+  scale="0.5 0.5 0.5"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="mobile2"
+  visible="false"></a-entity>
 
-<a-box id="cube3"
-       position="0 0 0"
-       color="#FFC65D"
-       scale="0.8 0.8 0.8"
-       class="clickable product"
-       data-product="cube3"
-       visible="false"></a-box>
+<a-entity id="mobile3"
+  obj-model="obj: #mobile3-obj; mtl: #mobile3-mtl"
+  position="0 0 0"
+  scale="0.5 0.5 0.5"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="mobile3"
+  visible="false"></a-entity>
 
-<!-- Cubos adicionales para Teléfonos -->
-<a-box id="phone_cube1"
-       position="0 0 0"
-       color="#87CEEB"
-       scale="0.8 0.8 0.8"
-       class="clickable product"
-       data-product="phone_cube1"
-       visible="false"></a-box>
+<a-entity id="mobile4"
+  obj-model="obj: #mobile4-obj; mtl: #mobile4-mtl"
+  position="0 0 0"
+  scale="0.5 0.5 0.5"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="mobile4"
+  visible="false"></a-entity>
 
-<a-box id="phone_cube2"
-       position="0 0 0"
-       color="#4169E1"
-       scale="0.8 0.8 0.8"
-       class="clickable product"
-       data-product="phone_cube2"
-       visible="false"></a-box>
+<a-entity id="mobile5"
+  obj-model="obj: #mobile5-obj; mtl: #mobile5-mtl"
+  position="0 0 0"
+  scale="0.5 0.5 0.5"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="mobile5"
+  visible="false"></a-entity>
 
-<a-box id="phone_cube3"
-       position="0 0 0"
-       color="#0080FF"
-       scale="0.8 0.8 0.8"
-       class="clickable product"
-       data-product="phone_cube3"
-       visible="false"></a-box>
+<!-- COMPUTADORAS / PCs -->
+<a-entity id="pc1"
+  obj-model="obj: #pc1-obj; mtl: #pc1-mtl"
+  position="0 0 0"
+  scale="0.5 0.5 0.5"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="pc1"
+  visible="false"></a-entity>
 
-<!-- Cubos adicionales para Cómputo -->
-<a-box id="comp_cube1"
-       position="0 0 0"
-       color="#FF6B6B"
-       scale="0.8 0.8 0.8"
-       class="clickable product"
-       data-product="comp_cube1"
-       visible="false"></a-box>
+<a-entity id="pc2"
+  obj-model="obj: #pc2-obj; mtl: #pc2-mtl"
+  position="0 0 0"
+  scale="0.5 0.5 0.5"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="pc2"
+  visible="false"></a-entity>
 
-<a-box id="comp_cube2"
-       position="0 0 0"
-       color="#C44569"
-       scale="0.8 0.8 0.8"
-       class="clickable product"
-       data-product="comp_cube2"
-       visible="false"></a-box>
+<a-entity id="pc3"
+  obj-model="obj: #pc3-obj; mtl: #pc3-mtl"
+  position="0 0 0"
+  scale="0.5 0.5 0.5"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="pc3"
+  visible="false"></a-entity>
 
-<a-box id="comp_cube3"
-       position="0 0 0"
-       color="#F8B500"
-       scale="0.8 0.8 0.8"
-       class="clickable product"
-       data-product="comp_cube3"
-       visible="false"></a-box>
+<a-entity id="pc4"
+  obj-model="obj: #pc4-obj; mtl: #pc4-mtl"
+  position="0 0 0"
+  scale="0.5 0.5 0.5"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="pc4"
+  visible="false"></a-entity>
 
-<a-box id="comp_cube4"
-       position="0 0 0"
-       color="#FF4757"
-       scale="0.8 0.8 0.8"
-       class="clickable product"
-       data-product="comp_cube4"
-       visible="false"></a-box>
+<a-entity id="pc5"
+  obj-model="obj: #pc5-obj; mtl: #pc5-mtl"
+  position="0 0 0"
+  scale="0.5 0.5 0.5"
+  rotation="0 0 0"
+  class="clickable product"
+  data-product="pc5"
+  visible="false"></a-entity>
 
-<!-- Cubos adicionales para Televisores -->
-<a-box id="tv_cube1"
-       position="0 0 0"
-       color="#FFEB3B"
-       scale="0.8 0.8 0.8"
-       class="clickable product"
-       data-product="tv_cube1"
-       visible="false"></a-box>
+<!-- TELEVISORES -->
+<a-entity id="tv1"
+  obj-model="obj: #tv1-obj; mtl: #tv1-mtl"
+  position="-4.047 2.0 17.205"
+  scale="0.8 0.8 0.8"
+  rotation="0 180 0"
+  class="clickable product"
+  data-product="tv1"
+  visible="false"></a-entity>
 
-<a-box id="tv_cube2"
-       position="0 0 0"
-       color="#FF9800"
-       scale="0.8 0.8 0.8"
-       class="clickable product"
-       data-product="tv_cube2"
-       visible="false"></a-box>
+<a-entity id="tv2"
+  obj-model="obj: #tv2-obj; mtl: #tv2-mtl"
+  position="-4.047 2.0 17.205"
+  scale="0.8 0.8 0.8"
+  rotation="0 180 0"
+  class="clickable product"
+  data-product="tv2"
+  visible="false"></a-entity>
 
-<a-box id="tv_cube3"
-       position="0 0 0"
-       color="#FF5722"
-       scale="0.8 0.8 0.8"
-       class="clickable product"
-       data-product="tv_cube3"
-       visible="false"></a-box>
+<a-entity id="tv3"
+  obj-model="obj: #tv3-obj; mtl: #tv3-mtl"
+  position="-4.047 2.0 17.205"
+  scale="0.8 0.8 0.8"
+  rotation="0 180 0"
+  class="clickable product"
+  data-product="tv3"
+  visible="false"></a-entity>
+
+<a-entity id="tv4"
+  obj-model="obj: #tv4-obj; mtl: #tv4-mtl"
+  position="-4.047 2.0 17.205"
+  scale="0.8 0.8 0.8"
+  rotation="0 180 0"
+  class="clickable product"
+  data-product="tv4"
+  visible="false"></a-entity>
+
+<a-entity id="tv5"
+  obj-model="obj: #tv5-obj; mtl: #tv5-mtl"
+  position="-4.047 2.0 17.205"
+  scale="0.8 0.8 0.8"
+  rotation="0 180 0"
+  class="clickable product"
+  data-product="tv5"
+  visible="false"></a-entity>
   
 <!-- SISTEMA DE 3 MOSTRADORES POR CATEGORÍAS -->
 
