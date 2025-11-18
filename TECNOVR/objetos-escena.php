@@ -287,7 +287,7 @@
          position="-2.5 1 0" 
          color="#FF6B6B" 
          scale="0.4 0.6 0.15"
-         text="value: ◀; position: 0 0 0.1; align: center; color: white; width: 15"
+         text="value: ◀; align: center; color: white; width: 15"
          animation__hover="property: scale; to: 0.45 0.65 0.2; startEvents: mouseenter; dur: 200"
          animation__leave="property: scale; to: 0.4 0.6 0.15; startEvents: mouseleave; dur: 200">
   </a-box>
@@ -298,7 +298,7 @@
          position="2.5 1 0" 
          color="#4ECDC4" 
          scale="0.4 0.6 0.15"
-         text="value: ▶; position: 0 0 0.1; align: center; color: white; width: 15"
+         text="value: ▶; align: center; color: white; width: 15"
          animation__hover="property: scale; to: 0.45 0.65 0.2; startEvents: mouseenter; dur: 200"
          animation__leave="property: scale; to: 0.4 0.6 0.15; startEvents: mouseleave; dur: 200">
   </a-box>
@@ -311,8 +311,7 @@
           position="0 2 0" 
           align="center" 
           color="#4CC3D9" 
-          width="8"
-          font-size="0.8">
+          width="8">
   </a-text>
 </a-entity>
 
@@ -324,7 +323,7 @@
          position="-2.5 1 0" 
          color="#FF6B6B" 
          scale="0.4 0.6 0.15"
-         text="value: ◀; position: 0 0 0.1; align: center; color: white; width: 15"
+         text="value: ◀; align: center; color: white; width: 15"
          animation__hover="property: scale; to: 0.45 0.65 0.2; startEvents: mouseenter; dur: 200"
          animation__leave="property: scale; to: 0.4 0.6 0.15; startEvents: mouseleave; dur: 200">
   </a-box>
@@ -335,7 +334,7 @@
          position="2.5 1 0" 
          color="#4ECDC4" 
          scale="0.4 0.6 0.15"
-         text="value: ▶; position: 0 0 0.1; align: center; color: white; width: 15"
+         text="value: ▶; align: center; color: white; width: 15"
          animation__hover="property: scale; to: 0.45 0.65 0.2; startEvents: mouseenter; dur: 200"
          animation__leave="property: scale; to: 0.4 0.6 0.15; startEvents: mouseleave; dur: 200">
   </a-box>
@@ -348,8 +347,7 @@
           position="0 2 0" 
           align="center" 
           color="#EF2D5E" 
-          width="8"
-          font-size="0.8">
+          width="8">
   </a-text>
 </a-entity>
 
@@ -361,7 +359,7 @@
          position="-2.5 1 0" 
          color="#FF6B6B" 
          scale="0.4 0.6 0.15"
-         text="value: ◀; position: 0 0 0.1; align: center; color: white; width: 15"
+         text="value: ◀; align: center; color: white; width: 15"
          animation__hover="property: scale; to: 0.45 0.65 0.2; startEvents: mouseenter; dur: 200"
          animation__leave="property: scale; to: 0.4 0.6 0.15; startEvents: mouseleave; dur: 200">
   </a-box>
@@ -372,7 +370,7 @@
          position="2.5 1 0" 
          color="#4ECDC4" 
          scale="0.4 0.6 0.15"
-         text="value: ▶; position: 0 0 0.1; align: center; color: white; width: 15"
+         text="value: ▶; align: center; color: white; width: 15"
          animation__hover="property: scale; to: 0.45 0.65 0.2; startEvents: mouseenter; dur: 200"
          animation__leave="property: scale; to: 0.4 0.6 0.15; startEvents: mouseleave; dur: 200">
   </a-box>
@@ -385,8 +383,7 @@
           position="0 2 0" 
           align="center" 
           color="#FFC65D" 
-          width="8"
-          font-size="0.8">
+          width="8">
   </a-text>
 </a-entity>
 
