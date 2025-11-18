@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'tv2', color: '#FFD700', productId: 34 },  // Samsung S90C
         { id: 'tv3', color: '#FFA500', productId: 38 },  // Sony X90J
         { id: 'tv4', color: '#FFEB3B', productId: 35 },  // LG OLED
-        { id: 'tv5', color: '#FF9800', productId: 36 }   // Sony Bravia
       ]
     }
   };
@@ -96,11 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
     updateProductDisplay() {
       const currentProduct = this.productos[this.currentIndex];
       
+      // Cambiar color del cubo display del mostrador (si existe)
       if (this.productDisplay) {
-        // Cambiar color del cubo display del mostrador
         this.productDisplay.setAttribute('color', currentProduct.color);
-        
-        // Animación de cambio
         this.productDisplay.emit('change-product');
       }
       

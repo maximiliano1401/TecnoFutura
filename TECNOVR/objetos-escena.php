@@ -142,8 +142,8 @@
 <!-- MÓVILES -->
 <a-entity id="mobile1"
   obj-model="obj: #mobile1-obj; mtl: #mobile1-mtl"
-  position="0 0 0"
-  scale="0.5 0.5 0.5"
+  position="-2.490 2.0 -2.367"
+  scale="0.002 0.002 0.002"
   rotation="0 0 0"
   class="clickable product"
   data-product="mobile1"
@@ -151,8 +151,8 @@
 
 <a-entity id="mobile2"
   obj-model="obj: #mobile2-obj; mtl: #mobile2-mtl"
-  position="0 0 0"
-  scale="0.5 0.5 0.5"
+  position="-2.490 2.0 -2.367"
+  scale="4 4 4"
   rotation="0 0 0"
   class="clickable product"
   data-product="mobile2"
@@ -160,8 +160,8 @@
 
 <a-entity id="mobile3"
   obj-model="obj: #mobile3-obj; mtl: #mobile3-mtl"
-  position="0 0 0"
-  scale="0.5 0.5 0.5"
+  position="-2.490 2.0 -2.367"
+  scale="4 4 4"
   rotation="0 0 0"
   class="clickable product"
   data-product="mobile3"
@@ -169,8 +169,8 @@
 
 <a-entity id="mobile4"
   obj-model="obj: #mobile4-obj; mtl: #mobile4-mtl"
-  position="0 0 0"
-  scale="0.5 0.5 0.5"
+  position="-2.490 2.0 -2.367"
+  scale="4 4 4"
   rotation="0 0 0"
   class="clickable product"
   data-product="mobile4"
@@ -178,8 +178,8 @@
 
 <a-entity id="mobile5"
   obj-model="obj: #mobile5-obj; mtl: #mobile5-mtl"
-  position="0 0 0"
-  scale="0.5 0.5 0.5"
+  position="-2.490 2.0 -2.367"
+  scale="4 4 4"
   rotation="0 0 0"
   class="clickable product"
   data-product="mobile5"
@@ -188,45 +188,45 @@
 <!-- COMPUTADORAS / PCs -->
 <a-entity id="pc1"
   obj-model="obj: #pc1-obj; mtl: #pc1-mtl"
-  position="0 0 0"
-  scale="0.5 0.5 0.5"
-  rotation="0 0 0"
+  position="6.171 2.0 3.542"
+  scale="0.01 0.01 0.01"
+  rotation="0 -90 0"
   class="clickable product"
   data-product="pc1"
   visible="false"></a-entity>
 
 <a-entity id="pc2"
   obj-model="obj: #pc2-obj; mtl: #pc2-mtl"
-  position="0 0 0"
-  scale="0.5 0.5 0.5"
-  rotation="0 0 0"
+  position="6.171 2.0 3.542"
+  scale="0.01 0.01 0.01"
+  rotation="0 -90 0"
   class="clickable product"
   data-product="pc2"
   visible="false"></a-entity>
 
 <a-entity id="pc3"
   obj-model="obj: #pc3-obj; mtl: #pc3-mtl"
-  position="0 0 0"
-  scale="0.5 0.5 0.5"
-  rotation="0 0 0"
+  position="6.171 2.0 3.542"
+  scale="0.01 0.01 0.01"
+  rotation="0 -90 0"
   class="clickable product"
   data-product="pc3"
   visible="false"></a-entity>
 
 <a-entity id="pc4"
   obj-model="obj: #pc4-obj; mtl: #pc4-mtl"
-  position="0 0 0"
-  scale="0.5 0.5 0.5"
-  rotation="0 0 0"
+  position="6.171 2.0 3.542"
+  scale="0.01 0.01 0.01"
+  rotation="0 -90 0"
   class="clickable product"
   data-product="pc4"
   visible="false"></a-entity>
 
 <a-entity id="pc5"
   obj-model="obj: #pc5-obj; mtl: #pc5-mtl"
-  position="0 0 0"
-  scale="0.5 0.5 0.5"
-  rotation="0 0 0"
+  position="6.171 2.0 3.542"
+  scale="0.01 0.01 0.01"
+  rotation="0 -90 0"
   class="clickable product"
   data-product="pc5"
   visible="false"></a-entity>
@@ -235,7 +235,7 @@
 <a-entity id="tv1"
   obj-model="obj: #tv1-obj; mtl: #tv1-mtl"
   position="-4.047 2.0 17.205"
-  scale="0.8 0.8 0.8"
+  scale="0.2 0.2 0.2"
   rotation="0 180 0"
   class="clickable product"
   data-product="tv1"
@@ -244,7 +244,7 @@
 <a-entity id="tv2"
   obj-model="obj: #tv2-obj; mtl: #tv2-mtl"
   position="-4.047 2.0 17.205"
-  scale="0.8 0.8 0.8"
+  scale="3.5 3.5 3.5"
   rotation="0 180 0"
   class="clickable product"
   data-product="tv2"
@@ -253,7 +253,7 @@
 <a-entity id="tv3"
   obj-model="obj: #tv3-obj; mtl: #tv3-mtl"
   position="-4.047 2.0 17.205"
-  scale="0.8 0.8 0.8"
+  scale="3.5 3.5 3.5"
   rotation="0 180 0"
   class="clickable product"
   data-product="tv3"
@@ -262,33 +262,25 @@
 <a-entity id="tv4"
   obj-model="obj: #tv4-obj; mtl: #tv4-mtl"
   position="-4.047 2.0 17.205"
-  scale="0.8 0.8 0.8"
+  scale="3.5 3.5 3.5"
   rotation="0 180 0"
   class="clickable product"
   data-product="tv4"
   visible="false"></a-entity>
 
-<a-entity id="tv5"
+<!-- <a-entity id="tv5"
   obj-model="obj: #tv5-obj; mtl: #tv5-mtl"
   position="-4.047 2.0 17.205"
-  scale="0.8 0.8 0.8"
+  scale="3.5 3.5 3.5"
   rotation="0 180 0"
   class="clickable product"
   data-product="tv5"
-  visible="false"></a-entity>
+  visible="false"></a-entity> -->
   
 <!-- SISTEMA DE 3 MOSTRADORES POR CATEGORÍAS -->
 
 <!-- MOSTRADOR 1: TELÉFONOS -->
 <a-entity id="mostrador-telefonos" position="-2.490 0.000 -2.367">
-  <!-- Producto display -->
-  <a-box id="product-display-1" 
-         position="0 1 0" 
-         color="#4CC3D9" 
-         scale="1.2 1.2 1.2"
-         animation="property: rotation; to: 0 360 0; dur: 8000; loop: true; easing: linear">
-  </a-box>
-  
   <!-- Botón Anterior -->
   <a-box id="btn-anterior-1" 
          class="clickable nav-button" 
@@ -326,14 +318,6 @@
 
 <!-- MOSTRADOR 2: CÓMPUTO -->
 <a-entity id="mostrador-computo" position="6.171 0.000 3.542" rotation="0.000 -90.0 0.000">
-  <!-- Producto display -->
-  <a-box id="product-display-2" 
-         position="0 1 0" 
-         color="#EF2D5E" 
-         scale="1.2 1.2 1.2"
-         animation="property: rotation; to: 0 360 0; dur: 8000; loop: true; easing: linear">
-  </a-box>
-  
   <!-- Botón Anterior -->
   <a-box id="btn-anterior-2" 
          class="clickable nav-button" 
@@ -371,14 +355,6 @@
 
 <!-- MOSTRADOR 3: TELEVISORES -->
 <a-entity id="mostrador-televisores" position="-4.047 0.000 17.205" rotation="0.000 180.00 0.000">
-  <!-- Producto display -->
-  <a-box id="product-display-3" 
-         position="0 1 0" 
-         color="#FFC65D" 
-         scale="1.2 1.2 1.2"
-         animation="property: rotation; to: 0 360 0; dur: 8000; loop: true; easing: linear">
-  </a-box>
-  
   <!-- Botón Anterior -->
   <a-box id="btn-anterior-3" 
          class="clickable nav-button" 

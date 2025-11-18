@@ -66,7 +66,6 @@ $mapa_objetos = [
     'tv2' => 34, // Samsung S90C
     'tv3' => 38, // Sony X90J
     'tv4' => 35, // LG OLED
-    'tv5' => 36, // Sony Bravia
 ];
 
 $objetoId = $_GET['id'];

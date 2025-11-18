@@ -245,7 +245,7 @@ if (!isset($_SESSION['ID_Cliente'])) {
 </head>
 
 <body>
-  <div id="demo-banner-div">DEMO - Esta es una versión de prueba</div>
+  <!-- <div id="demo-banner-div">DEMO - Esta es una versión de prueba</div> -->
   <!-------- [[CONTROLES TÁCTILES]] -------->
   <?php include ('controles-tactiles.php') ?>
 
