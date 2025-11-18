@@ -1,6 +1,6 @@
 <!-- TIENDA -->-
-<a-asset-item id="estructura-obj" src="assets/baseTecnofutura/modelo actual.obj"></a-asset-item>
-<a-asset-item id="estructura-mtl" src="assets/baseTecnofutura/modelo actual.mtl"></a-asset-item>      
+<a-asset-item id="estructura-obj" src="assets/tiendaT/tiendaT.obj"></a-asset-item>
+<a-asset-item id="estructura-mtl" src="assets/tiendaT/tiendaT.mtl"></a-asset-item>      
 
 <!-- PRODUCTOS -->
 
