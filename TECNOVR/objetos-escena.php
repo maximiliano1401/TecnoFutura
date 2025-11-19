@@ -42,6 +42,7 @@
   data-product="laptop1"
   visible="false"></a-entity>
 
+
 <!-- TELEVISORES -->
 <a-entity id="tv1"
   obj-model="obj: #tv1-obj; mtl: #tv1-mtl"
