@@ -6,27 +6,23 @@ document.addEventListener('DOMContentLoaded', () => {
     1: { // Teléfonos - Modelos 3D reales
       productos: [
         { id: 'mobile1', color: '#4CC3D9', productId: 1 },  // iPhone 15 Pro Max
-        { id: 'mobile2', color: '#00BFFF', productId: 6 },  // Samsung Galaxy S23 Ultra
-        { id: 'mobile3', color: '#1E90FF', productId: 7 },  // Xiaomi 13T
-        { id: 'mobile4', color: '#87CEEB', productId: 8 },  // iPhone 16 Pro Max
-        { id: 'mobile5', color: '#4169E1', productId: 10 }  // Xiaomi 14 Ultra
+        { id: 'mobile3', color: '#1E90FF', productId: 7 }   // Xiaomi 13T
       ]
     },
     2: { // Cómputo - Modelos 3D reales
       productos: [
-        { id: 'pc1', color: '#EF2D5E', productId: 19 },  // HP Pavilion x360
-        { id: 'pc2', color: '#FF6B6B', productId: 21 },  // Lenovo ThinkPad
-        { id: 'pc3', color: '#C44569', productId: 22 },  // MacBook Air
-        { id: 'pc4', color: '#F8B500', productId: 23 },  // ASUS ROG
-        { id: 'pc5', color: '#FF4757', productId: 24 }   // Acer Aspire
+        { id: 'pc1', color: '#EF2D5E', productId: 19 },     // HP Pavilion x360
+        { id: 'laptop1', color: '#FF6B6B', productId: 20 }  // Laptop modelo 1
       ]
     },
     3: { // Televisores - Modelos 3D reales
       productos: [
-        { id: 'tv1', color: '#FFC65D', productId: 3 },   // Samsung TV 50 4K
-        { id: 'tv2', color: '#FFD700', productId: 34 },  // Samsung S90C
-        { id: 'tv3', color: '#FFA500', productId: 38 },  // Sony X90J
-        { id: 'tv4', color: '#FFEB3B', productId: 35 },  // LG OLED
+        { id: 'tv1', color: '#FFC65D', productId: 3 },      // Samsung TV 50 4K
+        { id: 'tv2', color: '#FFD700', productId: 34 },     // Samsung S90C
+        { id: 'tv3', color: '#FFA500', productId: 38 },     // Sony X90J
+        { id: 'tv4', color: '#FFEB3B', productId: 35 },     // LG OLED
+        { id: 'monitor1', color: '#FF4757', productId: 36 },// Monitor 1
+        { id: 'monitor2', color: '#FFB040', productId: 37 } // Monitor 2
       ]
     }
   };

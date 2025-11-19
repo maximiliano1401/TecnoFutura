@@ -8,33 +8,15 @@
 <a-asset-item id="mobile1-obj" src="assets/productos/modiles/modelo 1/mobile1.obj"></a-asset-item>
 <a-asset-item id="mobile1-mtl" src="assets/productos/modiles/modelo 1/mobile1.mtl"></a-asset-item>
 
-<a-asset-item id="mobile2-obj" src="assets/productos/modiles/modelo2/mobiles.obj"></a-asset-item>
-<a-asset-item id="mobile2-mtl" src="assets/productos/modiles/modelo2/mobiles.mtl"></a-asset-item>
-
 <a-asset-item id="mobile3-obj" src="assets/productos/modiles/modelo 3/mobile3.obj"></a-asset-item>
 <a-asset-item id="mobile3-mtl" src="assets/productos/modiles/modelo 3/mobile3.mtl"></a-asset-item>
-
-<a-asset-item id="mobile4-obj" src="assets/productos/modiles/modelo 1/mobile1.obj"></a-asset-item>
-<a-asset-item id="mobile4-mtl" src="assets/productos/modiles/modelo 1/mobile1.mtl"></a-asset-item>
-
-<a-asset-item id="mobile5-obj" src="assets/productos/modiles/modelo2/mobiles.obj"></a-asset-item>
-<a-asset-item id="mobile5-mtl" src="assets/productos/modiles/modelo2/mobiles.mtl"></a-asset-item>
 
 <!-- COMPUTADORAS / PCs -->
 <a-asset-item id="pc1-obj" src="assets/productos/pc/modelo 1/pc1.obj"></a-asset-item>
 <a-asset-item id="pc1-mtl" src="assets/productos/pc/modelo 1/pc1.mtl"></a-asset-item>
 
-<a-asset-item id="pc2-obj" src="assets/productos/pc/modelo2/pc2.obj"></a-asset-item>
-<a-asset-item id="pc2-mtl" src="assets/productos/pc/modelo2/pc2.mtl"></a-asset-item>
-
-<a-asset-item id="pc3-obj" src="assets/productos/pc/modelo 1/pc1.obj"></a-asset-item>
-<a-asset-item id="pc3-mtl" src="assets/productos/pc/modelo 1/pc1.mtl"></a-asset-item>
-
-<a-asset-item id="pc4-obj" src="assets/productos/pc/modelo2/pc2.obj"></a-asset-item>
-<a-asset-item id="pc4-mtl" src="assets/productos/pc/modelo2/pc2.mtl"></a-asset-item>
-
-<a-asset-item id="pc5-obj" src="assets/productos/pc/modelo 1/pc1.obj"></a-asset-item>
-<a-asset-item id="pc5-mtl" src="assets/productos/pc/modelo 1/pc1.mtl"></a-asset-item>
+<a-asset-item id="laptop1-obj" src="assets/productos/pc/modelo 1/pc1.obj"></a-asset-item>
+<a-asset-item id="laptop1-mtl" src="assets/productos/pc/modelo 1/pc1.mtl"></a-asset-item>
 
 <!-- TELEVISORES -->
 <a-asset-item id="tv1-obj" src="assets/productos/tv/modelo 1/tv1.obj"></a-asset-item>
@@ -49,8 +31,11 @@
 <a-asset-item id="tv4-obj" src="assets/productos/tv/modelo4/tv4.obj"></a-asset-item>
 <a-asset-item id="tv4-mtl" src="assets/productos/tv/modelo4/tv4.mtl"></a-asset-item>
 
-<!-- <a-asset-item id="tv5-obj" src="assets/productos/tv/modelo5/tv5.obj"></a-asset-item>
-<a-asset-item id="tv5-mtl" src="assets/productos/tv/modelo5/tv5.mtl"></a-asset-item> -->
+<a-asset-item id="monitor1-obj" src="assets/productos/tv/modelo 1/tv1.obj"></a-asset-item>
+<a-asset-item id="monitor1-mtl" src="assets/productos/tv/modelo 1/tv1.mtl"></a-asset-item>
+
+<a-asset-item id="monitor2-obj" src="assets/productos/tv/modelo2/tv2.obj"></a-asset-item>
+<a-asset-item id="monitor2-mtl" src="assets/productos/tv/modelo2/tv2.mtl"></a-asset-item>
 
       
       <!-- COMENTADO: Modelos faltantes - descomentar cuando se transfieran desde Windows -->

@@ -2,240 +2,51 @@
 <a-entity obj-model="obj: #estructura-obj; mtl: #estructura-mtl" position="0.403 -0.665 2.000" scale="0.300 0.300 0.300" rotation="0 0 0"></a-entity>
 
 <!-- PRODUCTOS -->
-<!-- <a-entity id="laptop1"
-  obj-model="obj: #laptop1-obj; mtl: #laptop1-mtl"
-  position="-33.594 1.084 26.464"
-  scale="0.5 0.5 0.5"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="laptop1"></a-entity>
-
-<a-entity id="celular1"
-  obj-model="obj: #celular1-obj; mtl: #celular1-mtl"
-  position="65.2 -15.4 36.7"
-  scale="0.4 0.4 0.4"
-  rotation="0 30 0"
-  class="clickable product"
-  data-product="celular1"></a-entity>
-
-<a-entity id="monitor1"
-  obj-model="obj: #monitor1-obj; mtl: #monitor1-mtl"
-  position="-0.2 -36.17 -22.7"
-  scale="0.6 0.6 0.6"
-  rotation="0 180 0"
-  class="clickable product"
-  data-product="monitor1"></a-entity>
-
-<a-entity id="monitor2"
-  obj-model="obj: #monitor2-obj; mtl: #monitor2-mtl"
-  position="15.3 -29.6 97.1"
-  scale="0.6 0.6 0.6"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="monitor2"></a-entity> -->
-
-<!-- COMENTADO: Modelos 3D faltantes - descomentar cuando se transfieran desde Windows -->
-<!--<a-entity id="lapgamer"
-  obj-model="obj: #laptopgamer-obj; mtl: #laptopgamer-mtl"
-  position="15.3 -29.6 97.1"
-  scale="0.6 0.6 0.6"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="lapgamer"></a-entity>-->
-
-<!---->
-<!---->
-<!---->
-
-<!--<a-entity id="lapgamer1"
-  obj-model="obj: #laptopgamer1-obj; mtl: #laptopgamer1-mtl"
-  position="0 0 0"
-  scale="0.6 0.6 0.6"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="lapgamer1"></a-entity>-->
-
-<!--<a-entity id="lapgamer2"
-  obj-model="obj: #laptopgamer2-obj; mtl: #laptopgamer2-mtl"
-  position="-17 46 17"
-  scale="0.6 0.6 0.6"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="lapgamer2"></a-entity>-->
-
-<!--<a-entity id="lapgamer3"
-  obj-model="obj: #laptopgamer3-obj; mtl: #laptopgamer3-mtl"
-  position="-64 76.5 61"
-  scale="0.6 0.6 0.6"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="lapgamer3"></a-entity>-->
-
-<!--<a-entity id="lapgamer5"
-  obj-model="obj: #laptopgamer5-obj; mtl: #laptopgamer5-mtl"
-  position="-90 108.3 1.3"
-  scale="0.6 0.6 0.6"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="lapgamer5"></a-entity>-->
-
-
-<!---->
-<!---->
-<!---->
-
-<!--<a-entity id="pc1"
-  obj-model="obj: #pc1-obj; mtl: #pc1-mtl"
-  position="0 0 0"
-  scale="0.6 0.6 0.6"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="pc1"></a-entity>-->
-
-<!--<a-entity id="pc2"
-  obj-model="obj: #pc2-obj; mtl: #pc2-mtl"
-  position="0 0 0"
-  scale="0.6 0.6 0.6"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="pc2"></a-entity>-->
-
-<!--<a-entity id="pc3"
-  obj-model="obj: #pc3-obj; mtl: #pc3-mtl"
-  position="-5.3 162.8 1.74"
-  scale="0.6 0.6 0.6"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="pc3"></a-entity>-->
-
-<!--<a-entity id="pc4"
-  obj-model="obj: #pc4-obj; mtl: #pc4-mtl"
-  position="0 0 0"
-  scale="0.6 0.6 0.6"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="pc4"></a-entity>-->
-
-<!--<a-entity id="pc5"
-  obj-model="obj: #pc5-obj; mtl: #pc5-mtl"
-  position="0 0 0"
-  scale="0.6 0.6 0.6"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="pc5"></a-entity>-->
-
-<!--<a-entity id="pc6"
-  obj-model="obj: #pc6-obj; mtl: #pc6-mtl"
-  position="0 0 0"
-  scale="0.6 0.6 0.6"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="pc6"></a-entity>-->
-
-
-<!---->
-<!---->
-<!---->
-
 <!-- MODELOS 3D REALES DE PRODUCTOS -->
 
 <!-- MÓVILES -->
 <a-entity id="mobile1"
   obj-model="obj: #mobile1-obj; mtl: #mobile1-mtl"
   position="-2.490 2.0 -2.367"
-  scale="0.002 0.002 0.002"
+  scale="0.010 0.010 0.010"
   rotation="0 0 0"
   class="clickable product"
   data-product="mobile1"
   visible="false"></a-entity>
 
-<a-entity id="mobile2"
-  obj-model="obj: #mobile2-obj; mtl: #mobile2-mtl"
-  position="-2.490 2.0 -2.367"
-  scale="0.01 0.01 0.01"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="mobile2"
-  visible="false"></a-entity>
-
 <a-entity id="mobile3"
   obj-model="obj: #mobile3-obj; mtl: #mobile3-mtl"
   position="-2.490 2.0 -2.367"
-  scale="0.01 0.01 0.01"
+  scale="0.005 0.005 0.005"
   rotation="0 0 0"
   class="clickable product"
   data-product="mobile3"
-  visible="false"></a-entity>
-
-<a-entity id="mobile4"
-  obj-model="obj: #mobile4-obj; mtl: #mobile4-mtl"
-  position="-2.490 2.0 -2.367"
-  scale="0.01 0.01 0.01"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="mobile4"
-  visible="false"></a-entity>
-
-<a-entity id="mobile5"
-  obj-model="obj: #mobile5-obj; mtl: #mobile5-mtl"
-  position="-2.490 2.0 -2.367"
-  scale="0.01 0.01 0.01"
-  rotation="0 0 0"
-  class="clickable product"
-  data-product="mobile5"
   visible="false"></a-entity>
 
 <!-- COMPUTADORAS / PCs -->
 <a-entity id="pc1"
   obj-model="obj: #pc1-obj; mtl: #pc1-mtl"
   position="6.171 2.0 3.542"
-  scale="0.1 0.1 0.1"
+  scale="0.500 0.500 0.250"
   rotation="0 -90 0"
   class="clickable product"
   data-product="pc1"
   visible="false"></a-entity>
 
-<a-entity id="pc2"
-  obj-model="obj: #pc2-obj; mtl: #pc2-mtl"
+<a-entity id="laptop1"
+  obj-model="obj: #laptop1-obj; mtl: #laptop1-mtl"
   position="6.171 2.0 3.542"
-  scale="0.1 0.1 0.1"
+  scale="0.500 0.500 0.500"
   rotation="0 -90 0"
   class="clickable product"
-  data-product="pc2"
-  visible="false"></a-entity>
-
-<a-entity id="pc3"
-  obj-model="obj: #pc3-obj; mtl: #pc3-mtl"
-  position="6.171 2.0 3.542"
-  scale="0.1 0.1 0.1"
-  rotation="0 -90 0"
-  class="clickable product"
-  data-product="pc3"
-  visible="false"></a-entity>
-
-<a-entity id="pc4"
-  obj-model="obj: #pc4-obj; mtl: #pc4-mtl"
-  position="6.171 2.0 3.542"
-  scale="0.1 0.1 0.1"
-  rotation="0 -90 0"
-  class="clickable product"
-  data-product="pc4"
-  visible="false"></a-entity>
-
-<a-entity id="pc5"
-  obj-model="obj: #pc5-obj; mtl: #pc5-mtl"
-  position="6.171 2.0 3.542"
-  scale="0.01 0.01 0.01"
-  rotation="0 -90 0"
-  class="clickable product"
-  data-product="pc5"
+  data-product="laptop1"
   visible="false"></a-entity>
 
 <!-- TELEVISORES -->
 <a-entity id="tv1"
   obj-model="obj: #tv1-obj; mtl: #tv1-mtl"
   position="-4.047 2.0 17.205"
-  scale="0.2 0.2 0.2"
+  scale="0.100 0.100 0.400"
   rotation="0 180 0"
   class="clickable product"
   data-product="tv1"
@@ -244,7 +55,7 @@
 <a-entity id="tv2"
   obj-model="obj: #tv2-obj; mtl: #tv2-mtl"
   position="-4.047 2.0 17.205"
-  scale="0.2 0.2 0.2"
+  scale="0.200 0.200 1.000"
   rotation="0 180 0"
   class="clickable product"
   data-product="tv2"
@@ -253,7 +64,7 @@
 <a-entity id="tv3"
   obj-model="obj: #tv3-obj; mtl: #tv3-mtl"
   position="-4.047 2.0 17.205"
-  scale="0.2 0.2 0.2"
+  scale="0.250 0.250 0.400"
   rotation="0 180 0"
   class="clickable product"
   data-product="tv3"
@@ -262,20 +73,29 @@
 <a-entity id="tv4"
   obj-model="obj: #tv4-obj; mtl: #tv4-mtl"
   position="-4.047 2.0 17.205"
-  scale="0.2 0.2 0.2"
+  scale="0.250 0.250 0.400"
   rotation="0 180 0"
   class="clickable product"
   data-product="tv4"
   visible="false"></a-entity>
 
-<!-- <a-entity id="tv5"
-  obj-model="obj: #tv5-obj; mtl: #tv5-mtl"
+<a-entity id="monitor1"
+  obj-model="obj: #monitor1-obj; mtl: #monitor1-mtl"
   position="-4.047 2.0 17.205"
-  scale="3.5 3.5 3.5"
+  scale="0.600 0.600 0.600"
   rotation="0 180 0"
   class="clickable product"
-  data-product="tv5"
-  visible="false"></a-entity> -->
+  data-product="monitor1"
+  visible="false"></a-entity>
+
+<a-entity id="monitor2"
+  obj-model="obj: #monitor2-obj; mtl: #monitor2-mtl"
+  position="-4.047 2.0 17.205"
+  scale="0.600 0.600 0.600"
+  rotation="0 180 0"
+  class="clickable product"
+  data-product="monitor2"
+  visible="false"></a-entity>
   
 <!-- SISTEMA DE 3 MOSTRADORES POR CATEGORÍAS -->
 

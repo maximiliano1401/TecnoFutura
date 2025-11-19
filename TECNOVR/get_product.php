@@ -49,23 +49,19 @@ if (!isset($_GET['id'])) {
 $mapa_objetos = [
     // MÓVILES - Modelos 3D reales
     'mobile1' => 1,  // iPhone 15 Pro Max
-    'mobile2' => 6,  // Samsung Galaxy S23 Ultra
     'mobile3' => 7,  // Xiaomi 13T
-    'mobile4' => 8,  // iPhone 16 Pro Max
-    'mobile5' => 10, // Xiaomi 14 Ultra
     
     // COMPUTADORAS / PCs - Modelos 3D reales
     'pc1' => 19, // HP Pavilion x360
-    'pc2' => 21, // Lenovo ThinkPad
-    'pc3' => 22, // MacBook Air
-    'pc4' => 23, // ASUS ROG
-    'pc5' => 24, // Acer Aspire
+    'laptop1' => 20, // Laptop modelo 1
     
     // TELEVISORES - Modelos 3D reales
     'tv1' => 3,  // Samsung TV 50 4K
     'tv2' => 34, // Samsung S90C
     'tv3' => 38, // Sony X90J
     'tv4' => 35, // LG OLED
+    'monitor1' => 36, // Monitor 1
+    'monitor2' => 37, // Monitor 2
 ];
 
 $objetoId = $_GET['id'];
