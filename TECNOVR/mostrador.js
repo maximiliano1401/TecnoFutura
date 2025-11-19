@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'tv2', color: '#FFD700', productId: 34 },     // Samsung S90C
         { id: 'tv3', color: '#FFA500', productId: 38 },     // Sony X90J
         { id: 'tv4', color: '#FFEB3B', productId: 35 },     // LG OLED
-        { id: 'monitor1', color: '#FF4757', productId: 36 },// Monitor 1
-        { id: 'monitor2', color: '#FFB040', productId: 37 } // Monitor 2
+        { id: 'monitor1', color: '#FF4757', productId: 36 } // Monitor 1
       ]
     }
   };

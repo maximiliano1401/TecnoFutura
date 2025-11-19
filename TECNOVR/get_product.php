@@ -61,7 +61,6 @@ $mapa_objetos = [
     'tv3' => 38, // Sony X90J
     'tv4' => 35, // LG OLED
     'monitor1' => 36, // Monitor 1
-    'monitor2' => 37, // Monitor 2
 ];
 
 $objetoId = $_GET['id'];

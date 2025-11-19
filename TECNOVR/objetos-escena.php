@@ -88,15 +88,6 @@
   class="clickable product"
   data-product="monitor1"
   visible="false"></a-entity>
-
-<a-entity id="monitor2"
-  obj-model="obj: #monitor2-obj; mtl: #monitor2-mtl"
-  position="-4.047 2.0 17.205"
-  scale="0.600 0.600 0.600"
-  rotation="0 180 0"
-  class="clickable product"
-  data-product="monitor2"
-  visible="false"></a-entity>
   
 <!-- SISTEMA DE 3 MOSTRADORES POR CATEGORÍAS -->
 
