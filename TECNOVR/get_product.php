@@ -61,6 +61,13 @@ $mapa_objetos = [
     'tv3' => 38, // Sony X90J
     'tv4' => 35, // LG OLED
     'monitor1' => 36, // Monitor 1
+    // Nuevas variantes añadidas (mapeo heurístico basado en dump SQL)
+    'cel2_1' => 13, // Redmi / variante (asignada heurísticamente)
+    'cel2_2' => 13, // misma familia
+    'cel2_3' => 13, // misma familia
+    'compu2_1' => 5,  // PC Gamer Fury (heurístico)
+    'compu2_2' => 15, // Digital Master PC Gamer SILVER PRO
+    'compu2_3' => 16, // PC Gamer Spartan Imagine
 ];
 
 $objetoId = $_GET['id'];

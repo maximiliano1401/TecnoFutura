@@ -7,12 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
       productos: [
         { id: 'mobile1', color: '#4CC3D9', productId: 1 },  // iPhone 15 Pro Max
         { id: 'mobile3', color: '#1E90FF', productId: 7 }   // Xiaomi 13T
+        ,{ id: 'cel2_1', color: '#00BFFF', productId: 13 }
+        ,{ id: 'cel2_2', color: '#00CED1', productId: 13 }
+        ,{ id: 'cel2_3', color: '#20B2AA', productId: 13 }
       ]
     },
     2: { // Cómputo - Modelos 3D reales
       productos: [
         { id: 'pc1', color: '#EF2D5E', productId: 19 },     // HP Pavilion x360
         { id: 'laptop1', color: '#FF6B6B', productId: 20 }  // Laptop modelo 1
+        ,{ id: 'compu2_1', color: '#8A2BE2', productId: 5 }
+        ,{ id: 'compu2_2', color: '#6A5ACD', productId: 15 }
+        ,{ id: 'compu2_3', color: '#483D8B', productId: 16 }
       ]
     },
     3: { // Televisores - Modelos 3D reales
@@ -127,9 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
     getDisplayPosition() {
       // Posiciones sobre cada mostrador según categoría
       const positions = {
-        1: '-2.490 2.0 -2.367',  // Teléfonos
-        2: '6.171 2.0 3.542',     // Cómputo
-        3: '-4.047 2.0 17.205'    // Televisores
+  1: '-4.308 2.0 19.038',  // Teléfonos (swapped, ajustado)
+  2: '7.581 2.0 6.181',     // Cómputo (moved)
+        3: '-1.499 2.0 -3.163'    // Televisores (moved)
       };
       return positions[this.categoriaId] || '0 2 0';
     }

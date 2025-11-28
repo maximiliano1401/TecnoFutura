@@ -7,18 +7,18 @@
 <!-- MÓVILES -->
 <a-entity id="mobile1"
   obj-model="obj: #mobile1-obj; mtl: #mobile1-mtl"
-  position="-2.490 2.0 -2.367"
+  position="-4.308 2.0 19.038"
   scale="0.010 0.010 0.010"
-  rotation="0 0 0"
+  rotation="0 180 0"
   class="clickable product"
   data-product="mobile1"
   visible="false"></a-entity>
 
 <a-entity id="mobile3"
   obj-model="obj: #mobile3-obj; mtl: #mobile3-mtl"
-  position="-2.490 2.0 -2.367"
+  position="-4.308 2.0 19.038"
   scale="0.005 0.005 0.005"
-  rotation="0 0 0"
+  rotation="0 180 0"
   class="clickable product"
   data-product="mobile3"
   visible="false"></a-entity>
@@ -26,7 +26,7 @@
 <!-- COMPUTADORAS / PCs -->
 <a-entity id="pc1"
   obj-model="obj: #pc1-obj; mtl: #pc1-mtl"
-  position="6.171 2.0 3.542"
+  position="7.581 2.0 6.181"
   scale="0.500 0.500 0.250"
   rotation="0 -90 0"
   class="clickable product"
@@ -35,56 +35,112 @@
 
 <a-entity id="laptop1"
   obj-model="obj: #laptop1-obj; mtl: #laptop1-mtl"
-  position="6.171 2.0 3.542"
+  position="7.581 2.0 6.181"
   scale="0.500 0.500 0.500"
   rotation="0 -90 0"
   class="clickable product"
   data-product="laptop1"
   visible="false"></a-entity>
 
+<!-- VARIANTES CEL2 (móviles adicionales) -->
+<a-entity id="cel2_1"
+  obj-model="obj: #cel2_1-obj; mtl: #cel2_1-mtl"
+  position="-4.308 2.0 19.038"
+  scale="0.500 0.500 0.500"
+  rotation="0 180 0"
+  class="clickable product"
+  data-product="cel2_1"
+  visible="false"></a-entity>
+
+<a-entity id="cel2_2"
+  obj-model="obj: #cel2_2-obj; mtl: #cel2_2-mtl"
+  position="-4.308 2.0 19.038"
+  scale="0.500 0.500 0.500"
+  rotation="0 180 0"
+  class="clickable product"
+  data-product="cel2_2"
+  visible="false"></a-entity>
+
+<a-entity id="cel2_3"
+  obj-model="obj: #cel2_3-obj; mtl: #cel2_3-mtl"
+  position="-4.308 2.0 19.038"
+  scale="0.500 0.500 0.500"
+  rotation="0 180 0"
+  class="clickable product"
+  data-product="cel2_3"
+  visible="false"></a-entity>
+
+<!-- VARIANTES COMPU2 (PCs adicionales) -->
+<a-entity id="compu2_1"
+  obj-model="obj: #compu2_1-obj; mtl: #compu2_1-mtl"
+  position="7.581 2.0 6.181"
+  scale="1.000 1.000 1.000"
+  rotation="0 -90 0"
+  class="clickable product"
+  data-product="compu2_1"
+  visible="false"></a-entity>
+
+<a-entity id="compu2_2"
+  obj-model="obj: #compu2_2-obj; mtl: #compu2_2-mtl"
+  position="7.581 2.0 6.181"
+  scale="1.000 1.000 1.000"
+  rotation="0 -90 0"
+  class="clickable product"
+  data-product="compu2_2"
+  visible="false"></a-entity>
+
+<a-entity id="compu2_3"
+  obj-model="obj: #compu2_3-obj; mtl: #compu2_3-mtl"
+  position="7.581 2.0 6.181"
+  scale="1.000 1.000 1.000"
+  rotation="0 -90 0"
+  class="clickable product"
+  data-product="compu2_3"
+  visible="false"></a-entity>
+
 
 <!-- TELEVISORES -->
 <a-entity id="tv1"
   obj-model="obj: #tv1-obj; mtl: #tv1-mtl"
-  position="-4.047 2.0 17.205"
-  scale="0.100 0.100 0.400"
-  rotation="0 180 0"
+  position="-1.499 2.0 -3.163"
+  scale="0.100 0.100 0.100"
+  rotation="0 0 0"
   class="clickable product"
   data-product="tv1"
   visible="false"></a-entity>
 
 <a-entity id="tv2"
   obj-model="obj: #tv2-obj; mtl: #tv2-mtl"
-  position="-4.047 2.0 17.205"
-  scale="0.200 0.200 1.000"
-  rotation="0 180 0"
+  position="-1.499 2.0 -3.163"
+  scale="0.200 0.200 0.200"
+  rotation="0 0 0"
   class="clickable product"
   data-product="tv2"
   visible="false"></a-entity>
 
 <a-entity id="tv3"
   obj-model="obj: #tv3-obj; mtl: #tv3-mtl"
-  position="-4.047 2.0 17.205"
-  scale="0.250 0.250 0.400"
-  rotation="0 180 0"
+  position="-1.499 2.0 -3.163"
+  scale="0.250 0.250 0.250"
+  rotation="0 0 0"
   class="clickable product"
   data-product="tv3"
   visible="false"></a-entity>
 
 <a-entity id="tv4"
   obj-model="obj: #tv4-obj; mtl: #tv4-mtl"
-  position="-4.047 2.0 17.205"
-  scale="0.250 0.250 0.400"
-  rotation="0 180 0"
+  position="-1.499 2.0 -3.163"
+  scale="0.250 0.250 0.250"
+  rotation="0 0 0"
   class="clickable product"
   data-product="tv4"
   visible="false"></a-entity>
 
 <a-entity id="monitor1"
   obj-model="obj: #monitor1-obj; mtl: #monitor1-mtl"
-  position="-4.047 2.0 17.205"
+  position="-1.499 2.0 -3.163"
   scale="0.600 0.600 0.600"
-  rotation="0 180 0"
+  rotation="0 0 0"
   class="clickable product"
   data-product="monitor1"
   visible="false"></a-entity>
@@ -92,7 +148,7 @@
 <!-- SISTEMA DE 3 MOSTRADORES POR CATEGORÍAS -->
 
 <!-- MOSTRADOR 1: TELÉFONOS -->
-<a-entity id="mostrador-telefonos" position="-2.490 0.000 -2.367">
+<a-entity id="mostrador-telefonos" position="-4.308 0.000 19.038" rotation="0.000 180.00 0.000">
   <!-- Botón Anterior -->
   <a-box id="btn-anterior-1" 
          class="clickable nav-button" 
@@ -128,7 +184,7 @@
 </a-entity>
 
 <!-- MOSTRADOR 2: CÓMPUTO -->
-<a-entity id="mostrador-computo" position="6.171 0.000 3.542" rotation="0.000 -90.0 0.000">
+<a-entity id="mostrador-computo" position="7.581 0.000 6.181" rotation="0.000 -90.0 0.000">
   <!-- Botón Anterior -->
   <a-box id="btn-anterior-2" 
          class="clickable nav-button" 
@@ -164,7 +220,7 @@
 </a-entity>
 
 <!-- MOSTRADOR 3: TELEVISORES -->
-<a-entity id="mostrador-televisores" position="-4.047 0.000 17.205" rotation="0.000 180.00 0.000">
+<a-entity id="mostrador-televisores" position="-1.499 0.000 -3.163" rotation="0 0 0">
   <!-- Botón Anterior -->
   <a-box id="btn-anterior-3" 
          class="clickable nav-button" 

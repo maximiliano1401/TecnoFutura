@@ -1,7 +1,7 @@
 <!-- PANELES DE INFORMACIÓN FIJOS PARA LOS 3 MOSTRADORES -->
 
 <!-- PANEL 1: TELÉFONOS -->
-<a-entity id="fixed-info-panel-1" position="-5.419 2.500 -3.270" rotation="0 0 0">
+<a-entity id="fixed-info-panel-1" position="-7.032 2.500 17.967" rotation="0.000 180.00 0.000">
   <!-- Panel principal -->
   <a-plane width="2" height="1.8" color="#1a1a2e" opacity="0.9" material="transparent: true"></a-plane>
   <a-plane width="2.05" height="1.85" color="#4CC3D9" opacity="0.4" position="0 0 -0.01" material="transparent: true"></a-plane>
@@ -31,7 +31,7 @@
 </a-entity>
 
 <!-- PANEL 2: CÓMPUTO -->
-<a-entity id="fixed-info-panel-2" position="6.604 2.500 0.746" rotation="0.000 -90.0 0.000">
+<a-entity id="fixed-info-panel-2" position="8.014 2.500 3.385" rotation="0.000 -90.0 0.000">
   <!-- Panel principal -->
   <a-plane width="2" height="1.8" color="#1a1a2e" opacity="0.9" material="transparent: true"></a-plane>
   <a-plane width="2.05" height="1.85" color="#EF2D5E" opacity="0.4" position="0 0 -0.01" material="transparent: true"></a-plane>
@@ -61,7 +61,7 @@
 </a-entity>
 
 <!-- PANEL 3: TELEVISORES -->
-<a-entity id="fixed-info-panel-3" position="-7.032 2.500 17.967" rotation="0.000 180.00 0.000">
+<a-entity id="fixed-info-panel-3" position="-5.419 2.500 -3.270" rotation="0 0 0">
   <!-- Panel principal -->
   <a-plane width="2" height="1.8" color="#1a1a2e" opacity="0.9" material="transparent: true"></a-plane>
   <a-plane width="2.05" height="1.85" color="#FFC65D" opacity="0.4" position="0 0 -0.01" material="transparent: true"></a-plane>

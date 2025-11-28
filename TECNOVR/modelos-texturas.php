@@ -34,5 +34,22 @@
 <a-asset-item id="monitor1-obj" src="assets/productos/tv/monitor/monitor(1).obj"></a-asset-item>
 <a-asset-item id="monitor1-mtl" src="assets/productos/tv/monitor/monitor(1).mtl"></a-asset-item>
 
-<a-asset-item id="monitor2-obj" src="assets/productos/tv/monitor/monitor(1).obj"></a-asset-item>
-<a-asset-item id="monitor2-mtl" src="assets/productos/tv/monitor/monitor(1).mtl"></a-asset-item>
+<!-- VARIANTES CEL2 (móviles adicionales) -->
+<a-asset-item id="cel2_1-obj" src="assets/productos/modiles/cel2.1/cel2.obj"></a-asset-item>
+<a-asset-item id="cel2_1-mtl" src="assets/productos/modiles/cel2.1/cel2.mtl"></a-asset-item>
+
+<a-asset-item id="cel2_2-obj" src="assets/productos/modiles/cel2.2/cel2.obj"></a-asset-item>
+<a-asset-item id="cel2_2-mtl" src="assets/productos/modiles/cel2.2/cel2.mtl"></a-asset-item>
+
+<a-asset-item id="cel2_3-obj" src="assets/productos/modiles/cel2.3/cel2.obj"></a-asset-item>
+<a-asset-item id="cel2_3-mtl" src="assets/productos/modiles/cel2.3/cel2.mtl"></a-asset-item>
+
+<!-- VARIANTES COMPU2 (PCs adicionales) -->
+<a-asset-item id="compu2_1-obj" src="assets/productos/pc/compu2.1/compu2.obj"></a-asset-item>
+<a-asset-item id="compu2_1-mtl" src="assets/productos/pc/compu2.1/compu2.mtl"></a-asset-item>
+
+<a-asset-item id="compu2_2-obj" src="assets/productos/pc/compu2.2/compu2.obj"></a-asset-item>
+<a-asset-item id="compu2_2-mtl" src="assets/productos/pc/compu2.2/compu2.mtl"></a-asset-item>
+
+<a-asset-item id="compu2_3-obj" src="assets/productos/pc/compu2.3/compu2.obj"></a-asset-item>
+<a-asset-item id="compu2_3-mtl" src="assets/productos/pc/compu2.3/compu2.mtl"></a-asset-item>
